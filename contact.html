@@ -85,6 +85,13 @@
                                     <label for="message">Message</label>
                                     <div class="invalid-feedback">A message is required.</div>
                                 </div>
+                                <input type="text" name="_gotcha" style="display:none" /> <!-- honeypot spam field -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="sendCopy" name="sendCopy">
+                                    <label class="form-check-label" for="sendCopy">
+                                        Send me a copy of this message
+                                    </label>
+                                </div>
                                 <br />
                                 <!-- Submit success message-->
                                 <!---->
@@ -104,7 +111,7 @@
                                 <!-- an error submitting the form-->
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                                 <!-- Submit Button-->
-                                <button class="btn btn-primary text-uppercase disabled" id="submitButton" type="submit">Send</button>
+                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
                             </form>
                             <!-- <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                                 <div class="form-floating">
