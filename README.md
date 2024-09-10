@@ -4,7 +4,7 @@ Collects various data science projects into one handy website.
 
 ## Acknowledgements
 
-Thanks Start Bootstrap for the [Clean Blog](https://startbootstrap.com/theme/clean-blog) Theme.
+Thanks to Start Bootstrap for the [Clean Blog](https://startbootstrap.com/theme/clean-blog) Theme.
 
 ## Author 
 
