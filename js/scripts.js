@@ -26,4 +26,11 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         scrollPos = currentTop;
     });
+
+    // added to the original template
+    // automatically update the year in the footer
+    const yearElement = document.getElementById("copyright-year");
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
 })
