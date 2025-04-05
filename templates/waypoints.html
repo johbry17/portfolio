@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
+        <meta name="description" content="Explore Waypoints: A Personal BioGeography by Bryan C. Johns. This project combines interactive maps, photo reels, and data-driven storytelling to visualize a global journey. Built with Leaflet.js, Python, and diverse geospatial APIs, it showcases technical expertise and creative storytelling." />
         <meta name="author" content="Bryan C. Johns" />
-        <title>Bryan C. Johns Portfolio - Template</title>
+        <title>Bryan C. Johns Portfolio - Waypoints</title>
         <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -95,7 +95,16 @@
                         <hr class="my-4" />
                         <h2 class="section-heading">Project Overview</h2>
                         <p>Waypoints is a deeply personal project that maps my life's journey through geography and storytelling. From the serene beaches of the Caribbean to the vast deserts of Namibia and the vibrant streets of India, each waypoint represents a pivotal experience. This project reflects my passion for exploration and my ability to transform data into compelling narratives, offering a unique perspective on how personal stories can be visualized through technology.</p>
-                        <p>Technically, Waypoints leverages <b>Leaflet.js</b> for rendering interactive maps with features like geospatial routing, automated data integration, and dynamic overlays. The backend, powered by <b>Python</b>, processes data from multiple sources, including the <b>Overpass API</b>, <b>Google Sheets API</b>, as well as JSON and CSV files. Google Sheets serves as a flexible data management layer, inspired by SQL principles. The maps include custom markers, clustering, and polylines for hiking routes, while popups display photo carousels and descriptive text, creating an intuitive and visually rich user experience.</p>
+                        <p>Technically, Waypoints leverages a suite of geospatial tools to create an interactive and visually rich experience:</p>
+                        <ul>
+                            <li><b>Leaflet.js</b> - For rendering dynamic, interactive maps with features like custom markers, clustering, and polylines for hiking routes.</li>
+                            <li><b>Overpass API</b> - To query OpenStreetMap data for geographic features such as hiking trails, ferry routes, and waterways.</li>
+                            <li><b>Nominatim</b> - For geocoding and reverse geocoding, converting locations into geographic coordinates and vice versa.</li>
+                            <li><b>OpenRouteService API</b> - For routing and geospatial analysis, including isochrones and multi-modal transportation routes.</li>
+                            <li><b>GeographicLib</b> - For precise geodesic calculations, such as great circle routes for airplane travel.</li>
+                            <li><b>GeoJSON</b> - As the primary format for encoding geographic data structures, enabling seamless integration with mapping libraries.</li>
+                        </ul>
+                        <p>The backend, powered by <b>Python</b>, processes data from multiple sources, including APIs, Google Sheets, and CSV files. Google Sheets serves as a flexible data management layer, inspired by SQL principles. The maps include custom markers, activity layers, and photo popups, creating an intuitive and immersive user experience.</p>
                         <p>This project showcases my expertise in <b>data engineering</b>, <b>visualization</b>, and <b>full-stack development</b>. By combining advanced techniques like geospatial routing, custom legends, and multilayer toggling, Waypoints demonstrates my ability to create responsive, user-friendly interfaces. It serves as both a personal archive of my travels and a professional example of how technical skills can be used to craft meaningful, interactive experiences.</p>
                         <!-- Divider-->
                         <hr class="my-4" />
@@ -119,9 +128,12 @@
                         <hr class="my-4" />
                         <h2 class="section-heading">References</h2>
                         <ul>
+                            <li><b>Leaflet.js</b> - Interactive map rendering library for creating dynamic and visually engaging maps. <a href="https://leafletjs.com/" target="_blank" style="text-decoration: underline;">Learn more</a>.</li>
                             <li><b>Overpass API</b> - Used for querying OpenStreetMap data to retrieve geographic information. <a href="https://overpass-api.de/" target="_blank" style="text-decoration: underline;">Learn more</a>.</li>
                             <li><b>Nominatim</b> - Used for geocoding and reverse geocoding to convert locations into geographic coordinates. <a href="https://nominatim.org/" target="_blank" style="text-decoration: underline;">Learn more</a>.</li>
-                            <li><b>Leaflet.js</b> - Interactive map rendering library for creating dynamic and visually engaging maps. <a href="https://leafletjs.com/" target="_blank" style="text-decoration: underline;">Learn more</a>.</li>
+                            <li><b>OpenRouteService API</b> - Provides routing and geospatial analysis services for various transportation modes. <a href="https://openrouteservice.org/documentation/" target="_blank" style="text-decoration: underline;">Learn more</a>.</li>
+                            <li><b>GeographicLib</b> - A library for performing geographic calculations, such as geodesics and projections (e.g., great circle routes). <a href="https://geographiclib.sourceforge.io/" target="_blank" style="text-decoration: underline;">Learn more</a>.</li>
+                            <li><b>GeoJSON Specification</b> - A format for encoding geographic data structures. <a href="https://geojson.org/" target="_blank" style="text-decoration: underline;">Learn more</a>.</li>
                             <li><b>Personal Photos</b> - All images used in this project are from my personal collection and are protected under copyright law. They may not be copied, modified, or distributed without explicit written permission. If you appear in any of the photos and would like them removed, please contact me at <a href="mailto:bryan.johns.official@gmail.com" style="text-decoration: underline;">bryan.johns.official@gmail.com</a>.</li>
                             <li><b>Personal Memory</b> - The narratives and waypoints are based on my personal experiences and recollections.</li>
                         </ul>
