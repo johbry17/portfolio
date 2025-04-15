@@ -33,4 +33,25 @@ window.addEventListener('DOMContentLoaded', () => {
     if (yearElement) {
       yearElement.textContent = new Date().getFullYear();
     }
+
+    // added to the original template
+    // add event listener to the form submit button
+    // to send a copy of the email to the user, if box is checked
+    document.getElementById('sendCopy').addEventListener('change', function () {
+        const form = document.getElementById('contactForm');
+        let copyField = document.getElementById('sendCopyField');
+
+        if (this.checked) {
+            if (!copyField) {
+                copyField = document.createElement('input');
+                copyField.type = 'hidden';
+                copyField.name = '_cc';
+                copyField.id = 'sendCopyField';
+                copyField.value = document.getElementById('email').value;
+                form.appendChild(copyField);
+            }
+        } else if (copyField) {
+            form.removeChild(copyField);
+        }
+    });
 })
