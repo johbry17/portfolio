@@ -34,24 +34,19 @@ window.addEventListener('DOMContentLoaded', () => {
       yearElement.textContent = new Date().getFullYear();
     }
 
+    // disabled, because I'd have to pay Formspree to cc the user
     // added to the original template
     // add event listener to the form submit button
     // to send a copy of the email to the user, if box is checked
-    document.getElementById('sendCopy').addEventListener('change', function () {
-        const form = document.getElementById('contactForm');
-        let copyField = document.getElementById('sendCopyField');
-
-        if (this.checked) {
-            if (!copyField) {
-                copyField = document.createElement('input');
-                copyField.type = 'hidden';
-                copyField.name = '_cc';
-                copyField.id = 'sendCopyField';
-                copyField.value = document.getElementById('email').value;
-                form.appendChild(copyField);
-            }
-        } else if (copyField) {
-            form.removeChild(copyField);
-        }
-    });
+    // document.getElementById('contactForm').addEventListener('submit', function (e) {
+    //     const sendCopy = document.getElementById('sendCopy').checked;
+    //     const userEmail = document.getElementById('email').value;
+    //     const ccField = document.getElementById('ccEmail');
+    
+    //     if (sendCopy && userEmail) {
+    //         ccField.value = userEmail;
+    //     } else {
+    //         ccField.value = ''; // clear it if unchecked
+    //     }
+    // });
 })

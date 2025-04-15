@@ -78,12 +78,14 @@
                                     <div class="invalid-feedback">A message is required.</div>
                                 </div>
                                 <input type="text" name="_gotcha" style="display:none" /> <!-- honeypot spam field -->
-                                <div class="form-check">
+                                <!-- disabled this checkbox, because I'd have to pay Formspree to cc the user -->
+                                <!-- <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="sendCopy" name="sendCopy">
                                     <label class="form-check-label" for="sendCopy">
                                         Send yourself a copy of this message
                                     </label>
                                 </div>
+                                <input type="hidden" name="_cc" id="ccEmail"> -->
                                 <br />
                                 <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
                             </form>
