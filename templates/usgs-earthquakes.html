@@ -1,133 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Explore Bryan C. Johns' interactive USGS Earthquake Map project, featuring real-time global earthquake data visualized with Leaflet.js and D3.js. This project includes a heatmap, tectonic plate boundaries, and detailed earthquake information to enhance public awareness and support for geological research." />
-        <meta name="author" content="Bryan C. Johns" />
-        <title>Bryan C. Johns Portfolio - USGS Earthquake Map</title>
-        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="../index.html">Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../archive.html">Archive</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Page Header-->
-        <header class="masthead" style="background-image: url('../assets/img/usgs-earthquakes/westford_eclipse_1.jpg')">
-            <div class="container position-relative px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="post-heading">
-                            <h1>USGS Earthquakes</h1>
-                            <h2 class="subheading">Explore Earth's Movements in Real Time</h2>
-                            <span class="meta">
-                                <!-- Posted by
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Explore Bryan C. Johns' interactive USGS Earthquake Map project, featuring real-time global earthquake data visualized with Leaflet.js and D3.js. This project includes a heatmap, tectonic plate boundaries, and detailed earthquake information to enhance public awareness and support for geological research."
+    />
+    <meta name="author" content="Bryan C. Johns" />
+    <title>Bryan C. Johns Portfolio - USGS Earthquake Map</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="../index.html">Home</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto py-4 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="../about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="../archive.html"
+                >Archive</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="../contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Header-->
+    <header
+      class="masthead"
+      style="
+        background-image: url('../assets/img/usgs-earthquakes/westford_eclipse_1.jpg');
+      "
+    >
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="post-heading">
+              <h1>USGS Earthquakes</h1>
+              <h2 class="subheading">Explore Earth's Movements in Real Time</h2>
+              <span class="meta">
+                <!-- Posted by
                                 <a href="#!">Start Bootstrap</a>
                                 on August 24, 2023 -->
-                            </span>
-                        </div>
-                    </div>
-                </div>
+              </span>
             </div>
-        </header>
-        <!-- Post Content-->
-        <article class="mb-4">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>This project uses <b>Leaflet.js</b> and <b>D3.js</b> to create an interactive <b>JavaScript</b> map displaying global earthquake data from the USGS, updated in real time, with features like a heatmap and tectonic plate boundaries. It effectively communicates seismic activity to drive public awareness and support for geological research.</p>
-                        <!-- Divider-->
-                        <hr class="my-4" />
-                        <h2 class="section-heading">Project Links</h2>
-                        <!-- <hr class="my-4" /> -->
-                        <div class="post-preview">
-                            <a href="https://johbry17.github.io/USGS-Earthquake-Map/" target="_blank">
-                                <p class="post-subtitle">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fas fa-wave-square fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    Live Website
-                                </p>
-                                <!-- <p>https://johbry17.github.io/USGS-Earthquake-Map/</p> -->
-                            </a>
-                        </div>
-                        <!-- <hr class="my-4" /> -->
-                        <div class="post-preview">
-                            <a href="https://github.com/johbry17/USGS-Earthquake-Map" target="_blank">
-                                <p class="post-subtitle">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    GitHub Repository
-                                </p>
-                                <!-- <p>https://github.com/johbry17/USGS-Earthquake-Map</p> -->
-                            </a>
-                        </div>
-                        <!-- Divider-->
-                        <hr class="my-4" />
-                        <h2 class="section-heading">Project Overview</h2>
-                        <p>In this project, I developed an interactive earthquake map using <b>JavaScript</b> to visualize data from the last 30 days, updated every minute, using a <b>GeoJSON API</b> provided by the <b>United States Geological Survey (USGS)</b>. The primary goal was to create an informative and dynamic tool that could be used to educate the public and government organizations on the critical issues of earthquake activity and its correlation with tectonic plates.</p>
-                        <p>To achieve this, I utilized the <b>Leaflet.js</b> library for mapping and <b>D3.js</b> for data manipulation and visualization. The map displays earthquake occurrences across the globe, with various data layers added to illustrate the relationship between earthquakes and tectonic plates. Users can interact with the map to view detailed information about each earthquake, including its magnitude, depth, and location. The map also features a heatmap layer to visually emphasize regions with higher earthquake activity, as well as fault lines to show the boundaries of tectonic plates.</p>
-                        <p>This project highlights my ability to integrate multiple data sources and visualization techniques into a cohesive, user-friendly interface. By effectively communicating complex scientific data through interactive visualizations, this tool can help drive awareness and funding for crucial geological research.</p>
-                        <!-- Divider-->
-                        <hr class="my-4" />
-                        <h2 class="section-heading">Gallery</h2>
-                        <!-- <hr class="my-4" /> -->
-                        <br><br>
-                        <img class="img-fluid mx-auto d-block" src="../assets/img/usgs-earthquakes/earthquakeMarkers.png" alt="USGS Earthquake Markers" style="border-radius: 10px;" />
-                        <span class="caption text-muted">Earthquake Markers</span>
-                        <br><br>
-                        <img class="img-fluid mx-auto d-block" src="../assets/img/usgs-earthquakes/earthquakeMarkesPlatesHeat.png" alt="Tectonic Plates Layer with Heat Map and Earthquake Markers" style="border-radius: 10px;" />
-                        <span class="caption text-muted">Tectonic Plates Layer with Heat Map and Earthquake Markers</span>
-                        <br><br>
-                        <img class="img-fluid mx-auto d-block" src="../assets/img/usgs-earthquakes/earthquakeTectonicPlates.png" alt="Tectonic Plates" style="border-radius: 10px;" />
-                        <span class="caption text-muted">Tectonic Plates Layer</span>
-                        <!-- <br><br> -->
-                        <!-- Divider-->
-                        <hr class="my-4" />
-                        <h2 class="section-heading">References</h2>
-                        <p>Dataset created by the <a href= "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php" target="_blank">United States Geological Survey</a>.</p>
-                        <!-- Divider-->
-                        <hr class="my-4" />
-                        <div class="d-flex justify-content-between mb-4">
-                            <a class="btn btn-light" href="#">Back to Top</a>
-                            <a class="btn btn-light" href="../index.html">Home</a>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <p>
+              This project uses <b>Leaflet.js</b> and <b>D3.js</b> to create an
+              interactive <b>JavaScript</b> map displaying global earthquake
+              data from the USGS, updated in real time, with features like a
+              heatmap and tectonic plate boundaries. It effectively communicates
+              seismic activity to drive public awareness and support for
+              geological research.
+            </p>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">Project Links</h2>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/USGS-Earthquake-Map/"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-wave-square fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Live Website
+                </p>
+                <!-- <p>https://johbry17.github.io/USGS-Earthquake-Map/</p> -->
+              </a>
             </div>
-        </article>
-        <!-- Footer-->
-        <footer class="border-top">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <ul class="list-inline text-center">
-                            <!-- <li class="list-inline-item">
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://github.com/johbry17/USGS-Earthquake-Map"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                  GitHub Repository
+                </p>
+                <!-- <p>https://github.com/johbry17/USGS-Earthquake-Map</p> -->
+              </a>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">Project Overview</h2>
+            <p>
+              In this project, I developed an interactive earthquake map using
+              <b>JavaScript</b> to visualize data from the last 30 days, updated
+              every minute, using a <b>GeoJSON API</b> provided by the
+              <b>United States Geological Survey (USGS)</b>. The primary goal
+              was to create an informative and dynamic tool that could be used
+              to educate the public and government organizations on the critical
+              issues of earthquake activity and its correlation with tectonic
+              plates.
+            </p>
+            <p>
+              To achieve this, I utilized the <b>Leaflet.js</b> library for
+              mapping and <b>D3.js</b> for data manipulation and visualization.
+              The map displays earthquake occurrences across the globe, with
+              various data layers added to illustrate the relationship between
+              earthquakes and tectonic plates. Users can interact with the map
+              to view detailed information about each earthquake, including its
+              magnitude, depth, and location. The map also features a heatmap
+              layer to visually emphasize regions with higher earthquake
+              activity, as well as fault lines to show the boundaries of
+              tectonic plates.
+            </p>
+            <p>
+              This project highlights my ability to integrate multiple data
+              sources and visualization techniques into a cohesive,
+              user-friendly interface. By effectively communicating complex
+              scientific data through interactive visualizations, this tool can
+              help drive awareness and funding for crucial geological research.
+            </p>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">Gallery</h2>
+            <!-- <hr class="my-4" /> -->
+            <br /><br />
+            <img
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/usgs-earthquakes/earthquakeMarkers.png"
+              alt="USGS Earthquake Markers"
+              style="border-radius: 10px"
+            />
+            <span class="caption text-muted"
+              >Earthquake markers: Real-time USGS data from the past 30 days,
+              with markers colored by depth and sized by magnitude.</span
+            >
+            <br /><br />
+            <img
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/usgs-earthquakes/earthquakeMarkesPlatesHeat.png"
+              alt="Tectonic Plates Layer with Heat Map and Earthquake Markers"
+              style="border-radius: 10px"
+            />
+            <span class="caption text-muted"
+              >Tectonic plates and heat map: Overlay of earthquake markers and
+              heat map, highlighting seismic hotspots and plate
+              boundaries.</span
+            >
+            <br /><br />
+            <img
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/usgs-earthquakes/earthquakeTectonicPlates.png"
+              alt="Tectonic Plates"
+              style="border-radius: 10px"
+            />
+            <span class="caption text-muted"
+              >Tectonic plates on ESRI’s National Geographic base map: An
+              artistic visualization of Earth’s major plate boundaries.</span
+            >
+            <!-- <br><br> -->
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">References</h2>
+            <p>
+              Dataset created by the
+              <a
+                href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php"
+                target="_blank"
+                >United States Geological Survey</a
+              >.
+            </p>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <div class="d-flex justify-content-between mb-4">
+              <a class="btn btn-light" href="#">Back to Top</a>
+              <a class="btn btn-light" href="../index.html">Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <ul class="list-inline text-center">
+              <!-- <li class="list-inline-item">
                                 <a href="#!">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
@@ -135,31 +252,34 @@
                                     </span>
                                 </a>
                             </li> -->
-                            <li class="list-inline-item">
-                                <a href="https://www.linkedin.com/in/b-johns/" target="_blank">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://github.com/johbry17" target="_blank">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Bryan C. Johns <span id="copyright-year">2024</span></div>
-                    </div>
-                </div>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/b-johns/" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/johbry17" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div class="small text-center text-muted fst-italic">
+              Copyright &copy; Bryan C. Johns
+              <span id="copyright-year">2024</span>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../js/scripts.js"></script>
-    </body>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
+  </body>
 </html>

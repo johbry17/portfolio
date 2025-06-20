@@ -1,82 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Explore Bryan C. Johns' Utilities-313 project, featuring an interactive dashboard and exploratory data analysis to visualize and analyze utility expenses. Built with Python, JavaScript, Plotly, and D3.js, this project provides actionable insights into household utility trends and spending patterns." />
-        <meta name="author" content="Bryan C. Johns" />
-        <title>Bryan C. Johns Portfolio - Utilities 313</title>
-        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="../index.html">Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../archive.html">Archive</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Page Header-->
-        <header class="masthead" style="background-image: url('../assets/img/utilities-313/bass_rock_gannets_1.jpg')">
-            <div class="container position-relative px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="post-heading">
-                            <h1>Utilities 313</h1>
-                            <h2 class="subheading">Visualizing the Bills</h2>
-                            <span class="meta">
-                                <!-- Posted by
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Explore Bryan C. Johns' Utilities-313 project, featuring an interactive dashboard and exploratory data analysis to visualize and analyze utility expenses. Built with Python, JavaScript, Plotly, and D3.js, this project provides actionable insights into household utility trends and spending patterns."
+    />
+    <meta name="author" content="Bryan C. Johns" />
+    <title>Bryan C. Johns Portfolio - Utilities 313</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="../index.html">Home</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto py-4 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="../about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="../archive.html"
+                >Archive</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="../contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Header-->
+    <header
+      class="masthead"
+      style="
+        background-image: url('../assets/img/utilities-313/bass_rock_gannets_1.jpg');
+      "
+    >
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="post-heading">
+              <h1>Utilities 313</h1>
+              <h2 class="subheading">Visualizing the Bills</h2>
+              <span class="meta">
+                <!-- Posted by
                                 <a href="#!">Start Bootstrap</a>
                                 on August 24, 2023 -->
-                            </span>
-                        </div>
-                    </div>
-                </div>
+              </span>
             </div>
-        </header>
-        <!-- Post Content-->
-        <article class="mb-4">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <!-- Post Content Summary-->
-                        <p>A data-driven project that combines <b>web development</b> and <b>exploratory data analysis</b> to provide actionable insights into utility expenses. This project leverages <b>Python</b>, <b>JavaScript</b>, <b>Plotly</b>, and <b>D3.js</b> to create an interactive dashboard and detailed EDA report for analyzing trends in utility bills.</p>
-                        <!-- Divider-->
-                        <hr class="my-4" />
-                        <h2 class="section-heading">Project Links</h2>
-                        <!-- <hr class="my-4" /> -->
-                        <div class="post-preview">
-                            <a href="https://johbry17.github.io/utilities-313/index.html" target="_blank">
-                                <p class="post-subtitle">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    Live Website
-                                </p>
-                                <!-- <p></p> -->
-                            </a>
-                        </div>
-                        <!-- <hr class="my-4" /> -->
-                        <!-- <div class="post-preview">
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post Content Summary-->
+            <p>
+              A data-driven project that combines <b>web development</b> and
+              <b>exploratory data analysis</b> to provide actionable insights
+              into utility expenses. This project leverages <b>Python</b>,
+              <b>JavaScript</b>, <b>Plotly</b>, and <b>D3.js</b> to create an
+              interactive dashboard and detailed EDA report for analyzing trends
+              in utility bills.
+            </p>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">Project Links</h2>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/utilities-313/index.html"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Live Website
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <!-- <div class="post-preview">
                             <a href="#" target="_blank">
                                 <p class="post-subtitle">
                                     <span class="fa-stack fa-lg">
@@ -85,85 +141,157 @@
                                     </span>
                                     Tableau Explanatory Data Analysis
                                 </p> -->
-                                <!-- <p></p> -->
-                            <!-- </a>
+            <!-- <p></p> -->
+            <!-- </a>
                         </div> -->
-                        <!-- <hr class="my-4" /> -->
-                        <div class="post-preview">
-                            <a href="https://johbry17.github.io/utilities-313/utilities_313_EDA.html" target="_blank">
-                                <p class="post-subtitle">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-python fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    Python Exploratory Data Analysis
-                                </p>
-                                <!-- <p></p> -->
-                            </a>
-                        </div>
-                        <!-- <hr class="my-4" /> -->
-                        <div class="post-preview">
-                            <a href="https://github.com/johbry17/utilities-313" target="_blank">
-                                <p class="post-subtitle">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    GitHub Repository
-                                </p>
-                                <!-- <p></p> -->
-                            </a>
-                        </div>
-                        <!-- Divider-->
-                        <hr class="my-4" />
-                        <h2 class="section-heading">Project Overview</h2>
-                        <p>The Utilities-313 Dashboard is a web-based tool designed to analyze and visualize household utility expenses. It features an interactive dashboard with stacked bar charts, line charts, and treemaps to explore spending patterns over time, compare costs across categories, and track total expenses. Built with <b>JavaScript</b> (<b>D3.js</b>, <b>Plotly</b>) and optimized for mobile, the dashboard provides a seamless user experience with hover-based insights and smooth transitions.</p>
-                        <p>In addition to the dashboard, an exploratory data analysis (EDA) report offers deeper statistical summaries and visualizations using <b>Python</b> (<b>pandas</b>, <b>Jupyter Notebook</b>). The report updates automatically through a streamlined data pipeline utilizing the <b>Google API</b>, ensuring fresh insights with minimal manual effort.</p>
-                        <p>This project demonstrates my ability to manage end-to-end data workflows, from preprocessing and analysis in <b>Python</b> to building interactive web visualizations with <b>JavaScript</b>. By combining data-driven insights with an intuitive user interface, the Utilities-313 Dashboard helps users better understand and manage their utility expenses.</p>
-                        <!-- Divider-->
-                        <hr class="my-4" />
-                        <h2 class="section-heading">Gallery</h2>
-                        <!-- <hr class="my-4" /> -->
-                        <br><br>
-                        <img class="img-fluid mx-auto d-block" src="../assets/img/utilities-313/dashboard.png" alt="Mobile Dashboard" />
-                        <span class="caption text-muted">Interactive Web Dashboard</span>
-                        <br><br>
-                        <img class="img-fluid mx-auto d-block" src="../assets/img/utilities-313/EDA_CleanChoice.png" alt="Exploratory Data Analysis" />
-                        <span class="caption text-muted">Sample from Exploratory Data Analysis</span>
-                        <br><br>
-                        <img class="img-fluid mx-auto d-block" src="../assets/img/utilities-313/stacked_bar.png" alt="Stacked Bar Chart of Monthly Expenses" />
-                        <span class="caption text-muted">Stacked Bar Chart of Monthly Utility Bills</span>
-                        <br><br>
-                        <img class="img-fluid mx-auto d-block" src="../assets/img/utilities-313/years_plot.png" alt="Line Chart of Monthly Bills, One Line per Year" />
-                        <span class="caption text-muted">Monthly Bills, One Line per Year</span>
-                        <br><br>
-                        <img class="img-fluid mx-auto d-block" src="../assets/img/utilities-313/monthly_bills_year_color_coded.png" alt="Bar Chart of Monthly Bills, Color-Coded By Year" />
-                        <span class="caption text-muted">Monthly Bills, Color-Coded By Year</span>
-                        <br><br>
-                        <img class="img-fluid mx-auto d-block" src="../assets/img/utilities-313/treemap.png" alt="Treemap of Expenses By Utility Type" />
-                        <span class="caption text-muted">Treemap of Expenses By Utility Type</span>
-                        <!-- <br><br> -->
-                        <!-- Divider-->
-                        <hr class="my-4" />
-                        <h2 class="section-heading">References</h2>
-                        <p>Dataset provided by Utilities 313.</p>
-                        <!-- Divider-->
-                        <hr class="my-4" />
-                        <div class="d-flex justify-content-between mb-4">
-                            <a class="btn btn-light" href="#">Back to Top</a>
-                            <a class="btn btn-light" href="../index.html">Home</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/utilities-313/utilities_313_EDA.html"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-python fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Python Exploratory Data Analysis
+                </p>
+                <!-- <p></p> -->
+              </a>
             </div>
-        </article>
-        <!-- Footer-->
-        <footer class="border-top">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <ul class="list-inline text-center">
-                            <!-- <li class="list-inline-item">
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://github.com/johbry17/utilities-313"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                  GitHub Repository
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">Project Overview</h2>
+            <p>
+              The Utilities-313 Dashboard is a web-based tool designed to
+              analyze and visualize household utility expenses. It features an
+              interactive dashboard with stacked bar charts, line charts, and
+              treemaps to explore spending patterns over time, compare costs
+              across categories, and track total expenses. Built with
+              <b>JavaScript</b> (<b>D3.js</b>, <b>Plotly</b>) and optimized for
+              mobile, the dashboard provides a seamless user experience with
+              hover-based insights and smooth transitions.
+            </p>
+            <p>
+              In addition to the dashboard, an exploratory data analysis (EDA)
+              report offers deeper statistical summaries and visualizations
+              using <b>Python</b> (<b>pandas</b>, <b>Jupyter Notebook</b>). The
+              report updates automatically through a streamlined data pipeline
+              utilizing the <b>Google API</b>, ensuring fresh insights with
+              minimal manual effort.
+            </p>
+            <p>
+              This project demonstrates my ability to manage end-to-end data
+              workflows, from preprocessing and analysis in <b>Python</b> to
+              building interactive web visualizations with <b>JavaScript</b>. By
+              combining data-driven insights with an intuitive user interface,
+              the Utilities-313 Dashboard helps users better understand and
+              manage their utility expenses.
+            </p>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">Gallery</h2>
+            <!-- <hr class="my-4" /> -->
+            <br /><br />
+            <img
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/utilities-313/dashboard.png"
+              alt="Mobile Dashboard"
+            />
+            <span class="caption text-muted"
+              >Interactive web dashboard: Toggle between cumulative and
+              per-person amounts, with a time filter slider for detailed expense
+              analysis.</span
+            >
+            <br /><br />
+            <img
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/utilities-313/EDA_CleanChoice.png"
+              alt="Exploratory Data Analysis"
+            />
+            <span class="caption text-muted"
+              >Exploratory data analysis: Line chart tracking expenses by
+              category over time.</span
+            >
+            <br /><br />
+            <img
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/utilities-313/stacked_bar.png"
+              alt="Stacked Bar Chart of Monthly Expenses"
+            />
+            <span class="caption text-muted"
+              >Stacked bar chart: Monthly utility bills by type, highlighting a
+              steady rise in electric expenses.</span
+            >
+            <br /><br />
+            <img
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/utilities-313/years_plot.png"
+              alt="Line Chart of Monthly Bills, One Line per Year"
+            />
+            <span class="caption text-muted"
+              >Monthly bills by year: Each line represents a year, revealing a
+              clear upward trend in expenses.</span
+            >
+            <br /><br />
+            <img
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/utilities-313/monthly_bills_year_color_coded.png"
+              alt="Bar Chart of Monthly Bills, Color-Coded By Year"
+            />
+            <span class="caption text-muted"
+              >Monthly bills: Bar chart color-coded by year, further
+              illustrating increasing costs over time.</span
+            >
+            <br /><br />
+            <img
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/utilities-313/treemap.png"
+              alt="Treemap of Expenses By Utility Type"
+            />
+            <span class="caption text-muted"
+              >Treemap: Visual breakdown of expenses by utility type, showing
+              the proportion of each category.</span
+            >
+            <!-- <br><br> -->
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">References</h2>
+            <p>Dataset provided by Utilities 313.</p>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <div class="d-flex justify-content-between mb-4">
+              <a class="btn btn-light" href="#">Back to Top</a>
+              <a class="btn btn-light" href="../index.html">Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <ul class="list-inline text-center">
+              <!-- <li class="list-inline-item">
                                 <a href="#!">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
@@ -171,31 +299,34 @@
                                     </span>
                                 </a>
                             </li> -->
-                            <li class="list-inline-item">
-                                <a href="https://www.linkedin.com/in/b-johns/" target="_blank">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://github.com/johbry17" target="_blank">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Bryan C. Johns <span id="copyright-year">2024</span></div>
-                    </div>
-                </div>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/b-johns/" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/johbry17" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div class="small text-center text-muted fst-italic">
+              Copyright &copy; Bryan C. Johns
+              <span id="copyright-year">2024</span>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../js/scripts.js"></script>
-    </body>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
+  </body>
 </html>
