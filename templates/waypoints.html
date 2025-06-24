@@ -103,14 +103,25 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- Post Content Summary-->
             <p>
-              Waypoints is a personal exploration of my life's journey, brought
-              to life through interactive <b>Leaflet.js</b> maps, photo reels,
-              and <b>data-driven storytelling</b>. This project combines
-              geographic data with personal narratives to create an engaging and
-              immersive experience. Each waypoint highlights a meaningful place
-              or moment, weaving together my global adventures with the power of
-              visualization.
+              Waypoints is a full-stack geospatial travel memoir built with
+              tools like <b>Leaflet</b>, <b>Overpass API</b>,
+              <b>OpenRouteService</b>, and <b>geojson.io</b>. With interactive
+              mapping, photo reels, and custom layers, this is
+              <b>data-driven storytelling</b> at its most personal.
             </p>
+            <blockquote class="blockquote">
+              <p>
+                Mapping my travels turned into a masterclass in geospatial tools
+                and memory—coordinates, mapping APIs, and long-lost places I
+                hadn’t thought about in years. From tracing a train ride in
+                India to redrawing a boat trip in Costa Rica, the technical work
+                brought deep personal reflection. Rebuilding a moment from a
+                blurry photo, rerouting old paths, rediscovering forgotten
+                places. It was sweetly profound, nostalgic, and oddly healing.
+                It's far from done. So is life.
+              </p>
+              <p>I look forward to never finishing it.</p>
+            </blockquote>
             <!-- Divider-->
             <hr class="my-4" />
             <h2 class="section-heading">Project Links</h2>
@@ -153,70 +164,55 @@
             <hr class="my-4" />
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              Waypoints is a deeply personal project that maps my life's journey
-              through geography and storytelling. From the serene beaches of the
-              Caribbean to the vast deserts of Namibia and the vibrant streets
-              of India, each waypoint represents a pivotal experience. This
-              project reflects my passion for exploration and my ability to
-              transform data into compelling narratives, offering a unique
-              perspective on how personal stories can be visualized through
-              technology.
+              Waypoints maps my story across continents, from the serene beaches
+              of the Caribbean to the vast deserts of Namibia and the vibrant
+              streets of India. It’s a visual memoir powered by geospatial tools
+              and narrative intent. Technically, it merges full-stack
+              development with advanced mapping capabilities to tell a human
+              story — my human story — through data.
             </p>
-            <p>
-              Technically, Waypoints leverages a suite of geospatial tools to
-              create an interactive and visually rich experience:
-            </p>
+            <p>Core technologies used include:</p>
             <ul>
               <li>
-                <b>Leaflet.js</b> - For rendering dynamic, interactive maps with
-                features like custom markers, clustering, and polylines for
-                hiking routes.
+                <b>Leaflet</b> for interactive maps with custom markers,
+                clustering, and polylines (e.g., hiking routes).
               </li>
               <li>
-                <b>Overpass API</b> - To query OpenStreetMap data for geographic
-                features such as hiking trails, ferry routes, and waterways.
+                <b>Overpass API</b> to fetch OpenStreetMap data like trails,
+                waterways, and ferry lines.
+              </li>
+              <li><b>Nominatim</b> for geocoding and reverse geocoding.</li>
+              <li>
+                <b>OpenRouteService API</b> for generating vehicle routes
+                automatically.
               </li>
               <li>
-                <b>Nominatim</b> - For geocoding and reverse geocoding,
-                converting locations into geographic coordinates and vice versa.
+                <b>GeographicLib</b> for great circle and geodesic calculations.
               </li>
               <li>
-                <b>OpenRouteService API</b> - For routing and geospatial
-                analysis, including isochrones and multi-modal transportation
-                routes.
+                <b>geojson.io</b> for hand-drawing and exporting custom
+                GeoJSONs.
               </li>
               <li>
-                <b>GeographicLib</b> - For precise geodesic calculations, such
-                as great circle routes for airplane travel.
-              </li>
-              <li>
-                <b>geojson.io</b> - A web-based tool for drawing and editing
-                custom geographic data, such as boat and ferry routes, and
-                exporting them in GeoJSON format.
-              </li>
-              <li>
-                <b>GeoJSON</b> - As the primary format for encoding geographic
-                data structures, enabling seamless integration with mapping
-                libraries.
+                <b>GeoJSON</b> as the foundation for spatial data
+                representation.
               </li>
             </ul>
             <p>
-              The backend, powered by <b>Python</b>, processes data from
-              multiple sources, including APIs, Google Sheets, and CSV files.
-              Google Sheets serves as a flexible data management layer, inspired
-              by SQL principles. The maps include custom markers, activity
-              layers, and photo popups, creating an intuitive and immersive user
+              The backend, built with <b>Python</b>, integrates data from
+              <b>APIs</b>, <b>Google Sheets</b>, and <b>CSV files</b>, with
+              Google Sheets serving as a lightweight, SQL-style data layer. The
+              map includes custom layers for activities, travel modes, and
+              pop-up photo galleries, delivering a mobile-responsive, engaging
               experience.
             </p>
             <p>
-              This project showcases my expertise in <b>data engineering</b>,
-              <b>visualization</b>, and <b>full-stack development</b>. By
-              combining advanced techniques like geospatial routing, custom
-              legends, and multilayer toggling, Waypoints demonstrates my
-              ability to create responsive, user-friendly interfaces. It serves
-              as both a personal archive of my travels and a professional
-              example of how technical skills can be used to craft meaningful,
-              interactive experiences.
+              Waypoints is a personal archive and technical showcase—proof that
+              data storytelling can be as emotional as it is analytical. It
+              demonstrates my skills in <b>geospatial data processing</b>,
+              <b>API integration</b>, and <b>frontend experience design</b>.
+              It's data storytelling at the most intimate of levels, my
+              memories.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -247,7 +243,7 @@
             <img
               class="img-fluid mx-auto d-block"
               src="../assets/img/waypoints/activities_stj.png"
-              alt="Actvities in the Caribbean"
+              alt="Activities in the Caribbean"
             />
             <span class="caption text-muted"
               >Virgin Islands: Activity markers and routes layer shown together,
@@ -267,7 +263,7 @@
             <img
               class="img-fluid mx-auto d-block"
               src="../assets/img/waypoints/activities_vt.png"
-              alt="Actvities in the Caribbean"
+              alt="Activities in Vermont"
             />
             <span class="caption text-muted"
               >Vermont: Clustered activity icons and visible routes layer,
@@ -280,7 +276,7 @@
               alt="Entity Relationship Diagram"
             />
             <span class="caption text-muted"
-              >Entity Relationship Diagram (tentaive): Visual overview of the
+              >Entity Relationship Diagram (tentative): Visual overview of the
               data model powering markers, popups, and route overlays.</span
             >
             <hr class="my-4" />
