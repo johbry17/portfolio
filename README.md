@@ -1,12 +1,39 @@
-# Bryan C. Johns Portfolio
+# Portfolio – Bryan C. Johns
 
 ![Last Commit](https://img.shields.io/github/last-commit/johbry17/portfolio)
 
-Collects various data science projects into one handy website.
+This repository contains the source for my personal data portfolio website. It brings together featured projects, exploratory analyses, and experiments across data science, visualization, and storytelling.
 
-Use `./templates/00_post_template_sample.html` when adding a new project. Remember to edit the meta data - description, title.
+## Structure
 
-Business card QR code located in `./resources/images/portfolio.png`.
+- **Home** – Featured projects and highlights
+- **Archive** – Additional and experimental projects
+- **Project Pages** – Dedicated landing pages with summaries, visuals, and links
+- **About** – Background, skills, CV, and credentials
+- **Contact** – Email form for collaboration and inquiries
+
+## Features
+
+- **Project Gallery:** Browse a range of data science projects, from predictive modeling and dashboards to geospatial storytelling.
+- **Dedicated Project Pages:** Each project includes a summary, visuals, and links to supporting resources (dashboards, maps, writing samples, GitHub repos, Tableau stories, and more).
+- **Interactive Visualizations:** Explore dashboards, mapping tools, exploratory analyses, technical reports, and layperson-friendly overviews.
+- **Responsive Design:** Built with the Clean Blog theme by Start Bootstrap for seamless use across devices.
+
+## Featured Projects
+
+- **[Classified: At-Risk](https://johbry17.github.io/portfolio/templates/salifort-employee-churn.html)** – AI-driven machine learning models for predicting employee turnover and supporting HR retention strategies
+- **[Cyclistic Analytics](https://johbry17.github.io/portfolio/templates/cyclistic.html)** – Data analysis of Chicago’s bikeshare for customer conversion and marketing recommendations
+- **[DC Short-Term Rental Explorer](https://johbry17.github.io/portfolio/templates/dc-airbnb.html)** – Dashboard of Airbnb statistics in Washington, DC
+- **[Red Light, Green Light](https://johbry17.github.io/portfolio/templates/red-light-green-light.html)** – AI-powered convolutional neural network trained to read German traffic signs for policy and safety applications
+- **[Waypoints](https://johbry17.github.io/portfolio/templates/waypoints.html)** – A geospatial travel memoir combining mapping, routing, and narrative
+
+Additional projects are available in the Living Archive, ranging from biodiversity dashboards to real-time earthquake maps.
+
+## Usage
+
+- To add a new project, use the template at `./templates/00_post_template_sample.html`.
+- Update the meta data (description, title) for each new project page.
+- The business card QR code is located at `./resources/images/portfolio.png`.
 
 ![QR Code](./resources/images/portfolio.png)
 
