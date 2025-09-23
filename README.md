@@ -23,7 +23,7 @@ This repository contains the source for my personal data portfolio website. It b
 
 - **[Classified: At-Risk](https://johbry17.github.io/portfolio/templates/salifort-employee-churn.html)** – AI-driven machine learning models for predicting employee turnover and supporting HR retention strategies
 - **[Cyclistic Analytics](https://johbry17.github.io/portfolio/templates/cyclistic.html)** – Data analysis of Chicago’s bikeshare for customer conversion and marketing recommendations
-- **[DC Short-Term Rental Explorer](https://johbry17.github.io/portfolio/templates/dc-airbnb.html)** – Dashboard of Airbnb statistics in Washington, DC
+- **[Capital Crashpad](https://johbry17.github.io/portfolio/templates/dc-airbnb.html)** – Dashboard of Airbnb statistics in Washington, DC
 - **[Red Light, Green Light](https://johbry17.github.io/portfolio/templates/red-light-green-light.html)** – AI-powered convolutional neural network trained to read German traffic signs for policy and safety applications
 - **[Waypoints](https://johbry17.github.io/portfolio/templates/waypoints.html)** – A geospatial travel memoir combining mapping, routing, and narrative
 
