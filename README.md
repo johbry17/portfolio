@@ -2,6 +2,8 @@
 
 ![Last Commit](https://img.shields.io/github/last-commit/johbry17/portfolio)
 
+🔗 [Portfolio Website](https://johbry17.github.io/portfolio/)
+
 This repository contains the source for my personal data portfolio website. It brings together featured projects, exploratory analyses, and experiments across data science, visualization, and storytelling.
 
 ## Structure
