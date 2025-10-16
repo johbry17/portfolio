@@ -23,11 +23,11 @@ This repository contains the source for my personal data portfolio website. It b
 
 ## Featured Projects
 
-- **[Classified: At-Risk](https://johbry17.github.io/portfolio/templates/salifort-employee-churn.html)** – AI-driven machine learning models for predicting employee turnover and supporting HR retention strategies
-- **[Cyclistic Analytics](https://johbry17.github.io/portfolio/templates/cyclistic.html)** – Data analysis of Chicago’s bikeshare for customer conversion and marketing recommendations
-- **[Capital Crashpad](https://johbry17.github.io/portfolio/templates/dc-airbnb.html)** – Dashboard of Airbnb statistics in Washington, DC
-- **[Red Light, Green Light](https://johbry17.github.io/portfolio/templates/red-light-green-light.html)** – AI-powered convolutional neural network trained to read German traffic signs for policy and safety applications
-- **[Waypoints](https://johbry17.github.io/portfolio/templates/waypoints.html)** – A geospatial travel memoir combining mapping, routing, and narrative
+- **[Classified: At-Risk](https://informedwanderer.com/templates/salifort-employee-churn.html)** – AI-driven machine learning models for predicting employee turnover and supporting HR retention strategies
+- **[Cyclistic Analytics](https://informedwanderer.com/templates/cyclistic.html)** – Data analysis of Chicago’s bikeshare for customer conversion and marketing recommendations
+- **[Capital Crashpad](https://informedwanderer.com/templates/dc-airbnb.html)** – Dashboard of Airbnb statistics in Washington, DC
+- **[Red Light, Green Light](https://informedwanderer.com/templates/red-light-green-light.html)** – AI-powered convolutional neural network trained to read German traffic signs for policy and safety applications
+- **[Waypoints](https://informedwanderer.com/templates/waypoints.html)** – A geospatial travel memoir combining mapping, routing, and narrative
 
 Additional projects are available in the Living Archive, ranging from biodiversity dashboards to real-time earthquake maps.
 
