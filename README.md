@@ -2,7 +2,7 @@
 
 ![Last Commit](https://img.shields.io/github/last-commit/johbry17/portfolio)
 
-🔗 [Portfolio Website](https://johbry17.github.io/portfolio/)
+🔗 [Portfolio Website](https://informedwanderer.com)
 
 This repository contains the source for my personal data portfolio website. It brings together featured projects, exploratory analyses, and experiments across data science, visualization, and storytelling.
 
@@ -33,11 +33,15 @@ Additional projects are available in the Living Archive, ranging from biodiversi
 
 ## Usage
 
+Explore the website [here](https://informedwanderer.com).
+
+For updates:
+
 - To add a new project, use the template at `./templates/00_post_template_sample.html`.
 - Update the meta data (description, title) for each new project page.
-- The business card QR code is located at `./resources/images/portfolio.png`.
+- The business card QR code is located in `./resources/images/`.
 
-![QR Code](./resources/images/portfolio.png)
+![QR Code](./resources/images/qr_informedwanderer.png)
 
 ## Acknowledgements
 
