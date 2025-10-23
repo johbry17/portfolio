@@ -41,6 +41,8 @@ For updates:
 - Update the meta data (description, title) for each new project page.
 - The business card QR code is located in `./resources/images/`.
 
+![Masthead](./resources/images/masthead.png)
+
 ![QR Code](./resources/images/qr_informedwanderer.png)
 
 ## Acknowledgements
