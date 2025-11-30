@@ -1,24 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
-      name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
     />
     <meta
-      name="description"
       content="TensorFlow CNN teaching AI to recognize traffic signs — exploring deep learning for safer roads and smarter systems."
+      name="description"
     />
-    <meta name="author" content="Bryan C. Johns" />
+    <meta content="Bryan C. Johns" name="author" />
     <title>
       Red Light, Green Light — Teaching AI Traffic Signs | Bryan C. Johns
     </title>
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
     <!-- Font Awesome icons (free version)-->
     <script
-      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
       crossorigin="anonymous"
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
     ></script>
     <!-- Google fonts-->
     <link
@@ -40,13 +41,13 @@
       <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="../index.html">Home</a>
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
           aria-controls="navbarResponsive"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarResponsive"
+          data-bs-toggle="collapse"
+          type="button"
         >
           Menu
           <i class="fas fa-bars"></i>
@@ -118,6 +119,7 @@
             <div class="post-preview">
               <a
                 href="https://johbry17.github.io/Red-Light-Green-Light/templates/executive_summary.html"
+                rel="noopener"
                 target="_blank"
               >
                 <p class="post-subtitle">
@@ -134,6 +136,7 @@
             <div class="post-preview">
               <a
                 href="https://johbry17.github.io/Red-Light-Green-Light/templates/model_analysis.html"
+                rel="noopener"
                 target="_blank"
               >
                 <p class="post-subtitle">
@@ -143,7 +146,7 @@
                       class="fas fa-project-diagram fa-stack-1x fa-inverse"
                     ></i>
                   </span>
-                  Neural Net Development & Evaluation
+                  Neural Net Development &amp; Evaluation
                 </p>
                 <!-- <p></p> -->
               </a>
@@ -152,6 +155,7 @@
             <div class="post-preview">
               <a
                 href="https://github.com/johbry17/Red-Light-Green-Light"
+                rel="noopener"
                 target="_blank"
               >
                 <p class="post-subtitle">
@@ -213,9 +217,9 @@
             <!-- <hr class="my-4" /> -->
             <br /><br />
             <img
+              alt="Convolutional Neural Network and Biological Vision Diagram"
               class="img-fluid mx-auto d-block"
               src="../assets/img/red_light_green_light/conv_neural_net_diagram.png"
-              alt="Convolutional Neural Network and Biological Vision Diagram"
             />
             <span class="caption text-muted"
               >CNN architecture: mimics the human eye by combining simple
@@ -227,9 +231,9 @@
             >
             <br /><br />
             <img
+              alt="Class Distribution Plot"
               class="img-fluid mx-auto d-block"
               src="../assets/img/red_light_green_light/class_distribution.png"
-              alt="Class Distribution Plot"
             />
             <span class="caption text-muted"
               >Class imbalance: Label distribution is highly skewed across
@@ -237,27 +241,27 @@
             >
             <br /><br />
             <img
+              alt="GTSRB Sample Images"
               class="img-fluid mx-auto d-block"
               src="../assets/img/red_light_green_light/GTSRB_representatives.png"
-              alt="GTSRB Sample Images"
             />
             <span class="caption text-muted"
               >Dataset diversity: representative image for each label.</span
             >
             <br /><br />
             <img
+              alt="Training Curves Comparison"
               class="img-fluid mx-auto d-block"
               src="../assets/img/red_light_green_light/training_curves_comparison.png"
-              alt="Training Curves Comparison"
             />
             <span class="caption text-muted"
               >Validation and training curves: best model vs. baseline.</span
             >
             <br /><br />
             <img
+              alt="Confusion Matrix Comparison"
               class="img-fluid mx-auto d-block"
               src="../assets/img/red_light_green_light/confusion_matrix_comparison.png"
-              alt="Confusion Matrix Comparison"
             />
             <span class="caption text-muted"
               >Confusion matrices: best model noticeably reduces off-diagonal
@@ -265,9 +269,9 @@
             >
             <br /><br />
             <img
+              alt="Confidence Histogram Comparison"
               class="img-fluid mx-auto d-block"
               src="../assets/img/red_light_green_light/confidence_histogram_comparison.png"
-              alt="Confidence Histogram Comparison"
             />
             <span class="caption text-muted"
               >Misclassification confidence histogram: overkill model’s errors
@@ -281,17 +285,18 @@
               Dataset provided by the
               <a
                 href="https://benchmark.ini.rub.de/gtsrb_dataset.html"
+                rel="noopener"
                 target="_blank"
                 >German Traffic Sign Recognition Benchmark (GTSRB)</a
               >.
             </p>
-            <p id="footnote-1" class="footnote small">
+            <p class="footnote small" id="footnote-1">
               <a href="#return-footnote-1"><sup>1</sup></a> Inspired by
               <i
                 >Deep learning for wireless capsule endoscopy: a systematic
                 review and meta-analysis</i
-              >, Soffer, Shelly, et al, <i>Gastrointestinal Endoscopy</i>, ©
-              2020 American Society for Gastrointestinal Endoscopy. Image
+              >, Soffer, Shelly, et al, <i>Gastrointestinal Endoscopy</i>,
+              &copy; 2020 American Society for Gastrointestinal Endoscopy. Image
               generated with AI and edited by Bryan Johns. Used for educational
               purposes only. If this use does not qualify as fair use, I am
               happy to remove the image upon request.
@@ -321,7 +326,11 @@
                                 </a>
                             </li> -->
               <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/b-johns/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/b-johns/"
+                  rel="noopener"
+                  target="_blank"
+                >
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
@@ -329,7 +338,11 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://github.com/johbry17" target="_blank">
+                <a
+                  href="https://github.com/johbry17"
+                  rel="noopener"
+                  target="_blank"
+                >
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>

@@ -1,22 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta
-      name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
     />
     <meta
-      name="description"
       content="Get in touch with Bryan C. Johns — data storyteller and analyst translating analysis into impact. Data fluent, human literate."
+      name="description"
     />
-    <meta name="author" content="Bryan C. Johns" />
-    <title>Contact — Bryan C. Johns, Data Storyteller & Analyst</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <meta content="Bryan C. Johns" name="author" />
+    <title>Contact — Bryan C. Johns, Data Storyteller &amp; Analyst</title>
+    <link href="assets/favicon.ico" rel="icon" type="image/x-icon" />
     <!-- Font Awesome icons (free version)-->
     <script
-      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
       crossorigin="anonymous"
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
     ></script>
     <!-- Google fonts-->
     <link
@@ -38,13 +39,13 @@
       <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="index.html">Home</a>
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
           aria-controls="navbarResponsive"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarResponsive"
+          data-bs-toggle="collapse"
+          type="button"
         >
           Menu
           <i class="fas fa-bars"></i>
@@ -107,18 +108,25 @@
             </p>
             <p class="mt-5">
               You can also find me on
-              <a href="https://www.linkedin.com/in/b-johns/" target="_blank"
+              <a
+                href="https://www.linkedin.com/in/b-johns/"
+                rel="noopener"
+                target="_blank"
                 >LinkedIn</a
               >
               and
-              <a href="https://github.com/johbry17" target="_blank">GitHub</a>.
-              Full CV available via the <a href="about.html">About</a> page.
+              <a
+                href="https://github.com/johbry17"
+                rel="noopener"
+                target="_blank"
+                >GitHub</a
+              >. Full CV available via the <a href="about.html">About</a> page.
             </p>
             <div class="my-5">
               <!-- Using Formspree for now -->
               <form
-                id="contactForm"
                 action="https://formspree.io/f/xwpezyqg"
+                id="contactForm"
                 method="POST"
               >
                 <div class="form-floating">
@@ -126,9 +134,9 @@
                     class="form-control"
                     id="name"
                     name="name"
-                    type="text"
                     placeholder="Enter your name..."
-                    required
+                    required=""
+                    type="text"
                   />
                   <label for="name">Name</label>
                   <div class="invalid-feedback">A name is required.</div>
@@ -138,9 +146,9 @@
                     class="form-control"
                     id="email"
                     name="email"
-                    type="email"
                     placeholder="Enter your email..."
-                    required
+                    required=""
+                    type="email"
                   />
                   <label for="email">Email address</label>
                   <div class="invalid-feedback">An email is required.</div>
@@ -156,13 +164,13 @@
                     id="message"
                     name="message"
                     placeholder="Enter your message here..."
+                    required=""
                     style="height: 12rem"
-                    required
                   ></textarea>
                   <label for="message">Message</label>
                   <div class="invalid-feedback">A message is required.</div>
                 </div>
-                <input type="text" name="_gotcha" style="display: none" />
+                <input name="_gotcha" style="display: none" type="text" />
                 <!-- honeypot spam field -->
                 <!-- disabled this checkbox, because I'd have to pay Formspree to cc the user -->
                 <!-- <div class="form-check">
@@ -186,56 +194,6 @@
                 <a class="btn btn-light" href="#">Back to Top</a>
                 <a class="btn btn-light" href="index.html">Home</a>
               </div>
-              <!-- * * * * * * * * * * * * * * *-->
-              <!-- * * SB Forms Contact Form * *-->
-              <!-- * * * * * * * * * * * * * * *-->
-              <!-- This form is pre-integrated with SB Forms.-->
-              <!-- To make this form functional, sign up at-->
-              <!-- https://startbootstrap.com/solution/contact-forms-->
-              <!-- to get an API token!-->
-              <!-- <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                <div class="form-floating">
-                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                    <label for="name">Name</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                                </div>
-                                <div class="form-floating">
-                                    <input class="form-control" id="email" type="email" placeholder="Enter your email..." data-sb-validations="required,email" />
-                                    <label for="email">Email address</label>
-                                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                                </div>
-                                <div class="form-floating">
-                                    <input class="form-control" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />
-                                    <label for="phone">Phone Number</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                                </div>
-                                <div class="form-floating">
-                                    <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
-                                    <label for="message">Message</label>
-                                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                                </div>
-                                <br /> -->
-              <!-- Submit success message-->
-              <!---->
-              <!-- This is what your users will see when the form-->
-              <!-- has successfully submitted-->
-              <!-- <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                        To activate this form, sign up at
-                                        <br />
-                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                    </div>
-                                </div> -->
-              <!-- Submit error message-->
-              <!---->
-              <!-- This is what your users will see when there is-->
-              <!-- an error submitting the form-->
-              <!-- <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div> -->
-              <!-- Submit Button-->
-              <!-- <button class="btn btn-primary text-uppercase disabled" id="submitButton" type="submit">Send</button> -->
-              <!-- </form> -->
             </div>
           </div>
         </div>
@@ -256,7 +214,11 @@
                                 </a>
                             </li> -->
               <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/b-johns/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/b-johns/"
+                  rel="noopener"
+                  target="_blank"
+                >
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
@@ -264,7 +226,11 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://github.com/johbry17" target="_blank">
+                <a
+                  href="https://github.com/johbry17"
+                  rel="noopener"
+                  target="_blank"
+                >
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -287,10 +253,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
   </body>
 </html>
