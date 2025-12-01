@@ -8,12 +8,22 @@
       name="viewport"
     />
     <meta
-      content="Live Leaflet map of global seismic activity — bringing real-time earth science into your browser."
+      content="Dashboard tracking household energy costs and inflation — visualizing the long arc of power and price."
       name="description"
     />
     <meta content="Bryan C. Johns" name="author" />
-    <title>USGS Earthquakes — Real-Time Seismic Mapping | Bryan C. Johns</title>
+    <title>
+      Utilities 313 — Energy &amp; Inflation Dashboard | Bryan C. Johns
+    </title>
     <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="https://informedwanderer.com/workshop/utilities-313/" rel="canonical" />
+    <!-- JSON-LD: canonical Person reference (site-wide @id) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@id": "https://informedwanderer.com/#person"
+      }
+    </script>
     <!-- Font Awesome icons (free version)-->
     <script
       crossorigin="anonymous"
@@ -80,17 +90,15 @@
     <header
       class="masthead"
       style="
-        background-image: url('../assets/img/usgs-earthquakes/eclipse_clipped_4.png');
+        background-image: url('../assets/img/utilities-313/bass_rock_gannets_1.jpg');
       "
     >
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
             <div class="post-heading">
-              <h1>USGS Earthquakes</h1>
-              <h2 class="subheading">
-                Real-Time Earth Science in Your Browser
-              </h2>
+              <h1>Utilities 313</h1>
+              <h2 class="subheading">Inflation and Energy: A Love Story</h2>
               <span class="meta">
                 <!-- Posted by
                                 <a href="#!">Start Bootstrap</a>
@@ -106,11 +114,11 @@
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post Content Summary-->
             <p>
-              <b>Leaflet + D3 map</b> streaming global seismic activity, with
-              heatmaps and tectonic plates layered in. Designed to make
-              geoscience visible and visceral for anyone who’s ever felt the
-              ground move.
+              Interactive dashboard of <b>utility bills</b> over time. Tracks
+              inflation in household energy use, turning everyday costs into a
+              data story you can see and plan around.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -118,24 +126,54 @@
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://johbry17.github.io/USGS-Earthquake-Map/"
+                href="https://johbry17.github.io/utilities-313/index.html"
                 rel="noopener"
                 target="_blank"
               >
                 <p class="post-subtitle">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-wave-square fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
                   </span>
                   Live Website
                 </p>
-                <!-- <p>https://johbry17.github.io/USGS-Earthquake-Map/</p> -->
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <!-- <div class="post-preview">
+                            <a href="#" target="_blank">
+                                <p class="post-subtitle">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-chart-line fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    Tableau Explanatory Data Analysis
+                                </p> -->
+            <!-- <p></p> -->
+            <!-- </a>
+                        </div> -->
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/utilities-313/utilities_313_EDA.html"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-python fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Python Exploratory Data Analysis
+                </p>
+                <!-- <p></p> -->
               </a>
             </div>
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://github.com/johbry17/USGS-Earthquake-Map"
+                href="https://github.com/johbry17/utilities-313"
                 rel="noopener"
                 target="_blank"
               >
@@ -146,39 +184,46 @@
                   </span>
                   GitHub Repository
                 </p>
-                <!-- <p>https://github.com/johbry17/USGS-Earthquake-Map</p> -->
+                <!-- <p></p> -->
               </a>
             </div>
             <!-- Divider-->
             <hr class="my-4" />
             <blockquote class="blockquote mt-5">
               <p>
-                This was my first-ever map, and I still have a soft spot for it.
-                It shows the last 30 days of global earthquakes in real time,
-                layered with tectonic plates and a heatmap. Any time I hear
-                about a quake on the news, I still pull it up. It was a gateway
-                drug to web mapping, feeding an already full-blown cartographic
-                obsession.
+                I built this toy for fun. It tracks my home utilities, a
+                personal data diary capturing everything from electric company
+                headaches to the yearly Harvest Party cleaning discount. It’s
+                playful, but also genuinely useful: clear proof of inflation, a
+                budgeting tool, and an easy way to talk about energy awareness.
+                A reminder that even small datasets can hold big stories.
+                Mostly, though? Just a nifty little toy.
               </p>
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              This project visualizes global earthquake activity from the past
-              30 days using real-time data from the
-              <b>USGS GeoJSON API</b>. Built with <b>JavaScript</b>,
-              <b>Leaflet</b>, and <b>D3</b>, the map integrates multiple data
-              layers: earthquake points, tectonic boundaries, and a heatmap to
-              show seismic hotspots.
+              The Utilities-313 Dashboard is a web-based tool designed to
+              analyze and visualize household utility expenses. Built with
+              <b>JavaScript</b> (<b>D3</b> and <b>Plotly</b>) and styled for
+              mobile responsiveness, it features interactive tables and
+              charts—including stacked bars, time series, and treemaps—that
+              allow users to explore trends, compare spending categories, and
+              understand fluctuations in their utility bills.
             </p>
             <p>
-              Users can explore detailed quake info by clicking on markers and
-              toggling layers. The tool is designed to make seismic trends easy
-              to grasp, helping inform both the public and policy conversations.
+              Behind the dashboard, a <b>Python-based</b> exploratory data
+              analysis (EDA) report, generated in <b>Jupyter Notebook</b> using
+              <b>pandas</b> and <b>Plotly</b>, offers deeper statistical
+              context. The report updates automatically through a streamlined
+              data pipeline utilizing the <b>Google API</b>, ensuring fresh
+              insights with minimal manual effort.
             </p>
             <p>
-              It demonstrates my ability to combine live data, mapping
-              libraries, and layered interactivity to deliver accessible,
-              science-driven visual storytelling.
+              This project demonstrates my ability to manage full-stack data
+              workflows, from ingesting and processing data in Python to
+              building interactive, user-friendly visualizations in JavaScript.
+              It merges practical utility tracking with thoughtful UX, making
+              personal finance data both understandable and engaging.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -186,51 +231,70 @@
             <!-- <hr class="my-4" /> -->
             <br /><br />
             <img
-              alt="USGS Earthquake Markers"
+              alt="Mobile Dashboard"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/usgs-earthquakes/earthquakeMarkers.png"
-              style="border-radius: 10px"
+              src="../assets/img/utilities-313/dashboard.png"
             />
             <span class="caption text-muted"
-              >Earthquake markers: Real-time USGS data from the past 30 days,
-              with markers colored by depth and sized by magnitude.</span
+              >Interactive web dashboard: Toggle between cumulative and
+              per-person amounts, with a time filter slider for detailed expense
+              analysis.</span
             >
             <br /><br />
             <img
-              alt="Tectonic Plates Layer with Heat Map and Earthquake Markers"
+              alt="Exploratory Data Analysis"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/usgs-earthquakes/earthquakeMarkesPlatesHeat.png"
-              style="border-radius: 10px"
+              src="../assets/img/utilities-313/EDA_CleanChoice.png"
             />
             <span class="caption text-muted"
-              >Tectonic plates and heat map: Overlay of earthquake markers and
-              heat map, highlighting seismic hotspots and plate
-              boundaries.</span
+              >Exploratory data analysis: Line chart tracking expenses by
+              category over time.</span
             >
             <br /><br />
             <img
-              alt="Tectonic Plates"
+              alt="Stacked Bar Chart of Monthly Expenses"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/usgs-earthquakes/earthquakeTectonicPlates.png"
-              style="border-radius: 10px"
+              src="../assets/img/utilities-313/stacked_bar.png"
             />
             <span class="caption text-muted"
-              >Tectonic plates on ESRI’s National Geographic base map: An
-              artistic visualization of Earth’s major plate boundaries.</span
+              >Stacked bar chart: Monthly utility bills by type, highlighting a
+              steady rise in electric expenses.</span
+            >
+            <br /><br />
+            <img
+              alt="Line Chart of Monthly Bills, One Line per Year"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/utilities-313/years_plot.png"
+            />
+            <span class="caption text-muted"
+              >Monthly bills by year: Each line represents a year, revealing a
+              clear upward trend in expenses.</span
+            >
+            <br /><br />
+            <img
+              alt="Bar Chart of Monthly Bills, Color-Coded By Year"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/utilities-313/monthly_bills_year_color_coded.png"
+            />
+            <span class="caption text-muted"
+              >Monthly bills: Bar chart color-coded by year, further
+              illustrating increasing costs over time.</span
+            >
+            <br /><br />
+            <img
+              alt="Treemap of Expenses By Utility Type"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/utilities-313/treemap.png"
+            />
+            <span class="caption text-muted"
+              >Treemap: Visual breakdown of expenses by utility type, showing
+              the proportion of each category.</span
             >
             <!-- <br><br> -->
             <!-- Divider-->
             <hr class="my-4" />
             <h2 class="section-heading">References</h2>
-            <p>
-              Dataset created by the
-              <a
-                href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php"
-                rel="noopener"
-                target="_blank"
-                >United States Geological Survey</a
-              >.
-            </p>
+            <p>Dataset provided by Utilities 313.</p>
             <!-- Divider-->
             <hr class="my-4" />
             <div class="d-flex justify-content-between mb-4">

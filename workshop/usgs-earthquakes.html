@@ -8,12 +8,20 @@
       name="viewport"
     />
     <meta
-      content="Machine learning model predicting home prices — random forests and neural nets meet the real estate market."
+      content="Live Leaflet map of global seismic activity — bringing real-time earth science into your browser."
       name="description"
     />
     <meta content="Bryan C. Johns" name="author" />
-    <title>Ames Appraised — ML Home Price Prediction | Bryan C. Johns</title>
+    <title>USGS Earthquakes — Real-Time Seismic Mapping | Bryan C. Johns</title>
     <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="https://informedwanderer.com/workshop/usgs-earthquakes/" rel="canonical" />
+    <!-- JSON-LD: canonical Person reference (site-wide @id) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@id": "https://informedwanderer.com/#person"
+      }
+    </script>
     <!-- Font Awesome icons (free version)-->
     <script
       crossorigin="anonymous"
@@ -80,15 +88,17 @@
     <header
       class="masthead"
       style="
-        background-image: url('../assets/img/real-estate-price-prediction/this_is_not_an_easy_way_down_alt_cropped.jpg');
+        background-image: url('../assets/img/usgs-earthquakes/eclipse_clipped_4.png');
       "
     >
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
             <div class="post-heading">
-              <h1>Ames Appraised: This Old Model</h1>
-              <h2 class="subheading">AI Predicts the Price of Home</h2>
+              <h1>USGS Earthquakes</h1>
+              <h2 class="subheading">
+                Real-Time Earth Science in Your Browser
+              </h2>
               <span class="meta">
                 <!-- Posted by
                                 <a href="#!">Start Bootstrap</a>
@@ -105,11 +115,10 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
             <p>
-              First ML project—predicting house prices with
-              <b>random forests</b> and a <b>neural net</b>. A learning
-              milestone, it became a lesson in feature engineering, model
-              tuning, and how models can (and can’t) capture the story of a
-              home.
+              <b>Leaflet + D3 map</b> streaming global seismic activity, with
+              heatmaps and tectonic plates layered in. Designed to make
+              geoscience visible and visceral for anyone who’s ever felt the
+              ground move.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -117,41 +126,24 @@
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://github.com/johbry17/Real-Estate-Price-Prediction/blob/main/exploratory_data_analysis.ipynb"
+                href="https://johbry17.github.io/USGS-Earthquake-Map/"
                 rel="noopener"
                 target="_blank"
               >
                 <p class="post-subtitle">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-python fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-wave-square fa-stack-1x fa-inverse"></i>
                   </span>
-                  Python Exploratory Data Analysis
+                  Live Website
                 </p>
-                <!-- <p>https://github.com/johbry17/Real-Estate-Price-Prediction/blob/main/exploratory_data_analysis.ipynb</p> -->
+                <!-- <p>https://johbry17.github.io/USGS-Earthquake-Map/</p> -->
               </a>
             </div>
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://github.com/johbry17/Real-Estate-Price-Prediction/blob/main/predictive_models_report.md"
-                rel="noopener"
-                target="_blank"
-              >
-                <p class="post-subtitle">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-book fa-stack-1x fa-inverse"></i>
-                  </span>
-                  Dull, Dry, Technical Write-Up of Results
-                </p>
-                <!-- <p>https://github.com/johbry17/Real-Estate-Price-Prediction/blob/main/predictive_models_report.md</p> -->
-              </a>
-            </div>
-            <!-- <hr class="my-4" /> -->
-            <div class="post-preview">
-              <a
-                href="https://github.com/johbry17/Real-Estate-Price-Prediction"
+                href="https://github.com/johbry17/USGS-Earthquake-Map"
                 rel="noopener"
                 target="_blank"
               >
@@ -162,88 +154,39 @@
                   </span>
                   GitHub Repository
                 </p>
-                <!-- <p>https://github.com/johbry17/Real-Estate-Price-Prediction</p> -->
+                <!-- <p>https://github.com/johbry17/USGS-Earthquake-Map</p> -->
               </a>
             </div>
             <!-- Divider-->
             <hr class="my-4" />
-            <blockquote class="blockquote">
+            <blockquote class="blockquote mt-5">
               <p>
-                This one’s due for renovation. Thrown together during the final
-                survival-mode sprint of an intense bootcamp, it was my first
-                machine learning project, and it shows. While functional, it
-                reflects burnout more than best practices. I’ve since revisited
-                machine learning<a href="./salifort-employee-churn.html">*</a>
-                and plan to toss the neural net, overhauling this with logistic
-                regression and tree-based models, and applying stronger
-                evaluation and design techniques. Time to give it the remodel it
-                deserves (pun absolutely intended).
-              </p>
-              <p>
-                But first: a little interleaved learning and a recharge. Spaced
-                repetition and a scenic detour. I’m taking R for a walk… to
-                Mordor.
+                This was my first-ever map, and I still have a soft spot for it.
+                It shows the last 30 days of global earthquakes in real time,
+                layered with tectonic plates and a heatmap. Any time I hear
+                about a quake on the news, I still pull it up. It was a gateway
+                drug to web mapping, feeding an already full-blown cartographic
+                obsession.
               </p>
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              I began with <b>exploratory data analysis</b> to investigate key
-              factors affecting home values, address missing data, and prepare
-              features for modeling. Then I built two predictive models: a
-              <b>neural network</b> using <b>TensorFlow</b> and <b>Keras</b>,
-              and a <b>random forest</b> to offer a more interpretable baseline.
+              This project visualizes global earthquake activity from the past
+              30 days using real-time data from the
+              <b>USGS GeoJSON API</b>. Built with <b>JavaScript</b>,
+              <b>Leaflet</b>, and <b>D3</b>, the map integrates multiple data
+              layers: earthquake points, tectonic boundaries, and a heatmap to
+              show seismic hotspots.
             </p>
             <p>
-              After <b>hyperparameter tuning</b>, I compared performance using
-              <b>residual plots</b>, <b>scatter plots</b>, and
-              <b>training loss visualizations</b>. Each model offered different
-              strengths in handling complexity, variance, and interpretability.
+              Users can explore detailed quake info by clicking on markers and
+              toggling layers. The tool is designed to make seismic trends easy
+              to grasp, helping inform both the public and policy conversations.
             </p>
             <p>
-              While the neural net was arguably overkill for this dataset, the
-              project was a vital hands-on introduction to machine learning
-              pipelines, model evaluation, and the tradeoffs between black-box
-              and tree-based methods.
-            </p>
-            <blockquote class="blockquote">
-              Translation: This was baby's first machine learning project, and I
-              used a neural net before I knew better.
-            </blockquote>
-            <p>
-              In 2025, I enroll in Google's
-              <del
-                ><a
-                  href="https://www.coursera.org/google-certificates/advanced-data-analytics-certificate"
-                  rel="noopener"
-                  target="_blank"
-                  >Advanced Data Analytics Certification</a
-                ></del
-              >
-              <span style="color: green">(done!)</span>, Harvard's
-              <del
-                ><a
-                  href="https://cs50.harvard.edu/ai/"
-                  rel="noopener"
-                  target="_blank"
-                  >Artificial Intelligence</a
-                >
-                course</del
-              >
-              <span style="color: green">(done!)</span>, and Stanford's
-              Introduction to Statistical Learning with
-              <a
-                href="https://www.edx.org/learn/python/stanford-university-statistical-learning-with-python"
-                rel="noopener"
-                target="_blank"
-                >Python</a
-              >
-              or
-              <a
-                href="https://www.edx.org/learn/statistics/stanford-university-statistical-learning"
-                rel="noopener"
-                target="_blank"
-                >R</a
-              >.
+              It demonstrates my ability to combine live data, mapping
+              libraries, and layered interactivity to deliver accessible,
+              science-driven visual storytelling.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -251,39 +194,50 @@
             <!-- <hr class="my-4" /> -->
             <br /><br />
             <img
-              alt="Correlation Heatmap for Real Estate Features"
+              alt="USGS Earthquake Markers"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/real-estate-price-prediction/real_estate_correlation_heatmap.png"
+              src="../assets/img/usgs-earthquakes/earthquakeMarkers.png"
+              style="border-radius: 10px"
             />
             <span class="caption text-muted"
-              >Correlation heatmap: Sale price is most strongly linked to
-              overall quality, total living area, number of rooms, and year
-              built.</span
+              >Earthquake markers: Real-time USGS data from the past 30 days,
+              with markers colored by depth and sized by magnitude.</span
             >
             <br /><br />
             <img
-              alt="Scatter Plots of Features vs Sales Price"
+              alt="Tectonic Plates Layer with Heat Map and Earthquake Markers"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/real-estate-price-prediction/real_estate_eda_numerical_scatter.png"
+              src="../assets/img/usgs-earthquakes/earthquakeMarkesPlatesHeat.png"
+              style="border-radius: 10px"
             />
             <span class="caption text-muted"
-              >Scatter plots: Exploring how a wide range of features relate to
-              sales price, highlighting the dataset’s rich potential for machine
-              learning.</span
+              >Tectonic plates and heat map: Overlay of earthquake markers and
+              heat map, highlighting seismic hotspots and plate
+              boundaries.</span
+            >
+            <br /><br />
+            <img
+              alt="Tectonic Plates"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/usgs-earthquakes/earthquakeTectonicPlates.png"
+              style="border-radius: 10px"
+            />
+            <span class="caption text-muted"
+              >Tectonic plates on ESRI’s National Geographic base map: An
+              artistic visualization of Earth’s major plate boundaries.</span
             >
             <!-- <br><br> -->
             <!-- Divider-->
             <hr class="my-4" />
             <h2 class="section-heading">References</h2>
             <p>
-              Dataset from the
+              Dataset created by the
               <a
-                href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/"
+                href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php"
                 rel="noopener"
                 target="_blank"
-                >Kaggle House Prices: Advanced Regression Techniques</a
-              >
-              competition.
+                >United States Geological Survey</a
+              >.
             </p>
             <!-- Divider-->
             <hr class="my-4" />

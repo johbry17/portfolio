@@ -8,14 +8,22 @@
       name="viewport"
     />
     <meta
-      content="AI-driven model predicting employee turnover with high recall — helping organizations flag at-risk staff before they walk."
+      content="Interactive dashboard exploring microbial life in the human navel — playful data meets serious science."
       name="description"
     />
     <meta content="Bryan C. Johns" name="author" />
     <title>
-      Classified: At-Risk — AI for Employee Turnover | Bryan C. Johns
+      Belly Button Biodiversity — Microbiome Visualization | Bryan C. Johns
     </title>
     <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="https://informedwanderer.com/workshop/belly-button/" rel="canonical" />
+    <!-- JSON-LD: canonical Person reference (site-wide @id) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@id": "https://informedwanderer.com/#person"
+      }
+    </script>
     <!-- Font Awesome icons (free version)-->
     <script
       crossorigin="anonymous"
@@ -82,17 +90,15 @@
     <header
       class="masthead"
       style="
-        background-image: url('../assets/img/salifort-employee-churn/old_san_juan.jpg');
+        background-image: url('../assets/img/belly-button/table_mountain.jpg');
       "
     >
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
             <div class="post-heading">
-              <h1>Classified: At-Risk</h1>
-              <h2 class="subheading">
-                An AI Predictive Model for Employee Turnover
-              </h2>
+              <h1>Belly Button Biodiversity</h1>
+              <h2 class="subheading">The Intimate Forests of the Umbilicus</h2>
               <span class="meta">
                 <!-- Posted by
                                 <a href="#!">Start Bootstrap</a>
@@ -108,13 +114,10 @@
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
-            <!-- Post Content Summary-->
             <p>
-              Built a <b>Python + scikit-learn pipeline</b> to predict employee
-              attrition, tuned for recall to catch at-risk staff. Designed the
-              outputs as a web report for HR teams, turning raw data into
-              <b>actionable insights</b> they could act on before it was too
-              late.
+              A <b>Plotly dashboard</b> exploring microbial life in the navel.
+              Quirky biology made visual, and a reminder that ecosystems exist
+              as much inside us as outside.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -122,41 +125,24 @@
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://johbry17.github.io/Salifort-Employee-Churn-ml/"
+                href="https://johbry17.github.io/Belly-Button-Dashboard/"
                 rel="noopener"
                 target="_blank"
               >
                 <p class="post-subtitle">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-user-check fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-dna fa-stack-1x fa-inverse"></i>
                   </span>
-                  Executive Summary &amp; Non-Technical Guide (Web)
+                  Live Website
                 </p>
-                <!-- <p></p> -->
+                <!-- <p>https://johbry17.github.io/Belly-Button-Dashboard/</p> -->
               </a>
             </div>
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://johbry17.github.io/Salifort-Employee-Churn-ml/notebooks/eda.html"
-                rel="noopener"
-                target="_blank"
-              >
-                <p class="post-subtitle">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-python fa-stack-1x fa-inverse"></i>
-                  </span>
-                  Python Exploratory Data Analysis
-                </p>
-                <!-- <p></p> -->
-              </a>
-            </div>
-            <!-- <hr class="my-4" /> -->
-            <div class="post-preview">
-              <a
-                href="https://github.com/johbry17/Salifort-Employee-Churn-ml"
+                href="https://github.com/johbry17/Belly-Button-Dashboard"
                 rel="noopener"
                 target="_blank"
               >
@@ -167,66 +153,39 @@
                   </span>
                   GitHub Repository
                 </p>
-                <!-- <p></p> -->
+                <!-- <p>https://github.com/johbry17/Belly-Button-Dashboard</p> -->
               </a>
             </div>
             <!-- Divider-->
             <hr class="my-4" />
             <blockquote class="blockquote mt-5">
-              <p class="mb-0">
-                Think of this project as a user’s guide to the cranky crystal
-                ball of machine learning. It predicts which employees might
-                leave a company. I used it as a hands-on lab to wrestle with
-                fundamentals I’d previously skimmed: tuning models, chasing
-                false positives, exploring pipelines, and making peace with
-                misclassifications. I made every mistake I could, and learned
-                from all of them. The report is mostly tech-heavy, but includes
-                a guided, layperson-friendly section right after the Executive
-                Summary—part intro to machine learning, part personal field
-                journal—for those curious how the magic (i.e., math) happens.
+              <p>
+                This first JavaScript dashboard of mine brought joy to my inner
+                science nerd, combining old and new interests: science
+                communication and data storytelling. Visualizing data from a
+                public outreach project where volunteers swabbed their belly
+                buttons, it lets users explore mini microbe profiles and ponder
+                the invisible ecosystems we all carry around. The project
+                celebrates citizen science and healthy microbes—and might just
+                make you wash your belly button.
               </p>
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              This machine learning project explores employee churn at Salifort
-              Motors, using structured HR data to identify patterns in retention
-              and attrition. Through Python-based
-              <b>exploratory data analysis (EDA)</b> and
-              <b>predictive modeling</b>, I developed a
-              <b>data pipeline</b> that highlights at-risk employees and
-              supports proactive retention strategies.
+              This dashboard explores microbial diversity using the
+              <b>Belly Button Biodiversity</b> dataset, part of an NC State
+              University public science project. The aim was to create an
+              intuitive interface where users can explore different subjects’
+              microbial samples, highlighting the role of microbes in health and
+              everyday life.
             </p>
             <p>
-              The project began with a deep dive into the data using Pandas,
-              Matplotlib, and Seaborn to explore employee satisfaction, tenure,
-              workload, and performance. Key EDA findings, such as the U-shaped
-              relationship between tenure and churn, shaped our
-              <b>feature engineering</b> and modeling priorities.
-            </p>
-            <p>
-              Using a mix of <b>interpretable models</b> (Logistic Regression,
-              Decision Trees) and high-performing
-              <b>black-box models</b> (Random Forest, XGBoost), the final
-              pipeline emphasized recall, ensuring HR teams identify as many
-              potentially departing employees as possible. XGBoost emerged as
-              the most <b>accurate model</b>, particularly in predicting the
-              “gray zone” employees, those with middling satisfaction and
-              tenure.
-            </p>
-            <p>
-              To demystify the model’s logic, I incorporated
-              <b>SHAP values</b> for <b>model explainability</b>, offering HR a
-              clear view into which features most influenced predictions.
-              Burnout signals like high hours, high evaluation scores, and heavy
-              workloads surfaced as key churn predictors.
-            </p>
-            <p>
-              This project demonstrates my ability to combine
-              <b>domain knowledge</b>, <b>EDA</b>, <b>feature engineering</b>,
-              <b>machine learning</b>, and <b>interpretability tools</b> to
-              generate <b>business-ready insights</b>. The outcome is a powerful
-              model backed by actionable analysis, designed to help Salifort
-              keep their people and stay ahead of turnover.
+              Built with <b>Plotly</b>, <b>D3</b>, and <b>Bootstrap</b>, the app
+              includes interactive <b>bar charts</b> (top OTUs per subject),
+              <b>bubble charts</b> (species distribution), and a
+              <b>gauge chart</b> tracking belly button hygiene. It’s a playful
+              but powerful example of making biological data visual,
+              interactive, and publicly engaging.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -234,85 +193,38 @@
             <!-- <hr class="my-4" /> -->
             <br /><br />
             <img
-              alt="Temp background"
+              alt="Belly Button Dashboard Plots"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/salifort-employee-churn/xgboost_shap.png"
+              src="../assets/img/belly-button/bellyButton2.png"
             />
             <span class="caption text-muted"
-              >SHAP summary plot: Visualizing how each feature influences
-              XGBoost’s attrition predictions for individual employees.</span
+              >Belly Button dashboard: Visualizing the surprising biodiversity
+              of beneficial microbes found in our daily lives.</span
             >
             <br /><br />
             <img
-              alt="Temp background"
+              alt="Alternate Belly Button Dashboard Plots"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/salifort-employee-churn/satisfaction_vs_average_monthly_hours.png"
+              src="../assets/img/belly-button/bellyButtonDefault.png"
             />
             <span class="caption text-muted"
-              >Satisfaction vs. Average Monthly Hours: Two main clusters
-              emerge—overworked, dissatisfied leavers and underutilized,
-              disengaged employees.</span
-            >
-            <br /><br />
-            <img
-              alt="Temp background"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/salifort-employee-churn/decision_tree.png"
-            />
-            <span class="caption text-muted"
-              >Decision Tree: A step-by-step breakdown of how key features like
-              satisfaction, tenure, and workload drive attrition
-              predictions.</span
-            >
-            <br /><br />
-            <img
-              alt="Temp background"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/salifort-employee-churn/confusion_matrix_results.png"
-            />
-            <span class="caption text-muted"
-              >Confusion Matrices: Comparing model performance in correctly
-              identifying employees who stayed or left.</span
-            >
-            <br /><br />
-            <img
-              alt="Temp background"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/salifort-employee-churn/predicted_probability_misclassified.png"
-            />
-            <span class="caption text-muted"
-              >Predicted Probabilities: Distribution of model confidence for
-              cases it misclassified, highlighting areas of uncertainty.</span
-            >
-            <br /><br />
-            <img
-              alt="Temp background"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/salifort-employee-churn/feature_importances.png"
-            />
-            <span class="caption text-muted"
-              >Feature Importances: Ranking the most influential factors driving
-              employee attrition in the final model.</span
+              >Alternate dashboard view: Demographic details, bar and bubble
+              charts of microbial populations, and a gauge tracking washing
+              frequency.</span
             >
             <!-- <br><br> -->
             <!-- Divider-->
             <hr class="my-4" />
             <h2 class="section-heading">References</h2>
             <p>
-              Original dataset available on
+              Dataset from the
               <a
-                href="https://www.kaggle.com/datasets/mfaisalqureshi/hr-analytics-and-job-prediction"
+                href="https://robdunnlab.com/projects/belly-button-biodiversity/"
                 rel="noopener"
                 target="_blank"
-                >Kaggle</a
-              >. The data has been repurposed and adapted for this project as
-              part of the
-              <a
-                href="https://www.coursera.org/professional-certificates/google-advanced-data-analytics"
-                rel="noopener"
-                target="_blank"
-                >Google Advanced Data Analytics Capstone</a
-              >.
+                >Belly Button Biodiversity</a
+              >
+              Project.
             </p>
             <!-- Divider-->
             <hr class="my-4" />

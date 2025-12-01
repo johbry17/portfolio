@@ -8,14 +8,22 @@
       name="viewport"
     />
     <meta
-      content="Dashboard tracking household energy costs and inflation — visualizing the long arc of power and price."
+      content="R-based analysis of 5.8M Chicago bike trips uncovering patterns in rider behavior to guide marketing and strategy."
       name="description"
     />
     <meta content="Bryan C. Johns" name="author" />
     <title>
-      Utilities 313 — Energy &amp; Inflation Dashboard | Bryan C. Johns
+      Cyclistic Analytics — 5.8M Rides, Rider Insights | Bryan C. Johns
     </title>
     <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="https://informedwanderer.com/workshop/cyclistic/" rel="canonical" />
+    <!-- JSON-LD: canonical Person reference (site-wide @id) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@id": "https://informedwanderer.com/#person"
+      }
+    </script>
     <!-- Font Awesome icons (free version)-->
     <script
       crossorigin="anonymous"
@@ -81,16 +89,16 @@
     <!-- Page Header-->
     <header
       class="masthead"
-      style="
-        background-image: url('../assets/img/utilities-313/bass_rock_gannets_1.jpg');
-      "
+      style="background-image: url('../assets/img/cyclistic/catherineberg.jpg')"
     >
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
             <div class="post-heading">
-              <h1>Utilities 313</h1>
-              <h2 class="subheading">Inflation and Energy: A Love Story</h2>
+              <h1>Cyclistic Analytics</h1>
+              <h2 class="subheading">
+                Exploring 5.8M Chicago Bike Share Trips to Unlock Rider Behavior
+              </h2>
               <span class="meta">
                 <!-- Posted by
                                 <a href="#!">Start Bootstrap</a>
@@ -108,9 +116,10 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- Post Content Summary-->
             <p>
-              Interactive dashboard of <b>utility bills</b> over time. Tracks
-              inflation in household energy use, turning everyday costs into a
-              data story you can see and plan around.
+              Analyzed millions of bike-share trips with <b>R</b>, separating
+              <b>commuters from casual riders</b>. Delivered insights that
+              shaped strategies on pricing and retention, showing how the city
+              moves when the data rides along.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -118,46 +127,16 @@
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://johbry17.github.io/utilities-313/index.html"
+                href="https://johbry17.github.io/Cyclistic-Analytics/summary_2024.html"
                 rel="noopener"
                 target="_blank"
               >
                 <p class="post-subtitle">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-bicycle fa-stack-1x fa-inverse"></i>
                   </span>
-                  Live Website
-                </p>
-                <!-- <p></p> -->
-              </a>
-            </div>
-            <!-- <hr class="my-4" /> -->
-            <!-- <div class="post-preview">
-                            <a href="#" target="_blank">
-                                <p class="post-subtitle">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fas fa-chart-line fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    Tableau Explanatory Data Analysis
-                                </p> -->
-            <!-- <p></p> -->
-            <!-- </a>
-                        </div> -->
-            <!-- <hr class="my-4" /> -->
-            <div class="post-preview">
-              <a
-                href="https://johbry17.github.io/utilities-313/utilities_313_EDA.html"
-                rel="noopener"
-                target="_blank"
-              >
-                <p class="post-subtitle">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-python fa-stack-1x fa-inverse"></i>
-                  </span>
-                  Python Exploratory Data Analysis
+                  Strategy Report, 2024
                 </p>
                 <!-- <p></p> -->
               </a>
@@ -165,7 +144,58 @@
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://github.com/johbry17/utilities-313"
+                href="https://johbry17.github.io/Cyclistic-Analytics/scratch_pad_2024.html"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-r-project fa-stack-1x fa-inverse"></i>
+                  </span>
+                  R Exploratory Data Analysis, 2024
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/Cyclistic-Analytics/summary_2019.html"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-bicycle fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Strategy Report, 2019
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/Cyclistic-Analytics/scratch_pad_2019.html"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-r-project fa-stack-1x fa-inverse"></i>
+                  </span>
+                  R Exploratory Data Analysis, 2019
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://github.com/johbry17/Cyclistic-Analytics"
                 rel="noopener"
                 target="_blank"
               >
@@ -183,39 +213,45 @@
             <hr class="my-4" />
             <blockquote class="blockquote mt-5">
               <p>
-                I built this toy for fun. It tracks my home utilities, a
-                personal data diary capturing everything from electric company
-                headaches to the yearly Harvest Party cleaning discount. It’s
-                playful, but also genuinely useful: clear proof of inflation, a
-                budgeting tool, and an easy way to talk about energy awareness.
-                A reminder that even small datasets can hold big stories.
-                Mostly, though? Just a nifty little toy.
+                I built this project to refresh my R skills and ended up diving
+                much deeper than planned. I’m a fan of biking, was born outside
+                Chicago, and have long been curious about how bikeshare systems
+                work. I didn’t need to analyze both 2019 and 2024, but once I
+                got going, I couldn’t help myself. This is where I (finally)
+                stumbled upon the obvious trick of turning my analysis notebooks
+                into easy-to-read web pages—a game changer for presenting data
+                work cleanly. I’m proud of the insights and polish on this one.
               </p>
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              The Utilities-313 Dashboard is a web-based tool designed to
-              analyze and visualize household utility expenses. Built with
-              <b>JavaScript</b> (<b>D3</b> and <b>Plotly</b>) and styled for
-              mobile responsiveness, it features interactive tables and
-              charts—including stacked bars, time series, and treemaps—that
-              allow users to explore trends, compare spending categories, and
-              understand fluctuations in their utility bills.
+              This project explores trip data from <b>Cyclistic</b>, a fictional
+              bike-share company, to distinguish usage patterns between
+              <b>casual riders</b> and <b>annual members</b>. The goal was to
+              uncover trends that could inform a marketing strategy aimed at
+              converting casual riders into long-term members.
             </p>
             <p>
-              Behind the dashboard, a <b>Python-based</b> exploratory data
-              analysis (EDA) report, generated in <b>Jupyter Notebook</b> using
-              <b>pandas</b> and <b>Plotly</b>, offers deeper statistical
-              context. The report updates automatically through a streamlined
-              data pipeline utilizing the <b>Google API</b>, ensuring fresh
-              insights with minimal manual effort.
+              Using <b>R</b> for data cleaning and analysis, I processed ride
+              data for 2024 and 2019, identifying key differences in ride
+              duration, trip frequency, and preferred stations. Visualizations
+              highlighted actionable insights such as peak usage hours, seasonal
+              trends, and geographic hotspots for casual riders.
             </p>
             <p>
-              This project demonstrates my ability to manage full-stack data
-              workflows, from ingesting and processing data in Python to
-              building interactive, user-friendly visualizations in JavaScript.
-              It merges practical utility tracking with thoughtful UX, making
-              personal finance data both understandable and engaging.
+              Key findings, presented in an <b>R Markdown</b> report knitted
+              into HTML, highlight significant variations in trip length,
+              popular routes, and time-of-day preferences between user groups.
+              These insights support targeted marketing efforts, such as
+              promotional campaigns at high-traffic casual rider locations and
+              pricing adjustments for specific time slots.
+            </p>
+            <p>
+              This project demonstrates my ability to perform
+              <b>data wrangling</b>, <b>statistical analysis</b>, and
+              <b>visual storytelling</b>, translating raw data into strategic
+              business recommendations for Cyclistic’s membership growth
+              initiatives.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -223,70 +259,98 @@
             <!-- <hr class="my-4" /> -->
             <br /><br />
             <img
-              alt="Mobile Dashboard"
+              alt="Rides per Hour, by Member Type"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/utilities-313/dashboard.png"
+              src="../assets/img/cyclistic/rides_hour_2024.png"
             />
             <span class="caption text-muted"
-              >Interactive web dashboard: Toggle between cumulative and
-              per-person amounts, with a time filter slider for detailed expense
-              analysis.</span
+              >Rides per Hour (2024): Members show two peaks during commuting
+              hours, while casual riders peak in the late afternoon.</span
             >
             <br /><br />
             <img
-              alt="Exploratory Data Analysis"
+              alt="Rides per Hour and Day of Week, by Member Type"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/utilities-313/EDA_CleanChoice.png"
+              src="../assets/img/cyclistic/rides_per_hour_and_day_of_week_2024.png"
             />
             <span class="caption text-muted"
-              >Exploratory data analysis: Line chart tracking expenses by
-              category over time.</span
+              >Rides by Hour &amp; Day (2024): Members commute on weekdays;
+              casual riders increase on weekends, reflecting leisure
+              patterns.</span
             >
             <br /><br />
             <img
-              alt="Stacked Bar Chart of Monthly Expenses"
+              alt="2019 comparison map"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/utilities-313/stacked_bar.png"
+              src="../assets/img/cyclistic/2019_comparison_map.png"
             />
             <span class="caption text-muted"
-              >Stacked bar chart: Monthly utility bills by type, highlighting a
-              steady rise in electric expenses.</span
+              >2019 Comparison Map: Casual rider hotspots align with Chicago’s
+              major tourist destinations and attractions.</span
             >
             <br /><br />
             <img
-              alt="Line Chart of Monthly Bills, One Line per Year"
+              alt="2024 casual stations map"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/utilities-313/years_plot.png"
+              src="../assets/img/cyclistic/leaflet_casual_2024.png"
             />
             <span class="caption text-muted"
-              >Monthly bills by year: Each line represents a year, revealing a
-              clear upward trend in expenses.</span
+              >Casual Rider Stations (2024): High activity in neighborhoods near
+              the lakefront, parks, and cultural sites—Millennium Park, Museum
+              Campus, and Navy Pier.</span
             >
             <br /><br />
             <img
-              alt="Bar Chart of Monthly Bills, Color-Coded By Year"
+              alt="2024 member stations map"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/utilities-313/monthly_bills_year_color_coded.png"
+              src="../assets/img/cyclistic/leaflet_member_2024.png"
             />
             <span class="caption text-muted"
-              >Monthly bills: Bar chart color-coded by year, further
-              illustrating increasing costs over time.</span
+              >Member Stations (2024): Concentrated on The Loop and River North,
+              near transit hubs and dense commercial districts.</span
             >
             <br /><br />
             <img
-              alt="Treemap of Expenses By Utility Type"
+              alt="2024 Rides per Month by Bike and Member Type"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/utilities-313/treemap.png"
+              src="../assets/img/cyclistic/bike_type_month_2024.png"
             />
             <span class="caption text-muted"
-              >Treemap: Visual breakdown of expenses by utility type, showing
-              the proportion of each category.</span
+              >Rides by Bike Type &amp; Month (2024): Electric bike usage is
+              rising. Overall ridership shows clear seasonal trends: higher in
+              summer, lower in winter.</span
+            >
+            <br /><br />
+            <img
+              alt="Cyclistic Logo"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/cyclistic/Logo_AI.jpeg"
+            />
+            <span class="caption text-muted"
+              >AI-generated Cyclistic Logo: Branding for the project’s visual
+              identity.</span
             >
             <!-- <br><br> -->
             <!-- Divider-->
             <hr class="my-4" />
             <h2 class="section-heading">References</h2>
-            <p>Dataset provided by Utilities 313.</p>
+            <p>
+              <a
+                href="https://divvy-tripdata.s3.amazonaws.com/index.html"
+                rel="noopener"
+                target="_blank"
+                >Dataset</a
+              >
+              provided by Google, from Lyft and Divvy's Chicago operations. The
+              data has been made available by Motivate International Inc. under
+              this
+              <a
+                href="https://divvybikes.com/data-license-agreement"
+                rel="noopener"
+                target="_blank"
+                >license</a
+              >.
+            </p>
             <!-- Divider-->
             <hr class="my-4" />
             <div class="d-flex justify-content-between mb-4">

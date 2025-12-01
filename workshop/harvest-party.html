@@ -8,12 +8,22 @@
       name="viewport"
     />
     <meta
-      content="Data dashboard visualizing Washington, D.C.’s Airbnb market — exposing host activity, licensing gaps, and market dynamics."
+      content="A data story celebrating giving and community — the numbers behind a night of generosity."
       name="description"
     />
     <meta content="Bryan C. Johns" name="author" />
-    <title>Capital Crashpad — D.C. Airbnb Visualized | Bryan C. Johns</title>
+    <title>
+      Harvest Party — Data Story of Community &amp; Charity | Bryan C. Johns
+    </title>
     <link href="../assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="https://informedwanderer.com/workshop/harvest-party/" rel="canonical" />
+    <!-- JSON-LD: canonical Person reference (site-wide @id) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@id": "https://informedwanderer.com/#person"
+      }
+    </script>
     <!-- Font Awesome icons (free version)-->
     <script
       crossorigin="anonymous"
@@ -80,17 +90,16 @@
     <header
       class="masthead"
       style="
-        background-image: url('../assets/img/dc-airbnb/loblolly_anegada.jpg');
+        background-image: url('../assets/img/harvest-party/cape_town_sunset.jpg');
       "
     >
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
             <div class="post-heading">
-              <h1>Capital Crashpad</h1>
-              <!-- <h1>Capital CrashPad</h1> -->
+              <h1>Harvest Party</h1>
               <h2 class="subheading">
-                Visualizing the Airbnb Market in Washington, DC
+                A Data Story of Community, Celebration, and Charity
               </h2>
               <span class="meta">
                 <!-- Posted by
@@ -108,10 +117,9 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
             <p>
-              Mapped D.C.’s Airbnb market with
-              <b>SQL</b>, <b>JavaScript</b>, and <b>Tableau</b>. Revealed
-              unlicensed rentals, commercial hosts, and clever workarounds to
-              the city’s short-term rental laws.
+              Blended <b>Python, Tableau, and photos</b> to track donations,
+              attendance, and impact. A data story about
+              <b>giving, gathering, and transparency</b>.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -119,24 +127,24 @@
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://johbry17.github.io/DC-AirBnB-Data/"
+                href="https://www.harvestpartydc.com/"
                 rel="noopener"
                 target="_blank"
               >
                 <p class="post-subtitle">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-bed fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-carrot fa-stack-1x fa-inverse"></i>
                   </span>
                   Live Website
                 </p>
-                <!-- <p>https://johbry17.github.io/DC-AirBnB-Data/</p> -->
+                <!-- <p>https://www.harvestpartydc.com/</p> -->
               </a>
             </div>
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://public.tableau.com/views/DC-Airbnb/DCAirbnbMobile?:language=en-US&amp;publish=yes&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link"
+                href="https://public.tableau.com/views/HarvestPartyMobile/HarvestPartyMobile?:language=en-US&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link"
                 rel="noopener"
                 target="_blank"
               >
@@ -147,13 +155,15 @@
                   </span>
                   Tableau Explanatory Data Analysis
                 </p>
-                <!-- <p>https://public.tableau.com/app/profile/bryan.johns6699/viz/DC-Airbnb/DCAirbnbMobile</p> -->
+                <!-- <p>https://public.tableau.com/app/profile/bryan.johns6699/viz/HarvestParty/HarvestPartyStory</p> -->
+                <!-- or -->
+                <!-- <p>https://public.tableau.com/app/profile/bryan.johns6699/viz/HarvestPartyMobile/HarvestPartyMobile</p> -->
               </a>
             </div>
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://github.com/johbry17/DC-AirBnB-Data/blob/main/exploratory_data_analysis/eda.ipynb"
+                href="https://colab.research.google.com/drive/123nofMYi7z7l8IldtLYO9ns2wDWzKHCE?usp=sharing"
                 rel="noopener"
                 target="_blank"
               >
@@ -164,13 +174,13 @@
                   </span>
                   Python Exploratory Data Analysis
                 </p>
-                <!-- <p>http://github.com/johbry17/DC-AirBnB-Data/blob/main/exploratory_data_analysis/eda.ipynb</p> -->
+                <!-- <p>https://colab.research.google.com/drive/123nofMYi7z7l8IldtLYO9ns2wDWzKHCE?usp=sharing</p> -->
               </a>
             </div>
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://github.com/johbry17/DC-AirBnB-Data"
+                href="https://github.com/johbry17/Harvest-Party"
                 rel="noopener"
                 target="_blank"
               >
@@ -181,68 +191,76 @@
                   </span>
                   GitHub Repository
                 </p>
-                <!-- <p>https://github.com/johbry17/DC-AirBnB-Data</p> -->
+                <!-- <p>https://github.com/johbry17/Harvest-Party</p> -->
               </a>
             </div>
             <!-- Divider-->
             <hr class="my-4" />
             <blockquote class="blockquote mt-5">
-              <p class="mb-0">
-                This project is, quite literally, close to home for me. I live
-                in D.C., and it was built out of both personal interest and
-                professional curiosity. It started as a bootcamp group project
-                and quickly became a proving ground of firsts: first database
-                built, first full-stack app, first time tying together maps and
-                data stories. Patterns emerge if you dig—unlicensed listings,
-                commercial hosts, and clever workarounds to short-term rental
-                laws. I designed it as a tool anyone in the city could explore,
-                whether you're curious about your block or the big picture.
+              <p>
+                This project is a love letter to friends across the years. It
+                also served practical goals, helping the planning committee
+                visualize costs, justify donation requests, and prepare for the
+                2024 event. The results were mixed: we cut expenses, but
+                donations still fell short of covering costs or contributing to
+                the Capital Area Food Bank. Full of personal touches—photo
+                reels, vintage logos, COVID gags—it remains one of the most
+                heartfelt community projects I’ve ever been part of.
               </p>
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              This full-stack project analyzes the Airbnb market in Washington,
-              D.C., combining backend and frontend technologies to deliver a
-              robust data analysis platform. Listing data is stored in a
-              <b>PostgreSQL</b> database, with a <b>Python</b>-based backend
-              built first in <b>Flask</b> for its flexibility and later
-              reimplemented in <b>Django</b> to explore a more structured,
-              full-featured web framework. This progression allowed for deeper
-              control over <b>routing</b>, <b>authentication</b>, and
-              <b>admin tooling</b>.
+              The <b>Harvest Party</b> is an annual fundraiser supporting the
+              <b>Capital Area Food Bank</b>, blending community, live music, and
+              local food. I used this event as an opportunity to combine
+              personal connection with professional skills, turning historical
+              financial data into meaningful, interactive insights for both
+              donors and planners.
             </p>
             <p>
-              On the front end, <b>JavaScript</b> drives interactive components,
-              including a <b>Leaflet</b> map that visualizes listing density by
-              neighborhood, while <b>Tableau</b> provides advanced data
-              visualization, enabling users to explore key trends in the D.C.
-              Airbnb market. Metrics such as average nightly rates, listing
-              density by neighborhood, and occupancy rates are presented through
-              a user-friendly interface and dynamic dashboards.
+              The process began with
+              <b>Python-based exploratory data analysis (EDA)</b>, where I
+              cleaned and organized multi-year financial data using
+              <b>pandas</b>, <b>matplotlib</b>, <b>seaborn</b>, and
+              <b>Plotly</b>. This foundational step uncovered trends in
+              expenditures, donations, and attendance, setting the stage for
+              downstream analysis.
             </p>
             <p>
-              By combining backend engineering with intuitive visuals, this
-              project empowers users to compare neighborhoods, track changes
-              over time, and uncover meaningful patterns. It also serves as a
-              demonstration of my ability to manage the full
-              <b>data lifecycle</b>—from <b>data ingestion</b> and
-              <b>API design</b> to <b>frontend interaction</b> and
-              <b>visual storytelling</b>—across multiple frameworks and
-              technologies.
+              I then built a <b>mobile-responsive website</b> using
+              <b>JavaScript</b>, styled with <b>Sass</b> and <b>Bootstrap</b> to
+              host dynamic <b>Plotly.js</b> charts. Designed for transparency,
+              the site helps donors and organizers visualize where funds go and
+              how the event performs year to year. Custom touches, like animated
+              masks to reflect the 2020 pandemic, help keep the experience
+              engaging and on-brand.
+            </p>
+            <p>
+              Finally, I developed a set of interactive
+              <b>Tableau dashboards</b> that deliver explanatory analysis. These
+              dashboards highlight key metrics such as donation trends, spending
+              breakdowns, and cost per attendee, helping stakeholders quickly
+              understand the event’s financial health and identify opportunities
+              to improve impact and efficiency.
+            </p>
+            <p>
+              By combining technical tools and visual storytelling, this project
+              highlights my ability to not only analyze data but also present it
+              in ways that engage both technical and non-technical audiences.
             </p>
             <!-- begin tableau css div to center on mobile, at very end of styles.css -->
             <div id="tableau-viz">
               <!-- begin tableau mobile embed code -->
               <div
                 class="tableauPlaceholder"
-                id="viz1727416352687"
+                id="viz1726633006452"
                 style="position: relative"
               >
                 <noscript>
                   <a href="#">
                     <img
-                      alt="DC Airbnb Mobile "
-                      src="https://public.tableau.com/static/images/DC/DC-Airbnb/DCAirbnbMobile/1_rss.png"
+                      alt="Harvest Party Mobile"
+                      src="https://public.tableau.com/static/images/Ha/HarvestPartyMobile/HarvestPartyMobile/1_rss.png"
                       style="border: none"
                     />
                   </a>
@@ -254,12 +272,15 @@
                   />
                   <param name="embed_code_version" value="3" />
                   <param name="site_root" value="" />
-                  <param name="name" value="DC-Airbnb/DCAirbnbMobile" />
+                  <param
+                    name="name"
+                    value="HarvestPartyMobile/HarvestPartyMobile"
+                  />
                   <param name="tabs" value="no" />
                   <param name="toolbar" value="yes" />
                   <param
                     name="static_image"
-                    value="https://public.tableau.com/static/images/DC/DC-Airbnb/DCAirbnbMobile/1.png"
+                    value="https://public.tableau.com/static/images/Ha/HarvestPartyMobile/HarvestPartyMobile/1.png"
                   />
                   <param name="animate_transition" value="yes" />
                   <param name="display_static_image" value="yes" />
@@ -267,11 +288,10 @@
                   <param name="display_overlay" value="yes" />
                   <param name="display_count" value="yes" />
                   <param name="language" value="en-US" />
-                  <param name="filter" value="publish=yes" />
                 </object>
               </div>
               <script type="text/javascript">
-                var divElement = document.getElementById("viz1727416352687");
+                var divElement = document.getElementById("viz1726633006452");
                 var vizElement = divElement.getElementsByTagName("object")[0];
                 vizElement.style.width = "420px";
                 vizElement.style.height = "677px";
@@ -284,114 +304,159 @@
             </div>
             <!-- end tableau css div -->
             <span class="caption text-muted"
-              >Tableau Mobile Dashboard<br />Use two fingers to move maps</span
-            >
+              >Tableau Mobile Dashboard<br />Alternate, exhaustively
+              comprehensive
+              <a
+                href="https://public.tableau.com/views/HarvestParty/HarvestPartyStory?:language=en-US&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link"
+                rel="noopener"
+                style="color: #007bff"
+                target="_blank"
+                >desktop version here</a
+              >
+            </span>
             <!-- Divider-->
             <hr class="my-4" />
             <h2 class="section-heading">Gallery</h2>
             <!-- <hr class="my-4" /> -->
             <br /><br />
             <img
-              alt="Tableau Plot of Rental Type Stats"
+              alt="Harvest Party Web Pie Chart of Categorized Expenses Overlaid on Pumpkin Pie"
               class="img-fluid mx-auto d-block"
-              src="../assets/img/dc-airbnb/dc_airbnb_tableau_rental_type.png"
-            />
-            <span class="caption text-muted"
-              >Rental Property Type: Bubble chart from Tableau showing that
-              entire home/apartment rentals make up over 75% of all
-              listings.</span
-            >
-            <br /><br />
-            <img
-              alt="Bubble Map, Count of Washington, DC AirBnB's by Neighborhood"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/dc-airbnb/bubble.png"
-            />
-            <span class="caption text-muted"
-              >Neighborhood Bubble Map: Visualizing the count of AirBnB listings
-              by neighborhood, with the highest concentration near downtown
-              DC.</span
-            >
-            <br /><br />
-            <img
-              alt="Map of AirBnB's in a Washington, DC neighborhood"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/dc-airbnb/dc_airbnb_neighborhood.png"
-            />
-            <span class="caption text-muted"
-              >Licensing Status Map: Neighborhood-level map colored by license
-              status, highlighting a significant number of unlicensed
-              rentals.</span
-            >
-            <br /><br />
-            <img
-              alt="Web dashboard plots, with price comparison and minimum nights bar chart"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/dc-airbnb/dc_airbnb_plots.png"
-            />
-            <span class="caption text-muted"
-              >Web dashboard plots: Visualizing how each neighborhood’s mean and
-              median prices stack up against the city overall, and how minimum
-              nights drop sharply—spiking just after DC’s legal threshold for
-              short-term rentals.</span
-            >
-            <br /><br />
-            <img
-              alt="DC AirBnB Price and Availability Plot, Upcoming Year"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/dc-airbnb/dc_airbnb_price_availability_plot.png"
-            />
-            <span class="caption text-muted"
-              >Price &amp; Availability Trends (July, 2024): Plot showing stable
-              prices and increasing availability, with noticeable dips up to a
-              year out for major events like the inauguration and
-              graduations.</span
-            >
-            <br /><br />
-            <img
-              alt="Choropleth Map of Average Price per Neighborhood"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/dc-airbnb/choropleth.png"
-            />
-            <span class="caption text-muted"
-              >Price Choropleth: Average nightly price by neighborhood, with
-              downtown areas commanding the highest rates.</span
-            >
-            <br /><br />
-            <img
-              alt="DC AirBnB Average Price per Neighborhood Plot"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/dc-airbnb/dc_airbnb_avg_price.png"
-            />
-            <span class="caption text-muted"
-              >Average Price by Neighborhood: Python EDA plot comparing average
-              prices across neighborhoods—contrast with the polished web version
-              above.</span
-            >
-            <br /><br />
-            <img
-              alt="PostgreSQL Entity Relationship Diagram"
-              class="img-fluid mx-auto d-block"
-              src="../assets/img/dc-airbnb/dc_airbnb_erd.png"
+              src="../assets/img/harvest-party/pumpkin_pie_plot.png"
               style="border-radius: 10px"
             />
             <span class="caption text-muted"
-              >Entity Relationship Diagram: PostgreSQL ERD illustrating the data
-              engineering and structure behind the project.</span
+              >Web pie chart: Categorized expenses overlaid on a pumpkin
+              pie—festive and thematic, serving up a visual slice of party
+              spending.</span
+            >
+            <br /><br />
+            <img
+              alt="Harvest Party Web Bar Chart Expense by Category"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_expenditure_by_category.png"
+              style="border-radius: 10px"
+            />
+            <span class="caption text-muted"
+              >Web bar chart: Cumulative expenses by category, showing that Bar
+              and Music account for the largest shares.</span
+            >
+            <br /><br />
+            <img
+              alt="Harvest Party Web Bar Chart Itemized Expenses 2019"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_itemized_2019.png"
+              style="border-radius: 10px"
+            />
+            <span class="caption text-muted"
+              >Web bar chart: Itemized expenses for 2019, a typical year,
+              providing a detailed breakdown of spending.</span
+            >
+            <br /><br />
+            <img
+              alt="Harvest Party Web Sunburst Plot"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_Sunburst.png"
+              style="border-radius: 10px"
+            />
+            <span class="caption text-muted"
+              >Web Sunburst Plot: Colorful. Visually striking. Unwieldy and
+              consequently uninformative, but pretty. Made because I'll never
+              get the chance to make one ever again.</span
+            >
+            <br /><br />
+            <img
+              alt="Tableau Dashboard of Net Annual Gain or Loss"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_tableau.png"
+            />
+            <span class="caption text-muted"
+              >Tableau dashboard: Visualizing expenses, donations, and net
+              annual gain or loss. Early years show net losses—especially in
+              2021, post-COVID—followed by a return to positive net
+              donations.</span
+            >
+            <br /><br />
+            <img
+              alt="Tableau Dashboard of Attendees and Cost per Person"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_tableau_alt_2.png"
+            />
+            <span class="caption text-muted"
+              >Tableau dashboard: Facebook RSVPs and cost per person. Facebook’s
+              declining relevance contributes to the apparent drop in attendance
+              post-COVID. This metric is failing, yet it still doesn’t explain
+              the tripling of expenses per attendee.</span
+            >
+            <br /><br />
+            <img
+              alt="Tableau Dashboard of Annual Expenses"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_tableau_alt.png"
+            />
+            <span class="caption text-muted"
+              >Tableau dashboard: Annual expenses by year, with bar charts
+              highlighting steadily rising costs.</span
+            >
+            <br /><br />
+            <img
+              alt="Google Colab Exploratory Data Analysis Box and Whisker Plot"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_eda.png"
+            />
+            <span class="caption text-muted"
+              >Google Colab EDA: Box and whisker plot showing the distribution
+              of expenses by category, with Bar and Music consistently the
+              highest.</span
+            >
+            <br /><br />
+            <img
+              alt="Band playing"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_band.png"
+              style="border-radius: 10px"
+            />
+            <br /><br />
+            <img
+              alt="Kids and Pumpkins at the Party Bar"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_intro.png"
+              style="border-radius: 10px"
+            />
+            <br /><br />
+            <img
+              alt="Cute Dog"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_dog.png"
+              style="border-radius: 10px"
+            />
+            <br /><br />
+            <img
+              alt="Party Logo for 2022, with a Dog"
+              class="img-fluid mx-auto d-block"
+              src="../assets/img/harvest-party/hp_2022.jpg"
+            />
+            <span class="caption text-muted"
+              >Images courtesy of the Harvest Party Planning Committee</span
             >
             <!-- <br><br> -->
             <!-- Divider-->
             <hr class="my-4" />
             <h2 class="section-heading">References</h2>
             <p>
-              Dataset from the
+              Dataset provided by the
               <a
-                href="http://insideairbnb.com/get-the-data.html"
+                href="https://www.harvestpartydc.com/"
                 rel="noopener"
                 target="_blank"
-                >Inside AirBnB</a
+                >Harvest Party</a
               >
-              Project.
+              Planning Committee.
+            </p>
+            <p>
+              Heartfelt gratitude to all Harvest Party attendees and the
+              dedicated volunteers who brought this event to life and made it so
+              special year after year.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
