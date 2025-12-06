@@ -39,12 +39,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // added to the original template
   // smooth scroll to top when clicking "Back to Top" links
-  // document.querySelectorAll('a[href="#"]').forEach((anchor) => {
-  //   anchor.addEventListener("click", (e) => {
-  //     e.preventDefault();
-  //     window.scrollTo({ top: 0, behavior: "smooth" });
-  //   });
-  // });
+  document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
 
   // disabled, because I'd have to pay Formspree to cc the user
   // added to the original template
