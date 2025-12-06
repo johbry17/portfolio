@@ -113,7 +113,7 @@ def build_sitemap(files: list[pathlib.Path], base_url: str, project_prefix: str)
         priority = (
             "1.00"
             if f.name.lower() == "index.html"
-            else ("0.90" if f.stem.lower() == "about" else "0.80")
+            else ("0.90" if f.stem.lower() in ("about", "hire") else "0.80")
         )
         ET.SubElement(url, "priority").text = priority
 
