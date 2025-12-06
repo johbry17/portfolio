@@ -10826,9 +10826,9 @@ header.masthead .post-heading .meta a {
   font-weight: 500;
   color: #555; /* slightly darker than muted gray */
   margin-top: 0.4em;
-  letter-spacing: 0.03em;
-  /* font-variant: small-caps; */
-  /* letter-spacing: 0.5px; */
+  /* letter-spacing: 0.03em; */
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 600px) {
