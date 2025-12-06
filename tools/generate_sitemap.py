@@ -25,6 +25,23 @@ from typing import Optional
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 
+# Check if there are uncommitted changes to `path`.
+def has_uncommitted_changes(path: pathlib.Path) -> bool:
+    try:
+        try:
+            rel = str(path.relative_to(REPO_ROOT))
+        except Exception:
+            rel = str(path)
+        out = subprocess.check_output(
+            ["git", "status", "--porcelain", "--", rel],
+            stderr=subprocess.DEVNULL,
+            cwd=str(REPO_ROOT),
+        )
+        return bool(out.strip())
+    except Exception:
+        return False
+
+
 # Try to get an ISO 8601 timestamp for the last commit that changed `path`.
 # We run `git` with cwd=REPO_ROOT and pass the file path relative to REPO_ROOT
 # (safer for git to locate the file in the repo).
@@ -81,8 +98,11 @@ def build_sitemap(files: list[pathlib.Path], base_url: str, project_prefix: str)
         if f.name == "sitemap.xml":
             continue
 
-        # Prefer git commit date; fallback to file mtime
-        lastmod = git_lastmod_iso(f) or file_mtime_iso(f)
+        # Prefer commit date, but if file has uncommitted/staged changes use mtime so pre-commit reflects edits
+        if has_uncommitted_changes(f):
+            lastmod = file_mtime_iso(f)
+        else:
+            lastmod = git_lastmod_iso(f) or file_mtime_iso(f)
 
         # Create the <url> element and populate children
         url = ET.SubElement(urlset, "url")
