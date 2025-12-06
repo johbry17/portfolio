@@ -62,13 +62,13 @@ def loc_for(path: pathlib.Path, base_url: str, project_prefix: str = "workshop")
     name = path.name.lower()
     if name == "index.html":
         return f"{base}/"
-    if path.parent.name == "workshop":
-        # e.g. workshop/waypoints.html -> /workshop/waypoints/
+    if path.parent.name == project_prefix:
+        # e.g. workshop/waypoints.html -> /workshop/waypoints.html
         slug = path.stem
-        return f"{base}/{project_prefix}/{slug}/"
-    # default mapping for other root HTML files (about.html -> /about/)
+        return f"{base}/{project_prefix}/{slug}.html"
+    # default mapping for other root HTML files (about.html -> /about.html)
     slug = path.stem
-    return f"{base}/{slug}/"
+    return f"{base}/{slug}.html"
 
 
 # Build an ElementTree sitemap from a list of files.
