@@ -51,4 +51,4 @@ Thanks to Start Bootstrap for the [Clean Blog](https://startbootstrap.com/theme/
 
 ## Author 
 
-Copyright &copy; Bryan C. Johns, <!-- START_DATE -->2025<!-- END_DATE -->
+Copyright &copy; Bryan C. Johns, <!-- START_DATE -->2026<!-- END_DATE -->

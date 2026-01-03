@@ -16,7 +16,10 @@
       Classified: At-Risk — AI for Employee Turnover | Bryan C. Johns
     </title>
     <link href="/assets/favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="https://informedwanderer.com/workshop/salifort-employee-churn.html" rel="canonical" />
+    <link
+      href="https://informedwanderer.com/workshop/salifort-employee-churn.html"
+      rel="canonical"
+    />
     <!-- JSON-LD: canonical Person reference (site-wide @id) -->
     <script type="application/ld+json">
       {
@@ -118,11 +121,11 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- Post Content Summary-->
             <p>
-              Built a <b>Python + scikit-learn pipeline</b> to predict employee
-              attrition, tuned for recall to catch at-risk staff. Designed the
-              outputs as a web report for HR teams, turning raw data into
-              <b>actionable insights</b> they could act on before it was too
-              late.
+              Employee turnover is costly, disruptive, and often preventable.
+              This project builds a
+              <b>recall-focused machine learning model</b> to help HR teams
+              identify at-risk employees early, before burnout or disengagement
+              leads to resignation.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -183,26 +186,26 @@
             <blockquote class="blockquote mt-5">
               <p class="mb-0">
                 Think of this project as a user’s guide to the cranky crystal
-                ball of machine learning. It predicts which employees might
-                leave a company. I used it as a hands-on lab to wrestle with
-                fundamentals I’d previously skimmed: tuning models, chasing
-                false positives, exploring pipelines, and making peace with
-                misclassifications. I made every mistake I could, and learned
-                from all of them. The report is mostly tech-heavy, but includes
-                a guided, layperson-friendly section right after the Executive
-                Summary—part intro to machine learning, part personal field
-                journal—for those curious how the magic (i.e., math) happens.
+                ball of machine learning. I used it to put my understanding of
+                applied ML to the test: tuning models to catch as many at-risk
+                employees as possible, weighing false alarms against missed
+                warning signs, and turning uncertain predictions into clear
+                recommendations HR could use. The report is mostly tech-heavy,
+                but includes a guided, layperson-friendly section right after
+                the Executive Summary—part intro to machine learning, part
+                personal field journal—for those curious how the magic (i.e.,
+                math) happens.
               </p>
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              This machine learning project explores employee churn at Salifort
-              Motors, using structured HR data to identify patterns in retention
-              and attrition. Through Python-based
-              <b>exploratory data analysis (EDA)</b> and
-              <b>predictive modeling</b>, I developed a
-              <b>data pipeline</b> that highlights at-risk employees and
-              supports proactive retention strategies.
+              The goal of this project was not just prediction accuracy, but
+              <b
+                >providing early, trustworthy signals HR teams could use to
+                intervene before attrition occurs</b
+              >. Through Python-based exploratory data analysis (EDA) and
+              predictive modeling, I developed a data pipeline to highlight
+              at-risk employees and enable proactive retention strategies.
             </p>
             <p>
               The project began with a deep dive into the data using Pandas,
@@ -217,9 +220,9 @@
               <b>black-box models</b> (Random Forest, XGBoost), the final
               pipeline emphasized recall, ensuring HR teams identify as many
               potentially departing employees as possible. XGBoost emerged as
-              the most <b>accurate model</b>, particularly in predicting the
-              “gray zone” employees, those with middling satisfaction and
-              tenure.
+              the best-performing model under recall constraints, particularly
+              in predicting the “gray zone” employees, those with middling
+              satisfaction and tenure.
             </p>
             <p>
               To demystify the model’s logic, I incorporated
@@ -247,8 +250,9 @@
               src="/assets/img/salifort-employee-churn/xgboost_shap.png"
             />
             <span class="caption text-muted"
-              >SHAP summary plot: Visualizing how each feature influences
-              XGBoost’s attrition predictions for individual employees.</span
+              >SHAP summary plot: Highlighting which features most strongly
+              increase predicted churn risk. Used to surface actionable burnout
+              and disengagement signals.</span
             >
             <br /><br />
             <img
