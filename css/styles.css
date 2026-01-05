@@ -10797,8 +10797,9 @@ header.masthead .post-heading .meta a {
   }
 }
 
+/* ADDITIONAL CSS, beyond Bootstrap defaults */
 
-
+/* tableau css */
 #tableau-viz {
   margin: 0 auto;
   /* margin-bottom: 10px; */
@@ -10820,6 +10821,8 @@ header.masthead .post-heading .meta a {
     max-width: 80%;
   }
 } */
+
+/* footer css */
 .footer-tagline {
   text-align: center;
   font-size: 1.05em;
@@ -10830,10 +10833,43 @@ header.masthead .post-heading .meta a {
   font-variant: small-caps;
   letter-spacing: 0.5px;
 }
-
 @media (max-width: 600px) {
   .footer-tagline {
     font-size: 0.95em;
     margin-top: 0.3em;
   }
+}
+
+/* archive sections css */
+.archive-section-label {
+  margin: 4rem 0 2rem;
+  text-align: center;
+}
+.archive-section-label i {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+  opacity: 0.6;
+}
+.archive-section-label span {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+.archive-section-label p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #6c757d;
+  margin: 0;
+}
+/* break between sections */
+.archive-section-break {
+  width: 40%;
+  margin: 4rem auto;
+  opacity: 0.2;
 }
