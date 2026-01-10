@@ -25,7 +25,7 @@ This repository contains the source for my personal data portfolio website. It b
 
 - **[Classified: At-Risk](https://informedwanderer.com/workshop/salifort-employee-churn.html)** – AI-driven machine learning models for predicting employee turnover and supporting HR retention strategies
 - **[Cyclistic Analytics](https://informedwanderer.com/workshop/cyclistic.html)** – Data analysis of Chicago’s bikeshare for customer conversion and marketing recommendations
-- **[Capital Crashpad](https://informedwanderer.com/workshop/dc-airbnb.html)** – Dashboard of Airbnb statistics in Washington, DC
+- **[Capital Crashpad](https://informedwanderer.com/workshop/capital-crashpad.html)** – Dashboard of Airbnb statistics in Washington, DC
 - **[Red Light, Green Light](https://informedwanderer.com/workshop/red-light-green-light.html)** – AI-powered convolutional neural network trained to read German traffic signs for policy and safety applications
 - **[Waypoints](https://informedwanderer.com/workshop/waypoints.html)** – A geospatial travel memoir combining mapping, routing, and narrative
 
