@@ -8,11 +8,14 @@
       name="viewport"
     />
     <meta
-      content="Data dashboard visualizing Washington, D.C.’s Airbnb market — exposing host activity, licensing gaps, and market dynamics."
+      content="Case study and interactive dashboard exploring the impact of Airbnb’s 2024 verification expansion on Washington, D.C.’s short-term rental market."
       name="description"
     />
     <meta content="Bryan C. Johns" name="author" />
-    <title>Capital Crashpad — D.C. Airbnb Visualized | Bryan C. Johns</title>
+    <title>
+      Capital Crashpad — Platform Governance and Airbnb in Washington, DC |
+      Bryan C. Johns
+    </title>
     <link href="/assets/favicon.ico" rel="icon" type="image/x-icon" />
     <link
       href="https://informedwanderer.com/workshop/capital-crashpad.html"
@@ -91,7 +94,7 @@
     <header
       class="masthead"
       style="
-        background-image: url(&quot;/assets/img/dc-airbnb/IMG_1261.jpg&quot;);
+        background-image: url(&quot;/assets/img/capital-crashpad/IMG_1261.jpg&quot;);
       "
     >
       <div class="container position-relative px-4 px-lg-5">
@@ -119,21 +122,11 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
             <p>
-              <b>Update (Feb 2026):</b>
-              <i
-                >This project is currently being redesigned with a new dashboard
-                and revised analysis. The linked EDA reflects the updated
-                direction.</i
-              >
-            </p>
-            <p>
               Short-term rentals reshape housing markets, neighborhoods, and
-              regulation. This project visualizes Washington, D.C.’s Airbnb
-              ecosystem to help residents, policymakers, and researchers
-              understand pricing patterns, commercial hosting, and compliance
-              with city regulations. Revealed unlicensed rentals, commercial
-              hosts, and clever workarounds to the city’s short-term rental
-              laws.
+              regulation. Capital Crashpad's dashboard and case study chart the
+              sharp drop in Washington, DC Airbnbs after a nationwide rollout of
+              identity checks and quality removals, showing how platform
+              governance can shift local markets beyond city law.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -152,13 +145,28 @@
                   </span>
                   Live Website
                 </p>
-                <!-- <p>https://johbry17.github.io/Capital-Crashpad/</p> -->
               </a>
             </div>
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
-                href="https://public.tableau.com/views/DC-Airbnb/DCAirbnbMobile?:language=en-US&amp;publish=yes&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link"
+                href="https://johbry17.github.io/Capital-Crashpad/case_study.html"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-book-open fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Case Study
+                </p>
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <!-- <div class="post-preview">
+              <a
+                href="https://public.tableau.com/views/DCAirbnb/DCAirbnbMobile?:language=en-US&amp;publish=yes&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link"
                 rel="noopener"
                 target="_blank"
               >
@@ -169,11 +177,10 @@
                   </span>
                   Tableau Explanatory Data Analysis
                 </p>
-                <!-- <p>https://public.tableau.com/app/profile/bryan.johns6699/viz/DC-Airbnb/DCAirbnbMobile</p> -->
               </a>
-            </div>
+            </div> -->
             <!-- <hr class="my-4" /> -->
-            <div class="post-preview">
+            <!-- <div class="post-preview">
               <a
                 href="https://github.com/johbry17/Capital-Crashpad/blob/main/notebooks/eda_2026.ipynb"
                 rel="noopener"
@@ -186,9 +193,8 @@
                   </span>
                   Python Exploratory Data Analysis
                 </p>
-                <!-- <p>https://github.com/johbry17/Capital-Crashpad/blob/main/notebooks/eda_2026.ipynb</p> -->
               </a>
-            </div>
+            </div> -->
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
@@ -203,7 +209,6 @@
                   </span>
                   GitHub Repository
                 </p>
-                <!-- <p>https://github.com/johbry17/Capital-Crashpad</p> -->
               </a>
             </div>
             <!-- Divider-->
@@ -211,214 +216,170 @@
             <blockquote class="blockquote mt-5">
               <p class="mb-0">
                 This project is, quite literally, close to home for me; I live
-                in D.C. I wanted to understand how short-term rentals affect
-                neighborhoods, pricing, and regulatory enforcement. Patterns
-                emerge if you dig—unlicensed listings, commercial hosts, and
-                clever workarounds to short-term rental laws. I designed it as a
-                tool anyone in the city could explore, whether you're curious
+                in DC. I stumbled on a sharp drop in Airbnb listings while
+                digging through the data, and it caught my attention. Some
+                internet sleuthing revealed it coincided with changes in company
+                policy, not local laws. Routine EDA turned into a deeper
+                investigation: the data showed a structural break, with
+                lucrative extended-stay rentals disappearing. I built this tool
+                for anyone in DC to explore these shifts, whether you’re curious
                 about your block or the big picture.
               </p>
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              The central question wasn’t “How many Airbnbs exist?” but
-              <b
-                >how short-term rentals concentrate, operate, and adapt under
-                regulation</b
-              >, and what that means for neighborhoods and housing access.
+              The guiding question was not how many Airbnbs exist, but how
+              platform policies reshaped the structure of supply.
             </p>
             <p>
-              This full-stack project analyzes the Airbnb market in Washington,
-              D.C., combining backend and frontend technologies to deliver a
-              robust data analysis platform. Listing data is stored in a
-              <b>PostgreSQL</b> database, with a <b>Python</b>-based backend
-              built first in <b>Flask</b> for its flexibility and later
-              reimplemented in <b>Django</b> to explore a more structured,
-              full-featured web framework. This progression allowed for deeper
-              control over <b>routing</b>, <b>authentication</b>, and
-              <b>admin tooling</b>.
+              Using quarterly listing data stored in
+              <b>PostgreSQL</b> and analyzed in <b>Python</b>, I built a full
+              pipeline to track changes in pricing, licensing status,
+              minimum-night distributions, and projected revenue before and
+              after enforcement. The dashboard integrates <b>Leaflet</b> and
+              <b>JavaScript</b> to visualize neighborhood patterns and
+              regulatory thresholds, while the written case study interprets
+              those shifts in plain language.
             </p>
             <p>
-              On the front end, <b>JavaScript</b> drives interactive components,
-              including a <b>Leaflet</b> map that visualizes listing density by
-              neighborhood, while <b>Tableau</b> provides advanced data
-              visualization, enabling users to explore key trends in the D.C.
-              Airbnb market. Metrics such as average nightly rates, listing
-              density by neighborhood, and occupancy rates are presented through
-              a user-friendly interface and dynamic dashboards.
+              The result is both a tool and an argument. The dashboard enables
+              exploration; the case study explains what changed and why it
+              matters. Together, they show how platform governance can alter
+              local housing markets almost overnight.
             </p>
             <p>
-              By combining backend engineering with intuitive visuals, this
-              project empowers users to compare neighborhoods, track changes
-              over time, and uncover meaningful patterns. It also serves as a
-              demonstration of my ability to manage the full
-              <b>data lifecycle</b>—from <b>data ingestion</b> and
-              <b>API design</b> to <b>frontend interaction</b> and
-              <b>visual storytelling</b>—across multiple frameworks and
-              technologies.
+              Technically, the project demonstrates database design, SQL
+              querying, Python-based analysis, and geospatial visualization.
+              More importantly, it reflects my focus as a
+              <b>data communicator</b>: translating structural market changes
+              into insights that policymakers and residents can actually
+              understand and use.
             </p>
-            <!-- begin tableau css div to center on mobile, at very end of styles.css -->
-            <div id="tableau-viz">
-              <!-- begin tableau mobile embed code -->
-              <div
-                class="tableauPlaceholder"
-                id="viz1727416352687"
-                style="position: relative"
-              >
-                <noscript>
-                  <a href="#">
-                    <img
-                      alt="DC Airbnb Mobile "
-                      src="https://public.tableau.com/static/images/DC/DC-Airbnb/DCAirbnbMobile/1_rss.png"
-                      style="border: none"
-                    />
-                  </a>
-                </noscript>
-                <object class="tableauViz" style="display: none">
-                  <param
-                    name="host_url"
-                    value="https%3A%2F%2Fpublic.tableau.com%2F"
-                  />
-                  <param name="embed_code_version" value="3" />
-                  <param name="site_root" value="" />
-                  <param name="name" value="DC-Airbnb/DCAirbnbMobile" />
-                  <param name="tabs" value="no" />
-                  <param name="toolbar" value="yes" />
-                  <param
-                    name="static_image"
-                    value="https://public.tableau.com/static/images/DC/DC-Airbnb/DCAirbnbMobile/1.png"
-                  />
-                  <param name="animate_transition" value="yes" />
-                  <param name="display_static_image" value="yes" />
-                  <param name="display_spinner" value="yes" />
-                  <param name="display_overlay" value="yes" />
-                  <param name="display_count" value="yes" />
-                  <param name="language" value="en-US" />
-                  <param name="filter" value="publish=yes" />
-                </object>
-              </div>
-              <script type="text/javascript">
-                var divElement = document.getElementById("viz1727416352687");
-                var vizElement = divElement.getElementsByTagName("object")[0];
-                vizElement.style.width = "420px";
-                vizElement.style.height = "677px";
-                var scriptElement = document.createElement("script");
-                scriptElement.src =
-                  "https://public.tableau.com/javascripts/api/viz_v1.js";
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-              </script>
-              <!-- end tableau mobile embed code -->
-            </div>
-            <!-- end tableau css div -->
-            <span class="caption text-muted"
-              >Tableau Mobile Dashboard<br />Use two fingers to move maps</span
-            >
             <!-- Divider-->
             <hr class="my-4" />
             <h2 class="section-heading">Gallery</h2>
             <!-- <hr class="my-4" /> -->
             <br /><br />
             <img
-              alt="Tableau Plot of Rental Type Stats"
+              alt="Line chart showing drop and rebound in Airbnb listings after verification expansion"
               class="img-fluid mx-auto d-block"
-              src="/assets/img/dc-airbnb/dc_airbnb_tableau_rental_type.png"
+              src="/assets/img/capital-crashpad/case_study_listing_drop.png"
             />
             <span class="caption text-muted"
-              >Rental Property Type: Bubble chart from Tableau showing that
-              entire home/apartment rentals make up over 75% of all
-              listings.</span
+              >Listings Over Time (2023–2025): Active listings fall sharply
+              between Q1 and Q2 2024, marking a structural break coinciding with
+              Airbnb’s expanded verification and quality removals.</span
             >
             <br /><br />
             <img
-              alt="Bubble Map, Count of Washington, DC AirBnB's by Neighborhood"
+              alt="Line chart showing increase in licensed Airbnb listings"
               class="img-fluid mx-auto d-block"
-              src="/assets/img/dc-airbnb/bubble.png"
+              src="/assets/img/capital-crashpad/case_study_license_change.png"
             />
             <span class="caption text-muted"
-              >Neighborhood Bubble Map: Visualizing the count of AirBnB listings
-              by neighborhood, with the highest concentration near downtown
-              DC.</span
+              >Licensing Share: Following the Q2 2024 contraction, the share of
+              licensed listings rises as unlicensed supply exits the
+              platform.</span
             >
             <br /><br />
             <img
-              alt="Map of AirBnB's in a Washington, DC neighborhood"
+              alt="Bar plot of minimum nights required for Airbnb listings, colored by license status"
               class="img-fluid mx-auto d-block"
-              src="/assets/img/dc-airbnb/dc_airbnb_neighborhood.png"
+              src="/assets/img/capital-crashpad/case_study_license_minimum_nights.png"
             />
             <span class="caption text-muted"
-              >Licensing Status Map: Neighborhood-level map colored by license
-              status, highlighting a significant number of unlicensed
-              rentals.</span
+              >Minimum Nights (Pre vs Post): Unlicensed extended-stay (31+
+              night) listings decline disproportionately, accounting for a large
+              share of the overall market drop.</span
             >
             <br /><br />
             <img
-              alt="Web dashboard plots, with price comparison and minimum nights bar chart"
+              alt="Bar plot of minimum nights required for Airbnb listings, colored by license status"
               class="img-fluid mx-auto d-block"
-              src="/assets/img/dc-airbnb/dc_airbnb_plots.png"
+              src="/assets/img/capital-crashpad/minimum_nights_plot.png"
             />
             <span class="caption text-muted"
-              >Web dashboard plots: Visualizing how each neighborhood’s mean and
-              median prices stack up against the city overall, and how minimum
-              nights drop sharply—spiking just after DC’s legal threshold for
-              short-term rentals.</span
+              >Minimum Nights (Dashboard View): Post-enforcement distribution
+              shows a reduced extended-stay segment and a higher proportion of
+              licensed listings.</span
             >
             <br /><br />
             <img
-              alt="DC AirBnB Price and Availability Plot, Upcoming Year"
+              alt="Violin plot of nightly prices and availability for the upcoming year, with median annotated"
               class="img-fluid mx-auto d-block"
-              src="/assets/img/dc-airbnb/dc_airbnb_price_availability_plot.png"
+              src="/assets/img/capital-crashpad/price_violin_plot.png"
             />
             <span class="caption text-muted"
-              >Price &amp; Availability Trends (July, 2024): Plot showing stable
-              prices and increasing availability, with noticeable dips up to a
-              year out for major events like the inauguration and
-              graduations.</span
+              >Price Distribution: Nightly prices remain widely dispersed after
+              enforcement, with median levels relatively stable despite reduced
+              supply.</span
             >
             <br /><br />
             <img
-              alt="Choropleth Map of Average Price per Neighborhood"
+              alt="Choropleth map showing total Airbnb listings by neighborhood in Washington, D.C., relative to the average"
               class="img-fluid mx-auto d-block"
-              src="/assets/img/dc-airbnb/choropleth.png"
+              src="/assets/img/capital-crashpad/map_total_listings.png"
             />
             <span class="caption text-muted"
-              >Price Choropleth: Average nightly price by neighborhood, with
-              downtown areas commanding the highest rates.</span
+              >Listings by Neighborhood: Supply remains concentrated in central
+              DC, though listing density varies significantly across
+              neighborhoods.</span
             >
             <br /><br />
             <img
-              alt="DC AirBnB Average Price per Neighborhood Plot"
+              alt="Choropleth map of license compliance percentage per neighborhood"
               class="img-fluid mx-auto d-block"
-              src="/assets/img/dc-airbnb/dc_airbnb_avg_price.png"
+              src="/assets/img/capital-crashpad/map_license.png"
             />
             <span class="caption text-muted"
-              >Average Price by Neighborhood: Python EDA plot comparing average
-              prices across neighborhoods—contrast with the polished web version
-              above.</span
+              >License Compliance by Neighborhood: Licensing rates vary
+              geographically, as uneven compliance patterns continue across the
+              city despite the increased proportion of licensed listings.</span
             >
             <br /><br />
             <img
-              alt="PostgreSQL Entity Relationship Diagram"
+              alt="Lorenz curve of Airbnb host revenue concentration before and after verification, showing no change"
               class="img-fluid mx-auto d-block"
-              src="/assets/img/dc-airbnb/dc_airbnb_erd.png"
+              src="/assets/img/capital-crashpad/case_study_lorenz.png"
               style="border-radius: 10px"
             />
             <span class="caption text-muted"
-              >Entity Relationship Diagram: PostgreSQL ERD illustrating the data
-              engineering and structure behind the project.</span
+              >Revenue Concentration: Host revenue remains highly concentrated
+              before and after enforcement, indicating persistent structural
+              inequality within the market.</span
+            >
+            <br /><br />
+            <img
+              alt="Bubble chart showing neighborhoods with higher licensing and availability"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/capital-crashpad/case_study_bubble_neighborhoods.png"
+            />
+            <span class="caption text-muted"
+              >Neighborhood Stability: Licensing rates and listing availability
+              move together across many neighborhoods, illustrating broad
+              platform-level effects rather than isolated geographic
+              shifts.</span
             >
             <!-- <br><br> -->
             <!-- Divider-->
             <hr class="my-4" />
             <h2 class="section-heading">References</h2>
             <p>
-              Dataset from the
+              Dataset sourced from the
               <a
                 href="http://insideairbnb.com/get-the-data.html"
                 rel="noopener"
                 target="_blank"
-                >Inside AirBnB</a
+                >Inside Airbnb</a
               >
-              Project.
+              Project. Additional data on neighborhood population and housing
+              units came from
+              <a
+                href="https://censusreporter.org/profiles/16000US1150000-washington-dc/"
+                rel="noopener"
+                target="_blank"
+                >Census Reporter</a
+              >.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
