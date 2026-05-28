@@ -1,0 +1,534 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <meta
+      content="Flood risk, social vulnerability, and FEMA funding across Vermont’s towns. How do institutions shape climate resilience and disaster preparedness?"
+      name="description"
+    />
+    <meta content="Bryan C. Johns" name="author" />
+    <title>
+      Floodlines — Vermont Flood Risk, Vulnerability, and FEMA Funding Analysis
+      | Bryan C. Johns
+    </title>
+    <link href="/assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link
+      href="https://informedwanderer.com/workshop/floodlines.html"
+      rel="canonical"
+    />
+    <!-- JSON-LD: canonical Person reference (site-wide @id) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@id": "https://informedwanderer.com/#person"
+      }
+    </script>
+    <!-- Font Awesome icons (free version)-->
+    <script
+      crossorigin="anonymous"
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="/">Home</a>
+        <button
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarResponsive"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto py-4 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="/about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="/archive.html"
+                >Archive</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="/hire.html"
+                >Hire</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="/contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Header-->
+    <header
+      class="masthead"
+      style="
+        background-image: url(&quot;/assets/img/floodlines/001 001.jpg&quot;);
+      "
+    >
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="post-heading">
+              <h1>Floodlines</h1>
+              <h2 class="subheading">
+                When Disaster Funding Follows the Past, Not the Future
+              </h2>
+              <span class="meta">
+                <!-- Posted by
+                                <a href="#!">Start Bootstrap</a>
+                                on August 24, 2023 -->
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post Content Summary-->
+            <p>
+              Floodlines is a geospatial analysis and interactive dashboard
+              exploring how flood risk, social vulnerability, and FEMA
+              mitigation funding align across Vermont’s 250+ towns. By combining
+              GIS, Census demographics, and federal disaster datasets, the
+              project investigates a growing climate-policy question: are
+              vulnerable communities actually receiving the support they need?
+            </p>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">Project Links</h2>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/Floodlines/"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i
+                      class="fas fa-house-flood-water fa-stack-1x fa-inverse"
+                    ></i>
+                  </span>
+                  Live Website
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/Floodlines/article.html"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-chart-line fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Data Analysis
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://github.com/johbry17/Floodlines"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                  GitHub Repository
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <blockquote class="blockquote">
+              <p class="mb-0">
+                I grew up in Vermont, where rivers only jumped their banks in a
+                freak January thaw. After Irene in 2011, there was a sense that
+                the state had survived extraordinary disaster together —
+                “Vermont Strong”. When the floods returned in 2023, that feeling
+                curdled into something more sober: no once-a-century disaster,
+                just a recurring condition. Floodlines grew out of that
+                vibe shift. And I got to indulge my interest in maps, public
+                policy, systems thinking, and a pinch of institutional
+                skepticism to explore a question that’s only going to become
+                more urgent: how do institutions shape climate resilience and
+                disaster preparedness?
+              </p>
+            </blockquote>
+            <h2 class="section-heading">Project Overview</h2>
+            <p>
+              After Tropical Storm Irene and Vermont’s historic 2023 floods, it
+              became increasingly difficult to view flooding as a rare disaster
+              rather than a structural reality. At the same time, new floodplain
+              remapping and climate adaptation debates raised larger questions
+              about how mitigation money is distributed — and whether funding
+              systems are responding to future risk or simply reacting to past
+              damage.
+            </p>
+            <p>
+              Using Python, GeoPandas, FEMA datasets, ACS demographics, and
+              spatial analysis tools, I built a reproducible pipeline measuring
+              flood exposure, social vulnerability, FEMA mitigation investment,
+              and funding gaps across Vermont towns. The dashboard combines
+              choropleth mapping, interactive rankings, quadrant analysis, and
+              model comparisons to make complex spatial patterns explorable to
+              both technical and non-technical audiences.
+            </p>
+            <p>
+              The analysis found that FEMA mitigation funding was only weakly
+              correlated with modeled structural need, while past insurance
+              claims were a much stronger predictor of investment. Roughly
+              55–60% of Vermont towns appeared underfunded relative to measured
+              need, suggesting disaster funding systems may operate more
+              reactively than proactively.
+            </p>
+            <p>
+              Technically, the project demonstrates geospatial ETL workflows,
+              composite index construction, sensitivity analysis, spatial
+              statistics, and interactive dashboard development using Leaflet
+              and D3. More importantly, it reflects the kind of work I most
+              enjoy: combining environmental systems, public policy, spatial
+              data, and public-facing storytelling to translate complicated
+              problems into something people can actually understand and use.
+            </p>
+            <p>Tools & Technologies:</p>
+            <ul>
+              <li><b>Frontend:</b> JavaScript, Leaflet.js, D3.js, HTML/CSS</li>
+              <li>
+                <b>Backend & Analysis:</b> Python, Pandas, GeoPandas, NumPy,
+                Jupyter Notebook
+              </li>
+              <li>
+                <b>Spatial Analysis:</b> Shapely, libpysal, ESDA (Moran’s I)
+              </li>
+              <li>
+                <b>Statistics & Modeling:</b> scipy, scikit-learn, statsmodels
+              </li>
+              <li>
+                <b>Data Sources:</b> FEMA, OpenFEMA, NFIP, U.S. Census ACS,
+                Vermont ANR, FRED CPI
+              </li>
+              <li><b>Hosting:</b> GitHub Pages</li>
+            </ul>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">Gallery</h2>
+            <!-- <hr class="my-4" /> -->
+            <br /><br />
+            <img
+              alt="Default view — Quadrant map"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/floodlines/choropleth_quadrant_eal_per_capita.png"
+            />
+            <span class="caption text-muted"
+              >All Vermont towns classified into funding quadrants (high/low
+              funding, high/low need, zero-funding)</span
+            >
+
+            <br /><br />
+            <img
+              alt="Need index choropleth"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/floodlines/choropleth_need_eal_per_capita.png"
+            />
+            <span class="caption text-muted"
+              >Measuring Need: A rank-based composite of flood exposure and
+              social vulnerability</span
+            >
+
+            <br /><br />
+            <img
+              alt="Funding gap choropleth"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/floodlines/choropleth_gap_eal_per_capita_rel.png"
+            />
+            <span class="caption text-muted"
+              >Towns where need substantially exceeds FEMA HMA investment,
+              highlighting the most underserved communities</span
+            >
+
+            <br /><br />
+            <img
+              alt="Scatter plot — Need vs. Funding"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/floodlines/scatter_eal_per_capita.png"
+            />
+            <span class="caption text-muted"
+              >Loose cloud confirming weak alignment between structural need and
+              federal mitigation dollars</span
+            >
+
+            <br /><br />
+            <img
+              alt="Town detail panel"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/floodlines/stats_card.png"
+            />
+            <span class="caption text-muted"
+              >Per-town statistics, percentile rankings, and quadrant
+              classification for a selected community</span
+            >
+
+            <br /><br />
+            <img
+              alt="Relative toggle — EAL risk"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/floodlines/choropleth_risk_eal_per_capita.png"
+            />
+            <span class="caption text-muted"
+              >Risk map rescaled to show deviation from the Vermont statewide
+              average rather than absolute percentile rank</span
+            >
+
+            <br /><br />
+            <img
+              alt="NFIP claims overlay"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/floodlines/choropleth_claims.png"
+            />
+            <span class="caption text-muted"
+              >Reactive benchmark layer showing where insured losses occurred
+              vs. where modeled risk is highest</span
+            >
+
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">References</h2>
+            <ul>
+              <li>
+                <a
+                  href="https://www2.census.gov/geo/tiger/TIGER2025/COUSUB/tl_2025_50_cousub.zip"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >U.S. Census TIGER/Line 2025: Vermont County Subdivisions</a
+                >
+                — Vermont town (county subdivision) boundaries.
+              </li>
+              <li>
+                <a
+                  href="https://www2.census.gov/geo/tiger/TIGER2025/AREAWATER/tl_2025_50007_areawater.zip"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >U.S. Census TIGER/Line 2025: Vermont Areawater (Chittenden
+                  County)</a
+                >
+                — Water bodies (for masking Lake Champlain).
+              </li>
+              <li>
+                <a
+                  href="https://hazards.fema.gov/femaportal/NFHL/searchResult/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >FEMA National Flood Hazard Layer (NFHL)</a
+                >
+                — FEMA flood zone boundaries.
+              </li>
+              <li>
+                <a
+                  href="https://www.arcgis.com/home/item.html?id=51797aa9327343b9a04215e5e59e00c5"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >Vermont ANR River Corridors</a
+                >
+                — River corridor and flood-prone area delineation.
+              </li>
+              <li>
+                <a
+                  href="https://data.census.gov/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >U.S. Census: American Community Survey (ACS)</a
+                >
+                — Town-level demographic and socioeconomic data.
+              </li>
+              <li>
+                <a
+                  href="https://www.fema.gov/openfema-data-page/hazard-mitigation-assistance-projects-v4"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >OpenFEMA: Hazard Mitigation Assistance Projects</a
+                >
+                — FEMA mitigation funding and project allocations.
+              </li>
+              <li>
+                <a
+                  href="https://www.fema.gov/sites/default/files/2020-08/fema_mt-egrants-guide-to-eligible-activities-and-codes_job_aid_March_2018.pdf"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >FEMA Mitigation eGrants Guide</a
+                >
+                — Project activity classification and codes.
+              </li>
+              <li>
+                <a
+                  href="https://fred.stlouisfed.org/series/CPIAUCSL"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >FRED: CPI-U (U.S. City Average)</a
+                >
+                — CPI series for inflation-adjusting funding values.
+              </li>
+              <li>
+                <a
+                  href="https://www.fema.gov/openfema-data-page/fima-nfip-redacted-claims-v2"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >OpenFEMA: NFIP Redacted Claims</a
+                >
+                — Town-level flood insurance claims data.
+              </li>
+              <li>
+                <a
+                  href="https://www.fema.gov/openfema-data-page/fima-nfip-redacted-policies-v2"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >OpenFEMA: NFIP Redacted Policies</a
+                >
+                — Policy counts and penetration by town.
+              </li>
+              <li>
+                <a
+                  href="https://www.unitedstateszipcodes.org/zip-code-database/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >UnitedStatesZipCodes.org ZIP Code Database</a
+                >
+                — ZIP-to-town crosswalk for missing community names.
+              </li>
+              <li>
+                <a
+                  href="https://www.fema.gov/about/openfema/data-sets/national-risk-index-data"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >FEMA National Risk Index (NRI)</a
+                >
+                — Expected annual loss and vulnerability benchmarks.
+              </li>
+            </ul>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <div class="d-flex justify-content-between mb-4">
+              <a class="btn btn-light" href="#">Back to Top</a>
+              <a class="btn btn-light" href="/">Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <ul class="list-inline text-center">
+              <!-- <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li> -->
+              <li class="list-inline-item">
+                <a
+                  href="https://www.linkedin.com/in/b-johns/"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://github.com/johbry17"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div class="small text-center text-muted fst-italic">
+              Copyright &copy; Bryan C. Johns
+              <span id="copyright-year">2024</span>
+            </div>
+            <div class="footer-tagline fst-italic">
+              Fluent in Data. Fluent in Human.<br /><small
+                >Using data to understand the world. And help improve it.</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
