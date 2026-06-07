@@ -122,12 +122,11 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- Post Content Summary-->
             <p>
-              Floodlines is a geospatial analysis and interactive dashboard
-              exploring how flood risk, social vulnerability, and FEMA
-              mitigation funding align across Vermont’s 250+ towns. By combining
-              GIS, Census demographics, and federal disaster datasets, the
-              project investigates a growing climate-policy question: are
-              vulnerable communities actually receiving the support they need?
+              Floodlines is an independent analysis of flood risk, social
+              vulnerability, and FEMA mitigation funding across Vermont’s 250+
+              towns. Combining GIS, Census demographics, and federal disaster
+              datasets, the project investigates whether mitigation dollars are
+              reaching the communities that need them most.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -146,7 +145,7 @@
                       class="fas fa-house-flood-water fa-stack-1x fa-inverse"
                     ></i>
                   </span>
-                  Live Website
+                  Live Dashboard
                 </p>
                 <!-- <p></p> -->
               </a>
@@ -161,9 +160,26 @@
                 <p class="post-subtitle">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-chart-line fa-stack-1x fa-inverse"></i>
+                    <i class="fas fa-newspaper fa-stack-1x fa-inverse"></i>
                   </span>
-                  Data Analysis
+                  Analysis Article
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/Floodlines/appendix.html"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-flask fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Technical Appendix
                 </p>
                 <!-- <p></p> -->
               </a>
@@ -189,73 +205,59 @@
             <hr class="my-4" />
             <blockquote class="blockquote">
               <p class="mb-0">
-                I grew up in Vermont, where rivers only jumped their banks in a
-                freak January thaw. After Irene in 2011, there was a sense that
-                the state had survived extraordinary disaster together —
-                “Vermont Strong”. When the floods returned in 2023, that feeling
-                curdled into something more sober: no once-a-century disaster,
-                just a recurring condition. Floodlines grew out of that vibe
-                shift. And I got to indulge my interest in maps, public policy,
-                systems thinking, and a pinch of institutional skepticism to
-                explore a question that’s only going to become more urgent: how
-                do institutions shape climate resilience and disaster
-                preparedness?
+                I grew up in Vermont, where rivers occasionally jumped their
+                banks during a freak January thaw. After Irene in 2011, there
+                was a sense that the state had survived an extraordinary
+                disaster together — “Vermont Strong”. When the floods returned
+                in 2023, that feeling curdled into something more sober: no
+                once-a-century disaster, just a recurring condition. Floodlines
+                grew out of that emotional shift. It gave me an opportunity to
+                combine interests in maps, environmental systems, public policy,
+                and data storytelling while exploring a question that will only
+                become more urgent as climate risks intensify: how do
+                institutions decide what gets protected, and who gets left
+                waiting?
               </p>
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
               After Tropical Storm Irene and Vermont’s historic 2023 floods, it
               became increasingly difficult to view flooding as a rare disaster
-              rather than a structural reality. At the same time, new floodplain
-              remapping and climate adaptation debates raised larger questions
-              about how mitigation money is distributed — and whether funding
-              systems are responding to future risk or simply reacting to past
-              damage.
+              rather than a structural reality. At the same time, debates over
+              floodplain remapping, climate adaptation, and disaster recovery
+              raised broader questions about how mitigation funding is
+              distributed—and whether public investment is preparing communities
+              for future risk or responding primarily to past damage.
             </p>
             <p>
-              Using Python, GeoPandas, FEMA datasets, ACS demographics, and
-              spatial analysis tools, I built a reproducible pipeline measuring
-              flood exposure, social vulnerability, FEMA mitigation investment,
-              and funding gaps across Vermont towns. The dashboard combines
-              choropleth mapping, interactive rankings, quadrant analysis, and
-              model comparisons to make complex spatial patterns explorable to
-              both technical and non-technical audiences.
+              To explore that question, I built a reproducible geospatial
+              analysis pipeline combining FEMA flood-risk datasets, Census
+              demographics, mitigation funding records, and spatial analysis
+              techniques. The resulting dashboard allows users to compare flood
+              exposure, social vulnerability, mitigation investment, and funding
+              gaps across every Vermont municipality.
             </p>
             <p>
-              The analysis found that FEMA mitigation funding was only weakly
-              correlated with modeled structural need, while past insurance
-              claims were a much stronger predictor of investment. Roughly
-              55–60% of Vermont towns appeared underfunded relative to measured
-              need, suggesting disaster funding systems may operate more
-              reactively than proactively.
+              Across multiple models and sensitivity tests, the findings were
+              remarkably consistent: mitigation funding showed only weak
+              alignment with forward-looking measures of risk and vulnerability,
+              while past flood insurance claims were a substantially stronger
+              predictor of investment. More than half of Vermont municipalities
+              received no FEMA Hazard Mitigation Assistance funding at all.
             </p>
             <p>
-              Technically, the project demonstrates geospatial ETL workflows,
-              composite index construction, sensitivity analysis, spatial
-              statistics, and interactive dashboard development using Leaflet
-              and D3. More importantly, it reflects the kind of work I most
-              enjoy: combining environmental systems, public policy, spatial
-              data, and public-facing storytelling to translate complicated
-              problems into something people can actually understand and use.
+              From a technical perspective, the project demonstrates geospatial
+              ETL workflows, spatial statistics, composite index construction,
+              sensitivity analysis, and interactive dashboard development with
+              Leaflet and D3. More importantly, it reflects the kind of work I
+              most enjoy: using data, maps, and public-facing storytelling to
+              make complex systems easier to understand and interrogate.
             </p>
             <p>Tools & Technologies:</p>
             <ul>
-              <li><b>Frontend:</b> JavaScript, Leaflet.js, D3.js, HTML/CSS</li>
-              <li>
-                <b>Backend & Analysis:</b> Python, Pandas, GeoPandas, NumPy,
-                Jupyter Notebook
-              </li>
-              <li>
-                <b>Spatial Analysis:</b> Shapely, libpysal, ESDA (Moran’s I)
-              </li>
-              <li>
-                <b>Statistics & Modeling:</b> scipy, scikit-learn, statsmodels
-              </li>
-              <li>
-                <b>Data Sources:</b> FEMA, OpenFEMA, NFIP, U.S. Census ACS,
-                Vermont ANR, FRED CPI
-              </li>
-              <li><b>Hosting:</b> GitHub Pages</li>
+              Python • Pandas • GeoPandas • NumPy • Leaflet • D3.js • Shapely •
+              libpysal • scikit-learn • statsmodels • OpenFEMA • ACS • GitHub
+              Pages
             </ul>
             <!-- Divider-->
             <hr class="my-4" />
@@ -268,8 +270,8 @@
               src="/assets/img/floodlines/choropleth_quadrant_eal_per_capita.png"
             />
             <span class="caption text-muted"
-              >All Vermont towns classified into funding quadrants (high/low
-              funding, high/low need, zero-funding)</span
+              >All Vermont municipalities grouped by relative need and funding
+              received</span
             >
 
             <br /><br />
@@ -291,7 +293,8 @@
             />
             <span class="caption text-muted"
               >Towns where need substantially exceeds FEMA HMA investment,
-              highlighting the most underserved communities</span
+              highlighting municipalities where need substantially exceeds
+              mitigation investment</span
             >
 
             <br /><br />
@@ -301,8 +304,8 @@
               src="/assets/img/floodlines/scatter_eal_per_capita.png"
             />
             <span class="caption text-muted"
-              >Loose cloud confirming weak alignment between structural need and
-              federal mitigation dollars</span
+              >Weak relationship between measured need and FEMA mitigation
+              funding across Vermont towns</span
             >
 
             <br /><br />
