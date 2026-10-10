@@ -120,11 +120,10 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- Post Content Summary-->
             <p>
-              Three Journeys. One Walker. Two Clocks. An interactive
-              data-storytelling project mapping 5,196 miles of real-world
-              walking onto three fictional journeys through Middle-earth.
-              Explore the same routes through two independent timelines: the
-              dates I actually walked, and the Shire Calendar dates Tolkien's
+              Three Journeys. One Walker. Two Clocks. An interactive data story
+              mapping 5,196 miles of real-world walking onto three journeys
+              through Middle-earth. Explore the same routes through two
+              independent timelines: when I actually walked, and when Tolkien's
               characters did.
             </p>
             <!-- Divider-->
@@ -185,17 +184,25 @@
             <hr class="my-4" />
             <blockquote class="blockquote">
               <p class="mb-0">
-                I grew up reading Tolkien — certified hobbit nerd, can quote
-                <em>The Silmarillion</em>, pretty sure my mom was reading it
+                I grew up reading Tolkien. Certified hobbit nerd; can quote
+                <em>The Silmarillion</em>; pretty sure my mom was reading it
                 before I was born. I first walked to Mordor to cope with the
-                pandemic. The books gave me something to hold onto: a symbol for
-                doing long, hard things without knowing the outcome, a metaphor
-                for perseverance without any guarantee of success. Giving The
-                Conqueror money to gamify my second walk and mail me shiny
-                medals was a no-brainer. Three hobbit walks, two years, and
-                roughly enough miles to cover the Silk Road later, I had a pile
-                of data and obvious questions. How much did I walk? When did my
-                pace change? How did the three journeys compare?
+                pandemic. The books offered a way to think about doing hard
+                things without knowing the outcome, persevering without any
+                guarantee of success, and finding beauty in a transient world.
+                Gamifying my second walk with
+                <a
+                  href="https://www.theconqueror.events/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >The Conqueror</a
+                >
+                and earning shiny medals was a no-brainer. Three Middle-earth
+                journeys, two years, and roughly enough miles to cover the Silk
+                Road later, I had a pile of data and some questions. How much
+                did I walk? When did my pace change? How did the journeys
+                compare?
               </p>
               <p>
                 I'm also a data nerd. Of course I was gonna build something.
@@ -204,62 +211,49 @@
             <h2 class="section-heading">Project Overview</h2>
             <p>
               Between March 2024 and June 2026, I completed three virtual
-              walking challenges through
+              walking challenges for Frodo, Aragorn, and Bilbo through
               <a
                 href="https://www.theconqueror.events/"
                 rel="noopener"
                 style="text-decoration: underline"
                 target="_blank"
                 >The Conqueror</a
-              >: Frodo's Walk to Mordor, Aragorn's Return of the King, and
-              Bilbo's journey to the Lonely Mountain. Google Fit logged my
-              steps. Across the full two-year window — including gap periods
-              between challenges — I walked
-              <strong>5,196 miles over 806 days</strong>. All three challenges
-              exceeded their targets.
+              >, using daily distances recorded by Google Fit. Across the full
+              two-year window, including gap periods between challenges, I
+              walked <strong>5,196 miles over 806 days</strong>. All three
+              challenges exceeded their targets.
             </p>
             <p>
-              The central design problem was that the project crosses four
-              independent systems: my real-world calendar, the Shire Calendar,
-              The Conqueror's fictional mileage framework, and the geographic
-              geometry of a fan-made SVG map. None of them speak the same
-              language. Making them cohere required holding them apart first, so
-              each layer could be queried independently by the visualization.
+              The central challenge was reconciling four systems: my real-world
+              dates, Tolkien's chronology, The Conqueror's challenge mileages,
+              and the geography traced on a fan-made Middle-earth map. I built
+              separate data layers for each, then connected them through a
+              shared interactive map and route renderer. A custom Shire Calendar
+              and interpolated movement between dated narrative events made
+              Middle-earth Time explorable without pretending Tolkien's
+              chronology specifies every mile or day of travel.
             </p>
             <p>
-              <strong>My Time</strong> advances through real-world dates: each
-              day's recorded walking pushes the character forward by exactly
-              that distance. <strong>Middle-earth Time</strong> advances through
-              Tolkien's chronology — reconstructed from dated events and
-              narrative anchors in the appendices, entirely independent of my
-              walking pace. Both clocks drive the same map renderer. What
-              differs is the shape of movement they produce.
+              The two clocks tell different stories. Aragorn's 1,482-mile
+              journey took me 225 calendar days but spans just 30 days in the
+              reconstructed Middle-earth timeline—a
+              <strong>7.5× difference</strong>. In my defense, he had a horse.
+              Frodo's fictional mileage remains stationary for 95 of 185 days,
+              reflecting long rests at Rivendell and Lothlórien. Bilbo's
+              fictional journey takes 212 days, compared with my 142-day walking
+              challenge. The same routes and distances look very different
+              depending on which clock you use.
             </p>
             <p>
-              That contrast turned out to be the most interesting finding.
-              Aragorn's 1,482-mile journey spans 225 calendar days in my walking
-              data but just 30 days in Middle-earth Time — a
-              <strong>7.5× divergence</strong>. In my defense, he had a horse.
-              Frodo's ratio is a more modest 1.55×. Bilbo inverts the pattern
-              entirely: his fictional timeline runs 212 Middle-earth days while
-              I walked the same mileage in only 142 days. I walked faster than
-              Bilbo. Meanwhile, Frodo's fictional mileage stands still for 95 of
-              his 185 Middle-earth days — long rests at Rivendell and Lothlórien
-              — while my real walking continued without pause. The two clocks
-              were simply tracking different things.
-            </p>
-            <p>
-              The walking data has a story of its own. The habit never stopped:
-              not during a 27-day challenge pause, not during the 147-day
-              inter-journey gap when I accumulated 730+ miles with no active
-              challenge. 90.3% of the 806 project days exceeded 2 miles. The
-              longest unbroken streak ran 125 consecutive days through the
-              entire Bilbo challenge.
+              The walking data revealed a story beyond the challenges
+              themselves. I covered more than 730 miles during the 147 inactive
+              gap days between journeys, and 728 of 806 days exceeded two miles.
+              The walking habit outlasted the challenges.
             </p>
             <p><strong>Tools & Technologies:</strong></p>
             <ul>
               Python · Pandas · NumPy · Matplotlib · JavaScript · SVG · HTML/CSS
-              · GitHub Pages · Google Fit · The Conqueror
+              · GitHub Pages
             </ul>
             <!-- Divider-->
             <hr class="my-4" />
@@ -401,77 +395,6 @@
             <!-- Divider-->
             <hr class="my-4" />
             <h2 class="section-heading">References</h2>
-            <!-- <p>
-              This project would not exist without the work of J.R.R. Tolkien
-              and the many scholars, cartographers, and fan communities who have
-              made exploring Middle-earth possible.
-            </p>
-            <h3 style="font-weight: 500">Primary Sources</h3>
-            <ul>
-              <li>Tolkien, J.R.R. <em>The Hobbit</em>.</li>
-              <li>
-                Tolkien, J.R.R. <em>The Lord of the Rings</em>, including the
-                appendices.
-              </li>
-              <li>Tolkien, J.R.R. <em>Unfinished Tales</em>.</li>
-            </ul>
-            <h3 style="font-weight: 500">Secondary Sources</h3>
-            <ul>
-              <li>
-                Fonstad, Karen Wynn. <em>The Atlas of Middle-earth</em>. Revised
-                edition.
-              </li>
-            </ul>
-            <h3 style="font-weight: 500">Data & Project Sources</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://github.com/k1tesurfen/mapome/"
-                  rel="noopener"
-                  style="text-decoration: underline"
-                  target="_blank"
-                  >mapome</a
-                >
-                — Middle-earth map source by k1tesurfen, licensed under
-                <a
-                  href="https://creativecommons.org/licenses/by-sa/4.0/"
-                  rel="noopener"
-                  style="text-decoration: underline"
-                  target="_blank"
-                  >CC BY-SA 4.0</a
-                >.
-              </li>
-              <li>
-                <a
-                  href="https://www.theconqueror.events/"
-                  rel="noopener"
-                  style="text-decoration: underline"
-                  target="_blank"
-                  >The Conqueror</a
-                >
-                — Virtual challenge platform providing the mileage framework and
-                journey structure for the Tolkien challenges.
-              </li>
-              <li>
-                <a
-                  href="https://www.google.com/fit/"
-                  rel="noopener"
-                  style="text-decoration: underline"
-                  target="_blank"
-                  >Google Fit</a
-                >
-                — Source of the personal walking data used to track daily
-                distance.
-              </li>
-            </ul>
-            <p>Original code © 2026 Bryan Johns, MIT License.</p>
-            <p>
-              This project is non-commercial and is not affiliated with the
-              Tolkien Estate, HarperCollins, or any rights holder. No claim is
-              made to any intellectual property associated with Middle-earth.
-              See the repository README for full attribution and licensing
-              information.
-            </p> -->
             <ul>
               <li>
                 Tolkien, J.R.R. <em>The Hobbit</em>,
@@ -525,56 +448,14 @@
               </li>
             </ul>
             <p>
-              This project is independent, unofficial, and non-commercial. It is
-              not affiliated with or endorsed by the Tolkien Estate,
-              HarperCollins, Houghton Mifflin Harcourt, or The Conqueror. No
-              claim is made to any intellectual property associated with
-              Middle-earth or The Conqueror's challenge structure. See the
-              repository README for full attribution and licensing information.
+              This is an independent, unofficial, non-commercial fan project. It
+              is not affiliated with or endorsed by The Conqueror, the Tolkien
+              Estate, or the publishers of Tolkien's works. Middle-earth-related
+              names and material, challenge branding, and other third-party
+              assets remain subject to their respective rights. Attribution does
+              not imply endorsement or permission. See the repository README for
+              additional attribution and licensing.
             </p>
-
-            <!-- <p>
-              Primary sources include Tolkien’s <em>The Hobbit</em>,
-              <em>The Lord of the Rings</em> and appendices, and
-              <em>Unfinished Tales</em>, alongside Karen Wynn Fonstad’s
-              <em>The Atlas of Middle-earth</em>. Map geometry is based on
-              <a
-                href="https://github.com/k1tesurfen/mapome/"
-                rel="noopener"
-                style="text-decoration: underline"
-                target="_blank"
-                >mapome</a
-              >
-              (<a
-                href="https://creativecommons.org/licenses/by-sa/4.0/"
-                rel="noopener"
-                style="text-decoration: underline"
-                target="_blank"
-                >CC BY-SA 4.0</a
-              >). Walking data comes from my personal
-              <a
-                href="https://www.google.com/fit/"
-                rel="noopener"
-                style="text-decoration: underline"
-                target="_blank"
-                >Google Fit</a
-              >
-              records;
-              <a
-                href="https://www.theconqueror.events/"
-                rel="noopener"
-                style="text-decoration: underline"
-                target="_blank"
-                >The Conqueror</a
-              >
-              provided the virtual challenge framework.
-            </p>
-            <p>
-              Original code © Bryan C. Johns 2026, MIT License. This
-              non-commercial personal project is not affiliated with the Tolkien
-              Estate or other rights holders. See the repository README for full
-              attribution and licensing details.
-            </p> -->
             <!-- Divider-->
             <hr class="my-4" />
             <div class="d-flex justify-content-between mb-4">
