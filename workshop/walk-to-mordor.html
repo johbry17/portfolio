@@ -1,0 +1,645 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <meta
+      content="How real-world walking data became an interactive Middle-earth journey — the data, modeling, maps, and design behind The Walk to Mordor."
+      name="description"
+    />
+    <meta content="Bryan C. Johns" name="author" />
+    <title>
+      Walk to Mordor — Two Years of Walking, Mapped to Middle-earth | Bryan C.
+      Johns
+    </title>
+    <link href="/assets/favicon.ico" rel="icon" type="image/x-icon" />
+    <link
+      href="https://informedwanderer.com/workshop/walk-to-mordor.html"
+      rel="canonical"
+    />
+    <!-- JSON-LD: canonical Person reference (site-wide @id) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@id": "https://informedwanderer.com/#person"
+      }
+    </script>
+    <!-- Font Awesome icons (free version)-->
+    <script
+      crossorigin="anonymous"
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="/">Home</a>
+        <button
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarResponsive"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto py-4 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="/about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="/archive.html"
+                >Archive</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="/hire.html"
+                >Hire</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-lg-3 py-3 py-lg-4" href="/contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Header-->
+    <header
+      class="masthead"
+      style="
+        background-image: url(&quot;/assets/img/walk-to-mordor/PXL_20220413_161241565.PANO.jpg&quot;);
+      "
+    >
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="post-heading">
+              <h1>Walk to Mordor</h1>
+              <h2 class="subheading">Real footsteps. Fictional journeys.</h2>
+              <span class="meta">
+                <!-- Posted by
+                                <a href="#!">Start Bootstrap</a>
+                                on August 24, 2023 -->
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post Content Summary-->
+            <p>
+              Three Journeys. One Walker. Two Clocks. An interactive
+              data-storytelling project mapping 5,196 miles of real-world
+              walking onto three fictional journeys through Middle-earth.
+              Explore the same routes through two independent timelines: the
+              dates I actually walked, and the Shire Calendar dates Tolkien's
+              characters did.
+            </p>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">Project Links</h2>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/Walk-to-Mordor/static/"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-hiking fa-stack-1x fa-inverse"></i>
+                  </span>
+                  Live Website
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://johbry17.github.io/Walk-to-Mordor/static/about.html"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-book fa-stack-1x fa-inverse"></i>
+                  </span>
+                  About the Project
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- <hr class="my-4" /> -->
+            <div class="post-preview">
+              <a
+                href="https://github.com/johbry17/Walk-to-Mordor"
+                rel="noopener"
+                target="_blank"
+              >
+                <p class="post-subtitle">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                  GitHub Repository
+                </p>
+                <!-- <p></p> -->
+              </a>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <blockquote class="blockquote">
+              <p class="mb-0">
+                I grew up reading Tolkien — certified hobbit nerd, can quote
+                <em>The Silmarillion</em>, pretty sure my mom was reading it
+                before I was born. I first walked to Mordor to cope with the
+                pandemic. The books gave me something to hold onto: a symbol for
+                doing long, hard things without knowing the outcome, a metaphor
+                for perseverance without any guarantee of success. Giving The
+                Conqueror money to gamify my second walk and mail me shiny
+                medals was a no-brainer. Three hobbit walks, two years, and
+                roughly enough miles to cover the Silk Road later, I had a pile
+                of data and obvious questions. How much did I walk? When did my
+                pace change? How did the three journeys compare?
+              </p>
+              <p>
+                I'm also a data nerd. Of course I was gonna build something.
+              </p>
+            </blockquote>
+            <h2 class="section-heading">Project Overview</h2>
+            <p>
+              Between March 2024 and June 2026, I completed three virtual
+              walking challenges through
+              <a
+                href="https://www.theconqueror.events/"
+                rel="noopener"
+                style="text-decoration: underline"
+                target="_blank"
+                >The Conqueror</a
+              >: Frodo's Walk to Mordor, Aragorn's Return of the King, and
+              Bilbo's journey to the Lonely Mountain. Google Fit logged my
+              steps. Across the full two-year window — including gap periods
+              between challenges — I walked
+              <strong>5,196 miles over 806 days</strong>. All three challenges
+              exceeded their targets.
+            </p>
+            <p>
+              The central design problem was that the project crosses four
+              independent systems: my real-world calendar, the Shire Calendar,
+              The Conqueror's fictional mileage framework, and the geographic
+              geometry of a fan-made SVG map. None of them speak the same
+              language. Making them cohere required holding them apart first, so
+              each layer could be queried independently by the visualization.
+            </p>
+            <p>
+              <strong>My Time</strong> advances through real-world dates: each
+              day's recorded walking pushes the character forward by exactly
+              that distance. <strong>Middle-earth Time</strong> advances through
+              Tolkien's chronology — reconstructed from dated events and
+              narrative anchors in the appendices, entirely independent of my
+              walking pace. Both clocks drive the same map renderer. What
+              differs is the shape of movement they produce.
+            </p>
+            <p>
+              That contrast turned out to be the most interesting finding.
+              Aragorn's 1,482-mile journey spans 225 calendar days in my walking
+              data but just 30 days in Middle-earth Time — a
+              <strong>7.5× divergence</strong>. In my defense, he had a horse.
+              Frodo's ratio is a more modest 1.55×. Bilbo inverts the pattern
+              entirely: his fictional timeline runs 212 Middle-earth days while
+              I walked the same mileage in only 142 days. I walked faster than
+              Bilbo. Meanwhile, Frodo's fictional mileage stands still for 95 of
+              his 185 Middle-earth days — long rests at Rivendell and Lothlórien
+              — while my real walking continued without pause. The two clocks
+              were simply tracking different things.
+            </p>
+            <p>
+              The walking data has a story of its own. The habit never stopped:
+              not during a 27-day challenge pause, not during the 147-day
+              inter-journey gap when I accumulated 730+ miles with no active
+              challenge. 90.3% of the 806 project days exceeded 2 miles. The
+              longest unbroken streak ran 125 consecutive days through the
+              entire Bilbo challenge.
+            </p>
+            <p><strong>Tools & Technologies:</strong></p>
+            <ul>
+              Python · Pandas · NumPy · Matplotlib · JavaScript · SVG · HTML/CSS
+              · GitHub Pages · Google Fit · The Conqueror
+            </ul>
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">Gallery</h2>
+            <!-- <hr class="my-4" /> -->
+
+            <!-- <br /><br />
+            <img
+              alt="Default visualization view: Overview mode, Frodo departing Bag End on March 27, 2024"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/map_start.png"
+            />
+            <span class="caption text-muted"
+              >Default view: Overview in My Time. Frodo has just left Bag End on
+              March 27, 2024.</span
+            > -->
+            <br /><br />
+            <img
+              alt="Middle-earth Time showing Frodo near Mordor and Aragorn at Minas Tirith simultaneously in T.A. 3019, with both characters' active routes and narrative event panels visible"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/map_mordor.png"
+            />
+            <span class="caption text-muted"
+              >Middle-earth Time, T.A. 3019: Frodo escaping the Tower of Cirith
+              Ungol while Aragorn reaches Minas Tirith. Both journeys are active
+              on screen simultaneously during the final weeks of the War of the
+              Ring — the visualization's most distinctive moment.</span
+            >
+            <br /><br />
+            <img
+              alt="Interactive map view showing Aragorn's route through Rohan with the info panel displaying 'Paths of the Dead' and cumulative mileage of 824 miles"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/map_rohan.png"
+            />
+            <span class="caption text-muted"
+              >Aragorn, My Time, June 3, 2025: the Paths of the Dead. The info
+              panel shows the current location, cumulative miles, and Tolkien's
+              narrative event. The revealed route traces everything walked so
+              far.</span
+            >
+            <!-- <br /><br />
+            <img
+              alt="Frodo's route in My Time, Bridge of Khazad-dûm region"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/map_moria.png"
+            />
+            <span class="caption text-muted"
+              >Frodo's journey in My Time: passing the Bridge of Khazad-dûm. The
+              badge marks a challenge rest period aligned to the lament for
+              Gandalf. My Time follows real-world dates.</span
+            > -->
+            <br /><br />
+            <img
+              alt="Interactive map view showing Bilbo's route through Mirkwood toward the Lonely Mountain with the Middle-earth Time slider showing September T.A. 2941"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/map_hobbit.png"
+            />
+            <span class="caption text-muted"
+              >Bilbo, Middle-earth Time: September T.A. 2941, escaping the
+              Elvenking's Halls near the Lonely Mountain. Bilbo's journey runs
+              on its own Shire Calendar, 78 years before Frodo and
+              Aragorn's.</span
+            >
+            <br /><br />
+            <img
+              alt="Three line charts comparing cumulative walking distance over time in My Time versus Middle-earth Time for Frodo, Aragorn, and Bilbo; My Time rises steadily while Middle-earth Time includes long flat plateaus for rest periods"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/two_clocks.png"
+            />
+            <span class="caption text-muted"
+              >The same fictional mileage, read through two clocks. My Time
+              rises steadily; Middle-earth Time shows long flat plateaus for
+              Rivendell, Lothlórien, and the Wood-elves' captivity — periods
+              when the fictional timeline stands still while real-world walking
+              continued.</span
+            >
+            <!-- <br /><br />
+            <img
+              alt="Daily walking distance bar chart, March 2024 – June 2026, colored by journey with 14-day rolling average"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/daily_walking_plot.png"
+            />
+            <span class="caption text-muted"
+              >Daily walking distance bar chart, March 2024 – June 2026, colored
+              by journey with 14-day rolling average. The 14-day rolling average
+              sits broadly in the 6–9 miles/day band throughout.</span -->
+            >
+            <br /><br />
+            <img
+              alt="Line chart of cumulative walking miles from March 2024 to June 2026, colored by journey with Frodo in orange, Aragorn in teal, Bilbo in green, and gray gap periods between challenges, reaching 5,196 total miles"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/cumulative_walking.png"
+            />
+            <span class="caption text-muted"
+              >5,196 miles over 806 days. Grey segments show gap periods between
+              challenges. The consistently steady slope across two years
+              reflects a daily walking habit, not a challenge-driven burst. This
+              is a daily walker, not a weekend athlete.</span
+            >
+            <!-- <br /><br />
+            <img
+              alt="Daily distance by day of week and monthly totals"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/walking_temporal_by_day_month.png"
+            />
+            <span class="caption text-muted"
+              >Left: daily distance by day of week. Sunday and Monday produce
+              the highest medians; Friday the lowest. The range across all seven
+              days is only ~2.5 miles. Right: monthly totals colored by active
+              challenge. Monthly accumulation is broadly even across all three
+              challenge periods with no seasonal collapse.</span
+            > -->
+            <!-- <br /><br />
+            <img
+              alt="Mobile layout with info panel below the map"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/map_mobile.png"
+            />
+            <span class="caption text-muted"
+              >Responsive mobile layout: the map fills the viewport, with the
+              information panel positioned below.</span
+            > -->
+            <br /><br />
+            <img
+              alt="Completion medals for the Walk to Mordor challenge"
+              class="img-fluid mx-auto d-block"
+              src="/assets/img/walk-to-mordor/medals.jpg"
+            />
+            <span class="caption text-muted"
+              >Completion medals for the Walk to Mordor challenges, from
+              <a
+                href="https://www.theconqueror.events/"
+                target="_blank"
+                rel="noopener"
+                >The Conqueror</a
+              >.</span
+            >
+            <!-- <br><br> -->
+            <!-- Divider-->
+            <hr class="my-4" />
+            <h2 class="section-heading">References</h2>
+            <!-- <p>
+              This project would not exist without the work of J.R.R. Tolkien
+              and the many scholars, cartographers, and fan communities who have
+              made exploring Middle-earth possible.
+            </p>
+            <h3 style="font-weight: 500">Primary Sources</h3>
+            <ul>
+              <li>Tolkien, J.R.R. <em>The Hobbit</em>.</li>
+              <li>
+                Tolkien, J.R.R. <em>The Lord of the Rings</em>, including the
+                appendices.
+              </li>
+              <li>Tolkien, J.R.R. <em>Unfinished Tales</em>.</li>
+            </ul>
+            <h3 style="font-weight: 500">Secondary Sources</h3>
+            <ul>
+              <li>
+                Fonstad, Karen Wynn. <em>The Atlas of Middle-earth</em>. Revised
+                edition.
+              </li>
+            </ul>
+            <h3 style="font-weight: 500">Data & Project Sources</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/k1tesurfen/mapome/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >mapome</a
+                >
+                — Middle-earth map source by k1tesurfen, licensed under
+                <a
+                  href="https://creativecommons.org/licenses/by-sa/4.0/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >CC BY-SA 4.0</a
+                >.
+              </li>
+              <li>
+                <a
+                  href="https://www.theconqueror.events/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >The Conqueror</a
+                >
+                — Virtual challenge platform providing the mileage framework and
+                journey structure for the Tolkien challenges.
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/fit/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >Google Fit</a
+                >
+                — Source of the personal walking data used to track daily
+                distance.
+              </li>
+            </ul>
+            <p>Original code © 2026 Bryan Johns, MIT License.</p>
+            <p>
+              This project is non-commercial and is not affiliated with the
+              Tolkien Estate, HarperCollins, or any rights holder. No claim is
+              made to any intellectual property associated with Middle-earth.
+              See the repository README for full attribution and licensing
+              information.
+            </p> -->
+            <ul>
+              <li>
+                Tolkien, J.R.R. <em>The Hobbit</em>,
+                <em>The Lord of the Rings</em> (including appendices),
+                <em>Unfinished Tales</em>. Published by HarperCollins / Houghton
+                Mifflin Harcourt.
+              </li>
+              <li>
+                Fonstad, Karen Wynn. <em>The Atlas of Middle-earth</em>, revised
+                edition. Consulted as a secondary reference for routes,
+                locations, and geography.
+              </li>
+              <li>
+                <a
+                  href="https://github.com/k1tesurfen/mapome/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >mapome</a
+                >
+                by k1tesurfen — Middle-earth base map used for the
+                visualization. Licensed
+                <a
+                  href="https://creativecommons.org/licenses/by-sa/4.0/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >CC BY-SA 4.0</a
+                >.
+              </li>
+              <li>
+                <a
+                  href="https://www.theconqueror.events/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >The Conqueror</a
+                >
+                — virtual walking challenge mileage and segment framework.
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/fit/"
+                  rel="noopener"
+                  style="text-decoration: underline"
+                  target="_blank"
+                  >Google Fit</a
+                >
+                — source of personal walking data; only daily aggregate
+                distances are published.
+              </li>
+            </ul>
+            <p>
+              This project is independent, unofficial, and non-commercial. It is
+              not affiliated with or endorsed by the Tolkien Estate,
+              HarperCollins, Houghton Mifflin Harcourt, or The Conqueror. No
+              claim is made to any intellectual property associated with
+              Middle-earth or The Conqueror's challenge structure. See the
+              repository README for full attribution and licensing information.
+            </p>
+
+            <!-- <p>
+              Primary sources include Tolkien’s <em>The Hobbit</em>,
+              <em>The Lord of the Rings</em> and appendices, and
+              <em>Unfinished Tales</em>, alongside Karen Wynn Fonstad’s
+              <em>The Atlas of Middle-earth</em>. Map geometry is based on
+              <a
+                href="https://github.com/k1tesurfen/mapome/"
+                rel="noopener"
+                style="text-decoration: underline"
+                target="_blank"
+                >mapome</a
+              >
+              (<a
+                href="https://creativecommons.org/licenses/by-sa/4.0/"
+                rel="noopener"
+                style="text-decoration: underline"
+                target="_blank"
+                >CC BY-SA 4.0</a
+              >). Walking data comes from my personal
+              <a
+                href="https://www.google.com/fit/"
+                rel="noopener"
+                style="text-decoration: underline"
+                target="_blank"
+                >Google Fit</a
+              >
+              records;
+              <a
+                href="https://www.theconqueror.events/"
+                rel="noopener"
+                style="text-decoration: underline"
+                target="_blank"
+                >The Conqueror</a
+              >
+              provided the virtual challenge framework.
+            </p>
+            <p>
+              Original code © Bryan C. Johns 2026, MIT License. This
+              non-commercial personal project is not affiliated with the Tolkien
+              Estate or other rights holders. See the repository README for full
+              attribution and licensing details.
+            </p> -->
+            <!-- Divider-->
+            <hr class="my-4" />
+            <div class="d-flex justify-content-between mb-4">
+              <a class="btn btn-light" href="#">Back to Top</a>
+              <a class="btn btn-light" href="/">Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <ul class="list-inline text-center">
+              <!-- <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li> -->
+              <li class="list-inline-item">
+                <a
+                  href="https://www.linkedin.com/in/b-johns/"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://github.com/johbry17"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div class="small text-center text-muted fst-italic">
+              Copyright &copy; Bryan C. Johns
+              <span id="copyright-year">2024</span>
+            </div>
+            <div class="footer-tagline fst-italic">
+              Fluent in Data. Fluent in Human.<br /><small
+                >Using data to understand the world. And help improve it.</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
