@@ -23,11 +23,11 @@ This repository contains the source for my personal data portfolio website. It b
 
 ## Featured Projects
 
-- **[Classified: At-Risk](https://informedwanderer.com/workshop/salifort-employee-churn.html)** – AI-driven machine learning models for predicting employee turnover and supporting HR retention strategies
-- **[Cyclistic Analytics](https://informedwanderer.com/workshop/cyclistic.html)** – Data analysis of Chicago’s bikeshare for customer conversion and marketing recommendations
-- **[Capital Crashpad](https://informedwanderer.com/workshop/capital-crashpad.html)** – Dashboard of Airbnb statistics in Washington, DC
-
-- **[Waypoints](https://informedwanderer.com/workshop/waypoints.html)** – A geospatial travel memoir combining mapping, routing, and narrative
+- **[Floodlines](https://informedwanderer.com/workshop/floodlines.html)** – Geospatial policy analysis integrating FEMA flood risk, Census demographics, and federal mitigation funding to examine how public investment aligns with community need in Vermont.
+- **[Capital Crashpad](https://informedwanderer.com/workshop/capital-crashpad.html)** – Interactive analysis of Washington, DC's short-term rental market and structural shifts associated with platform verification enforcement.
+- **[Classified: At-Risk](https://informedwanderer.com/workshop/salifort-employee-churn.html)** – Recall-focused machine learning models predicting employee turnover and identifying workforce attrition risks.
+- **[Walk to Mordor](https://informedwanderer.com/workshop/walk-to-mordor.html)** – Interactive data story mapping 806 days of personal walking onto three journeys through Middle-earth, connecting activity records, geographic routes, and parallel timelines.
+- **[Waypoints](https://informedwanderer.com/workshop/waypoints.html)** – Interactive geospatial travel memoir combining maps, routes, photos, and narrative into an exploratory atlas.
 
 Additional projects are available in the Living Archive, ranging from biodiversity dashboards to real-time earthquake maps.
 
@@ -49,7 +49,7 @@ For updates:
 
 Thanks to Start Bootstrap for the [Clean Blog](https://startbootstrap.com/theme/clean-blog) Theme.
 
-## Author 
+## Author
 
 Copyright &copy; Bryan C. Johns, <!-- START_DATE -->2026<!-- END_DATE -->  
 [bryan.johns@informedwanderer.com](mailto:bryan.johns@informedwanderer.com) | [LinkedIn](https://www.linkedin.com/in/b-johns/) | [GitHub](https://github.com/johbry17) | [Portfolio](https://informedwanderer.com)  
