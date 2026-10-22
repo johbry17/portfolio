@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -91,7 +91,7 @@
     <header
       class="masthead"
       style="
-        background-image: url('/assets/img/waypoints/Building\ a\ Dam.JPG');
+        background-image: url(&quot;/assets/img/waypoints/Building\ a\ Dam.JPG&quot;);
       "
     >
       <div class="container position-relative px-4 px-lg-5">
@@ -119,10 +119,11 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- Post Content Summary-->
             <p>
-              Waypoints is an interactive geospatial archive that uses data,
-              stories, and photos to preserve memory, place, and movement. By
-              blending maps with narrative, it shows how data can deepen our
-              understanding of place and why that matters.
+              Waypoints is an interactive atlas of places I've visited, journeys
+              I've taken, and experiences I've documented. Built with Leaflet,
+              Python, and geospatial APIs, it combines geographic features,
+              travel routes, personal photographs, and narrative into an
+              explorable map.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -175,68 +176,52 @@
                 brought deep personal reflection. Rebuilding a moment from a
                 blurry photo, rerouting old paths, rediscovering forgotten
                 places. It was sweetly profound, nostalgic, and oddly healing.
-                It's far from done. So is life.
+              </p>
+              <p>
+                It's far from done. There will always be more world than time.
               </p>
               <p>I look forward to never finishing it.</p>
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              Waypoints maps my story across continents, from the serene beaches
-              of the Caribbean to the vast deserts of Namibia and the vibrant
-              streets of India. It’s a visual memoir powered by geospatial tools
-              and narrative intent. Technically, it merges full-stack
-              development with advanced mapping capabilities to tell a human
-              story—my human story—through data.
+              The atlas integrates travel records from Google Sheets and CSV
+              files with geographic features retrieved through APIs and custom
+              GeoJSON files. These sources feed an interactive Leaflet map that
+              combines location markers, activity layers, travel routes,
+              photographs, and personal narratives.
             </p>
-            <p>
-              The technical challenge was integrating diverse geospatial data
-              into a system that remained explorable, fast, and human-centered.
-              Core technologies used include:
-            </p>
+            <p>Supporting services extend the map's capabilities:</p>
             <ul>
               <li>
-                <b>Leaflet</b> for interactive maps with custom markers,
-                clustering, and polylines (e.g., hiking routes).
+                <b>Overpass API</b> queries OpenStreetMap data for geographic
+                features such as trails, waterways, and ferry routes.
               </li>
               <li>
-                <b>Overpass API</b> to fetch OpenStreetMap data like trails,
-                waterways, and ferry lines.
+                <b>Nominatim</b> supports geocoding and reverse geocoding.
               </li>
-              <li><b>Nominatim</b> for geocoding and reverse geocoding.</li>
+              <li><b>OpenRouteService API</b> generates vehicle routes.</li>
+              <li><b>GeographicLib</b> supports geodesic calculations.</li>
               <li>
-                <b>OpenRouteService API</b> for generating vehicle routes
-                automatically.
+                <b>geojson.io and GeoJSON</b> support the creation and storage
+                of custom geographic features and manually reconstructed routes.
               </li>
-              <li>
-                <b>GeographicLib</b> for great circle and geodesic calculations.
-              </li>
-              <li>
-                <b>geojson.io</b> for hand-drawing and exporting custom
-                GeoJSONs.
-              </li>
-              <!-- <li>
-                <b>GeoJSON</b> as the foundation for spatial data
-                representation.
-              </li> -->
-              <li>
-                <b>Shepherd.js</b> for a guided tour of the map and interface.
-              </li>
+              <li><b>Shepherd.js</b> guides visitors through the interface.</li>
             </ul>
             <p>
-              The backend, built with <b>Python</b>, integrates data from
-              <b>APIs</b>, <b>Google Sheets</b>, and <b>CSV files</b>, with
-              Google Sheets serving as a lightweight, SQL-style data layer. The
-              map includes custom layers for activities, travel modes, and
-              pop-up photo galleries, delivering a mobile-responsive, engaging
-              experience.
+              A Python backend integrates data from these sources, while Google
+              Sheets and CSV files provide lightweight, accessible data storage.
+              On the frontend, interactive popups combine photographs and
+              commentary, while map layers let visitors explore locations by
+              activity and travel route. The interface is designed to work
+              across screen sizes.
             </p>
             <p>
-              Waypoints is a personal archive and technical showcase, proof that
-              data storytelling can be as emotional as it is analytical. It
-              demonstrates my skills in <b>geospatial data processing</b>,
-              <b>API integration</b>, and <b>frontend experience design</b>.
-              It's data storytelling at the most intimate of levels, my
-              memories.
+              The central challenge is integrating diverse geographic and
+              narrative data into a single, intuitive interface. Waypoints
+              demonstrates API integration, geospatial data handling,
+              interactive visualization, and frontend design through an
+              application that connects places, journeys, and personal
+              experiences.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -244,65 +229,63 @@
             <!-- <hr class="my-4" /> -->
             <br /><br />
             <img
-              alt="Main markers on Map of Earth"
+              alt="World map with color-coded markers identifying major locations across the author's travels."
               class="img-fluid mx-auto d-block"
               src="/assets/img/waypoints/main_markers.png"
             />
             <span class="caption text-muted"
-              >Landing page, with main markers colored and mapped by life
-              imprint. Click any marker to explore interactive popups and
-              stories.</span
+              >The landing view maps major locations across the globe, with
+              marker colors distinguishing life imprints. Select a marker to
+              open its associated stories, photographs, and geographic
+              context.</span
             >
             <br /><br />
             <img
-              alt="Namibia Photo Reel"
+              alt="Namibia location popup displaying a reel of personal photographs and accompanying commentary."
               class="img-fluid mx-auto d-block"
               src="/assets/img/waypoints/photo_reel_namibia.png"
             />
             <span class="caption text-muted"
-              >Namibia popup: Example of a photo reel and commentary displayed
-              when clicking a marker.</span
+              >A location popup combining photographs and commentary in a single
+              interface, demonstrating how personal media and narrative are
+              integrated into the map.</span
             >
             <br /><br />
             <img
-              alt="Activities in the Caribbean"
+              alt="Map of the US Virgin Islands showing clustered activity markers, a waypoint, and connected travel routes."
               class="img-fluid mx-auto d-block"
               src="/assets/img/waypoints/activities_stj.png"
             />
             <span class="caption text-muted"
-              >Virgin Islands: Activity markers and routes layer shown together,
-              highlighting clustered adventures and travel paths.</span
+              >Multiple spatial layers showing a waypoint marker alongside
+              activity markers and travel routes in the US Virgin Islands,
+              illustrating how point-based records and linear geographic
+              features can be explored together.</span
             >
             <br /><br />
             <img
-              alt="India Photo Reel"
+              alt="India location popup with a photographic reel and commentary, displayed over the map's route layer."
               class="img-fluid mx-auto d-block"
               src="/assets/img/waypoints/photo_reel_india.png"
             />
             <span class="caption text-muted"
-              >India popup: Photo reel and commentary, with routes layer,
-              demonstrating how popups combine images and narrative.</span
+              >A location popup with a photo reel and commentary, shown
+              alongside the route layer. The view demonstrates how
+              location-specific stories connect to the broader geography of a
+              journey.</span
             >
             <br /><br />
             <img
-              alt="Activities in Vermont"
+              alt="Map of Vermont showing clustered activity markers and mapped travel routes at a local scale."
               class="img-fluid mx-auto d-block"
               src="/assets/img/waypoints/activities_vt.png"
             />
             <span class="caption text-muted"
-              >Vermont: Clustered activity icons and visible routes layer,
-              illustrating local adventures and travel paths.</span
+              >Activity markers and mapped routes reveal a more detailed,
+              local-scale view of the atlas, demonstrating how the same mapping
+              interface accommodates both global travel and nearby
+              exploration.</span
             >
-            <!-- <br /><br />
-            <img
-              class="img-fluid mx-auto d-block"
-              src="/assets/img/waypoints/ERD.png"
-              alt="Entity Relationship Diagram"
-            />
-            <span class="caption text-muted"
-              >Entity Relationship Diagram (tentative): Visual overview of the
-              data model powering markers, popups, and route overlays.</span
-            > -->
             <hr class="my-4" />
             <h2 class="section-heading">References</h2>
             <ul>
