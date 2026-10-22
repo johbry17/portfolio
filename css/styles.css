@@ -11215,6 +11215,65 @@ header.masthead .post-heading .meta a {
   opacity: 0.2;
 }
 
+/* ──── project thumbnail layout ──────────────────────────────────────────── */
+.post-preview.has-thumb {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+.post-preview.has-thumb .post-thumb-link {
+  flex: 0 0 180px;
+  display: block;
+}
+.post-preview.has-thumb .post-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.post-preview.has-thumb .post-thumb-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.post-preview.has-thumb .post-thumb-body > a {
+  color: #212529;
+  text-decoration: none;
+}
+.post-preview.has-thumb .post-thumb-body > a:focus,
+.post-preview.has-thumb .post-thumb-body > a:hover {
+  color: #0085a1;
+  text-decoration: none;
+}
+.post-preview.has-thumb .post-thumb-body > a > .post-title {
+  font-size: 1.875rem;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+}
+.post-preview.has-thumb .post-thumb-body > a > .post-subtitle {
+  font-weight: 300;
+  margin-bottom: 0.625rem;
+}
+.post-preview.has-thumb .post-thumb-body > .post-meta {
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-top: 0;
+  color: #6c757d;
+}
+@media (max-width: 575px) {
+  .post-preview.has-thumb {
+    flex-direction: column;
+  }
+  .post-preview.has-thumb .post-thumb-link {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .post-preview.has-thumb .post-thumb-body > a > .post-title {
+    font-size: 2.25rem;
+  }
+}
+
 /* ──── Hire page supplemental links ─────────────────────────────────────────────────────────── */
 .supplemental-item {
   padding-left: 0.25rem;
