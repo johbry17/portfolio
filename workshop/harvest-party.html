@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -93,7 +93,7 @@
     <header
       class="masthead"
       style="
-        background-image: url('/assets/img/harvest-party/cape_town_sunset.jpg');
+        background-image: url(&quot;/assets/img/harvest-party/cape_town_sunset.jpg&quot;);
       "
     >
       <div class="container position-relative px-4 px-lg-5">
@@ -156,7 +156,7 @@
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fas fa-chart-line fa-stack-1x fa-inverse"></i>
                   </span>
-                  Tableau Explanatory Data Analysis
+                  Tableau 2023 Data Analysis
                 </p>
                 <!-- <p>https://public.tableau.com/app/profile/bryan.johns6699/viz/HarvestParty/HarvestPartyStory</p> -->
                 <!-- or -->
@@ -212,44 +212,31 @@
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              The Harvest Party is an annual fundraiser supporting the Capital
-              Area Food Bank, blending community, live music, and local food. I
-              used this event as an opportunity to combine personal connection
-              with professional skills, turning historical financial data into
-              meaningful, interactive insights. The audience included both
-              non-technical volunteers and donors, requiring clarity without
-              oversimplification.
+              The Harvest Party is an annual community fundraiser supporting the
+              Capital Area Food Bank. I turned the event's historical financial
+              records into an interactive data story for the planning committee,
+              donors, and volunteers—making the numbers easier to explore while
+              preserving the personality of an event built around friends, food,
+              and live music.
             </p>
             <p>
-              The process began with
-              <b>Python-based exploratory data analysis (EDA)</b>, where I
-              cleaned and organized multi-year financial data using
-              <b>pandas</b>, <b>matplotlib</b>, <b>seaborn</b>, and
-              <b>Plotly</b>. This foundational step uncovered trends in
-              expenditures, donations, and attendance, setting the stage for
-              downstream analysis.
+              Using Python and pandas, I cleaned and explored the data before
+              building interactive visualizations with Plotly.js and Tableau.
+              The analysis revealed that bar and music were among the largest
+              expense categories, while annual expenses generally rose over
+              time. Year-by-year comparisons also showed how the event's
+              financial outcomes changed, including early losses and a later
+              return to positive net results.
             </p>
             <p>
-              I then built a <b>mobile-responsive website</b> using
-              <b>JavaScript</b>, styled with <b>Sass</b> and <b>Bootstrap</b> to
-              host dynamic <b>Plotly.js</b> charts. Designed for transparency,
-              the site helps donors and organizers visualize where funds go and
-              how the event performs year to year. Custom touches, like animated
-              masks to reflect the 2020 pandemic, help keep the experience
-              engaging and on-brand.
-            </p>
-            <p>
-              Finally, I developed a set of interactive
-              <b>Tableau dashboards</b> that deliver explanatory analysis. These
-              dashboards highlight key metrics such as donation trends, spending
-              breakdowns, and cost per attendee, helping stakeholders quickly
-              understand the event’s financial health and identify opportunities
-              to improve impact and efficiency.
-            </p>
-            <p>
-              By combining technical tools and visual storytelling, this project
-              highlights my ability to not only analyze data but also present it
-              in ways that engage both technical and non-technical audiences.
+              The project combines exploratory analysis, interactive dashboards,
+              and a mobile-responsive website to make the event's finances more
+              transparent. It also surfaced an important limitation: as Facebook
+              became a less reliable way to measure attendance, RSVP-based
+              cost-per-attendee figures became increasingly misleading. The
+              result is both a practical planning resource and a record of a
+              community event, with a few festive visualizations and pandemic-era
+              Easter eggs along the way.
             </p>
             <!-- begin tableau css div to center on mobile, at very end of styles.css -->
             <div id="tableau-viz">
