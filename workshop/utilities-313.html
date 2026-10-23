@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -93,7 +93,7 @@
     <header
       class="masthead"
       style="
-        background-image: url('/assets/img/utilities-313/bass_rock_gannets_1.jpg');
+        background-image: url(&quot;/assets/img/utilities-313/bass_rock_gannets_1.jpg&quot;);
       "
     >
       <div class="container position-relative px-4 px-lg-5">
@@ -119,10 +119,10 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- Post Content Summary-->
             <p>
-              Interactive dashboard of utility bills over time. Tracks inflation
-              in household energy use, turning everyday costs into a data story
-              you can see and plan around, revealing inflation and energy-use
-              trends at a household scale.
+              Interactive dashboard and exploratory analysis of household
+              utility expenses since 2020. Many years of bills reveal rising
+              electric costs, seasonal patterns, and the occasional billing
+              headache.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -144,19 +144,6 @@
                 <!-- <p></p> -->
               </a>
             </div>
-            <!-- <hr class="my-4" /> -->
-            <!-- <div class="post-preview">
-                            <a href="#" target="_blank">
-                                <p class="post-subtitle">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fas fa-chart-line fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                    Tableau Explanatory Data Analysis
-                                </p> -->
-            <!-- <p></p> -->
-            <!-- </a>
-                        </div> -->
             <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
@@ -207,31 +194,35 @@
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              The Utilities-313 Dashboard is a web-based tool designed to
-              analyze and visualize household utility expenses. The emphasis was
-              not scale, but clarity, automation, and usability.
+              Utilities 313 is an interactive dashboard for exploring household
+              utility expenses over time. The data reveals patterns in electric
+              costs, seasonal fluctuations, and differences across utility
+              categories, putting individual bills in a broader context.
             </p>
             <p>
               Built with <b>JavaScript</b> (<b>D3</b> and <b>Plotly</b>) and
-              styled for mobile responsiveness, it features interactive tables
-              and charts—including stacked bars, time series, and treemaps—that
-              allow users to explore trends, compare spending categories, and
-              understand fluctuations in their utility bills.
+              styled for mobile responsiveness, the dashboard features
+              interactive tables and charts—including stacked bars, time series,
+              and treemaps—that let users explore spending trends, compare
+              utility categories, and examine changes in monthly expenses.
             </p>
             <p>
-              Behind the dashboard, a <b>Python-based</b> exploratory data
-              analysis (EDA) report, generated in <b>Jupyter Notebook</b> using
-              <b>pandas</b> and <b>Plotly</b>, offers deeper statistical
-              context. The report updates automatically through a streamlined
-              data pipeline utilizing the <b>Google API</b>, ensuring fresh
-              insights with minimal manual effort.
+              A companion <b>Python-based</b> exploratory data analysis (EDA)
+              report, built in <b>Jupyter Notebook</b> with <b>pandas</b> and
+              <b>Plotly</b>, provides additional views of spending patterns,
+              annual comparisons, and variation in individual expenses. The
+              analysis also illustrates a challenge of working with real-world
+              data: provider changes, billing anomalies, and irregular payment
+              timing required documented data-cleaning adjustments. A
+              streamlined pipeline using the <b>Google API</b> helps keep the
+              analysis updated with minimal manual effort.
             </p>
             <p>
-              This project demonstrates my ability to manage full-stack data
-              workflows, from ingesting and processing data in Python to
-              building interactive, user-friendly visualizations in JavaScript.
-              It merges practical utility tracking with thoughtful UX, making
-              personal finance data both understandable and engaging.
+              The project brings together data collection, cleaning, exploratory
+              analysis, and interactive visualization in a practical end-to-end
+              workflow. One important limitation: because the data tracks
+              spending, not consumption, rising electric bills may reflect
+              higher rates, increased usage, or both.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
