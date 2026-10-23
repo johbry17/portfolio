@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -13,7 +13,8 @@
     />
     <meta content="Bryan C. Johns" name="author" />
     <title>
-      Red Light, Green Light — Teaching Computers to Read Traffic Signs | Bryan C. Johns
+      Red Light, Green Light — Teaching Computers to Read Traffic Signs | Bryan
+      C. Johns
     </title>
     <link href="/assets/favicon.ico" rel="icon" type="image/x-icon" />
     <link
@@ -93,7 +94,7 @@
     <header
       class="masthead"
       style="
-        background-image: url('/assets/img/red_light_green_light/PR_cat.jpg');
+        background-image: url(&quot;/assets/img/red_light_green_light/PR_cat.jpg&quot;);
       "
     >
       <div class="container position-relative px-4 px-lg-5">
@@ -101,7 +102,9 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <div class="post-heading">
               <h1>Red Light, Green Light</h1>
-              <h2 class="subheading">Teaching Computers to Read Traffic Signs</h2>
+              <h2 class="subheading">
+                Teaching Computers to Read Traffic Signs
+              </h2>
               <span class="meta">
                 <!-- Posted by
                                 <a href="#!">Start Bootstrap</a>
@@ -197,31 +200,23 @@
             <h2 class="section-heading">Project Overview</h2>
             <p>
               This project explores convolutional neural networks (CNNs) and
-              applied <b>computer vision</b> under realistic, noisy conditions.
-              I built a complete pipeline: preprocessing images, visualizing
-              class distributions and errors, and designing CNN architectures
-              with <b>convolutional/pooling layers</b>, <b>dropout</b>, and
-              <b>batch normalization</b>. Training curves, confusion matrices,
-              and error analyses were automated and exported for web
-              presentation. This was a controlled technical exercise rather than
-              a deployed system, focused on learning model behavior rather than
-              operational deployment.
+              computer vision using the German Traffic Sign Recognition
+              Benchmark (GTSRB). Building on Harvard's CS50AI coursework, I
+              developed and compared several model architectures, examining how
+              design choices affect classification performance.
             </p>
             <p>
-              I experimented with class weighting, additional convolutional
-              layers, batch normalization, and dense layers. The best results
-              came from a streamlined two-layer CNN with batch normalization,
-              which outperformed both the baseline and more complex, over-dense
-              models. In fact, extra dense layers reduced accuracy, underscoring
-              the value of <b>simplicity</b> and <b>regularization</b>.
+              A compact CNN with two convolutional layers and batch
+              normalization performed best, achieving 99.4% validation accuracy
+              and approximately 99% on the held-out test set. More complex
+              models performed worse, while class weighting improved recognition
+              of less common signs at the expense of overall accuracy.
             </p>
             <p>
-              The final model achieved over 99% accuracy on the test set, with
-              most misclassifications in ambiguous speed limit signs. This
-              project highlights my strengths in <b>deep learning</b>,
-              <b>systematic model experimentation</b>, and
-              <b>data storytelling</b>, taking a classic AI challenge from
-              concept to polished, portfolio-ready finish.
+              Error analysis showed that most remaining misclassifications
+              involved visually similar speed-limit signs. The project combines
+              systematic model experimentation, evaluation, and visualization to
+              explore the trade-offs between model complexity and performance.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
