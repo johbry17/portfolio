@@ -124,7 +124,8 @@
               vulnerability, and FEMA mitigation funding across Vermont’s 250+
               towns. Combining GIS, Census demographics, and federal disaster
               datasets, the project investigates whether mitigation dollars are
-              reaching the communities that need them most.
+              reaching the communities facing the greatest flood risk and social
+              vulnerability.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -239,50 +240,53 @@
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              After Tropical Storm Irene and Vermont’s historic 2023 floods, it
-              became increasingly difficult to view flooding as a rare disaster
-              rather than a structural reality. At the same time, debates over
-              floodplain remapping, climate adaptation, and disaster recovery
-              raised broader questions about how mitigation funding is
-              distributed, and whether existing programs are capable of reaching
-              communities facing future risk before major losses occur.
+              More than half of Vermont's municipalities have no recorded FEMA
+              Hazard Mitigation Assistance funding. Across the state, mitigation
+              funding aligns only weakly with a composite index of flood risk
+              and social vulnerability, while historical flood insurance claims
+              show a stronger association with funding.
+              <b
+                >Floodlines investigates the gap between where future flood risk
+                and vulnerability suggest investment may be needed and where
+                federal mitigation dollars have gone.</b
+              >
             </p>
             <p>
-              To explore that question, I built a reproducible geospatial
-              analysis pipeline combining FEMA flood-risk datasets, Census
-              demographics, mitigation funding records, and spatial analysis
-              techniques. The resulting interactive data story allows users to
-              explore and compare flood exposure, social vulnerability,
-              mitigation investment, and funding gaps across every Vermont
-              municipality.
+              I built a reproducible geospatial analysis pipeline combining FEMA
+              flood-risk and mitigation datasets, National Flood Insurance
+              Program claims, Census demographics, and municipal boundaries.
+              Using Python, GeoPandas, spatial analysis, and multiple model
+              specifications, I developed a transparent need index combining
+              expected flood losses with socioeconomic vulnerability. An
+              interactive dashboard built with Leaflet and D3 lets users compare
+              definitions of need, examine funding gaps, and explore results
+              town by town. The analysis also shows how measurement choices
+              change which communities appear most in need.
             </p>
             <p>
-              Across multiple models and sensitivity tests, the findings were
-              remarkably consistent: mitigation funding showed only weak
-              alignment with forward-looking measures of risk and vulnerability,
-              while past flood insurance claims were a substantially stronger
-              predictor of investment. That pattern is partly structural; the
-              largest federal mitigation programs are closely tied to disaster
-              declarations and prior loss history. More than half of Vermont
-              municipalities received no FEMA Hazard Mitigation Assistance
-              funding at all.
+              The pattern persisted across multiple model specifications and
+              sensitivity tests: correlations between modeled need and
+              mitigation funding were weak, while past insurance claims were
+              more strongly associated with investment. This reflects a
+              structural feature of FEMA's mitigation programs: many major
+              funding opportunities depend on presidential disaster
+              declarations, linking investment to the geography and timing of
+              past disasters. The historical spikes in project awards and
+              funding around Tropical Storm Irene in 2011 and Vermont's 2023
+              floods reinforce this pattern.
             </p>
             <p>
-              From a technical perspective, the project demonstrates geospatial
-              ETL workflows, spatial statistics, composite index construction,
-              sensitivity analysis, and interactive dashboard development with
-              Leaflet and D3. More importantly, it reflects the kind of work I
-              most enjoy: using data, maps, and public-facing storytelling to
-              make complex systems easier to understand and interrogate.
+              Floodlines is a screening tool, not a definitive ranking of
+              municipal need or a forecast of future losses. It demonstrates how
+              public datasets, transparent methods, and interactive maps can
+              help identify communities that warrant closer examination—and make
+              complex questions about climate resilience and public investment
+              more accessible to residents, planners, and policymakers.
             </p>
             <p><strong>Data Storytelling</strong></p>
             <p>
-              Floodlines includes a guided, interactive data-storytelling tour
-              designed to help users understand the analysis progressively
-              rather than simply explore the dashboard independently. The tour
-              uses contextual narration and guided interaction to move from the
-              central research question through the risk, vulnerability,
-              funding, and claims layers, helping users understand not only
+              A guided interactive tour connects the maps, models, and funding
+              patterns, helping users understand not only
               <em>what</em> the dashboard shows, but <em>why</em> the measures
               and comparisons matter.
             </p>
