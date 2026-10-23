@@ -123,10 +123,9 @@
             <!-- Post Content Summary-->
             <p>
               Employee turnover is costly, disruptive, and often preventable.
-              This project builds a
-              <b>recall-focused machine learning model</b> to help HR teams
-              identify at-risk employees early, before burnout or disengagement
-              leads to resignation.
+              This project builds a recall-focused machine learning model to
+              help HR teams identify at-risk employees early, before burnout or
+              disengagement leads to resignation.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -219,46 +218,50 @@
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              Using the Google Advanced Data Analytics capstone dataset as a
-              testbed, this project goes beyond prediction accuracy to develop a
-              <b>recall-focused model that identifies at-risk employees early</b
-              >, giving HR teams actionable signals to support retention before
-              attrition occurs. Through Python-based exploratory data analysis
-              (EDA) and predictive modeling, I developed a data pipeline to
-              highlight at-risk employees and enable proactive retention
-              strategies.
+              Why do employees leave, and can data help an organization
+              intervene earlier? For this capstone to the
+              <a
+                href="https://www.coursera.org/professional-certificates/google-advanced-data-analytics"
+                rel="noopener"
+                target="_blank"
+                >Google Advanced Data Analytics Certificate</a
+              >, I analyzed employee attrition data for the fictional Salifort
+              Motors, combining exploratory data analysis with predictive
+              modeling to identify patterns associated with turnover and inform
+              potential retention strategies.
             </p>
             <p>
-              The project began with a deep dive into the data using Pandas,
-              Matplotlib, and Seaborn to explore employee satisfaction, tenure,
-              workload, and performance. Key EDA findings, such as the U-shaped
-              relationship between tenure and churn, shaped our
-              <b>feature engineering</b> and modeling priorities.
+              The exploratory analysis revealed two prominent groups of
+              employees who left: overworked employees logging exceptionally
+              long hours across multiple projects, and underutilized employees
+              with fewer projects and low-to-moderate satisfaction. Attrition
+              was also concentrated around the three-to-four-year tenure mark,
+              while promotions were rare. Together, these patterns suggest that
+              both burnout and disengagement may be associated with limited
+              opportunities for advancement.
             </p>
             <p>
-              Using a mix of <b>interpretable models</b> (Logistic Regression,
-              Decision Trees) and high-performing
-              <b>black-box models</b> (Random Forest, XGBoost), the final
-              pipeline emphasized recall, ensuring HR teams identify as many
-              potentially departing employees as possible. XGBoost emerged as
-              the best-performing model under recall constraints, particularly
-              in predicting the “gray zone” employees, those with middling
-              satisfaction and tenure.
+              I compared Logistic Regression, Decision Tree, Random Forest, and
+              XGBoost models, prioritizing recall to reduce the number of
+              departing employees missed by the model.
+              <b
+                >XGBoost achieved 96.7% accuracy, 94.0% recall, and 87.2%
+                precision</b
+              >
+              on the held-out test set. It identified most employees who left
+              while producing fewer false positives than the other models—a
+              useful trade-off for a hypothetical early-warning system.
             </p>
             <p>
-              To demystify the model’s logic, I incorporated
-              <b>SHAP values</b> for <b>model explainability</b>, offering HR a
-              clear view into which features most influenced predictions.
-              Burnout signals like high hours, high evaluation scores, and heavy
-              workloads surfaced as key churn predictors.
-            </p>
-            <p>
-              This project demonstrates my ability to combine
-              <b>domain knowledge</b>, <b>EDA</b>, <b>feature engineering</b>,
-              <b>machine learning</b>, and <b>interpretability tools</b> to
-              generate <b>business-ready insights</b>. The outcome is a powerful
-              model backed by actionable analysis, designed to help Salifort
-              keep their people and stay ahead of turnover.
+              To investigate the predictions, I used feature importance, SHAP
+              values, and interpretable models to examine how satisfaction,
+              tenure, workload, and project assignments related to predicted
+              attrition. The resulting recommendations focus on sustainable
+              workloads, career development, recognition, and supportive HR
+              outreach. The project combines data exploration, model evaluation,
+              and explainability to translate predictive results into practical
+              questions an organization could investigate before implementing
+              retention interventions.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -344,7 +347,7 @@
                 href="https://www.coursera.org/professional-certificates/google-advanced-data-analytics"
                 rel="noopener"
                 target="_blank"
-                >Google Advanced Data Analytics Capstone</a
+                >Google Advanced Data Analytics Certificate</a
               >.
             </p>
             <!-- Divider-->
