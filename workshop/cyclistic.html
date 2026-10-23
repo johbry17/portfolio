@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -92,7 +92,9 @@
     <!-- Page Header-->
     <header
       class="masthead"
-      style="background-image: url('/assets/img/cyclistic/PXL_20220414_202149690.jpg')"
+      style="
+        background-image: url(&quot;/assets/img/cyclistic/PXL_20220414_202149690.jpg&quot;);
+      "
     >
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -119,12 +121,11 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- Post Content Summary-->
             <p>
-              Urban mobility data reveals how cities actually function. This
-              project analyzes <b>5.8M bike-share trips</b> to distinguish
-              commuters from casual riders and identify where pricing,
-              placement, and marketing interventions could most effectively
-              increase membership, showing how the city moves when the data
-              rides along.
+              Analyzing millions of bike-share trips reveals how travel patterns
+              differ across rider groups, seasons, and neighborhoods. This
+              project uses R to investigate those differences across two years
+              of Chicago bike-share data and translate them into actionable
+              marketing recommendations.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -231,33 +232,30 @@
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              This project explores trip data from a publicly documented
-              bike-share system (Cyclistic). The core question was how casual
-              riders behave differently from members—and where those differences
-              create realistic opportunities for targeted marketing efforts
-              aimed at converting casual riders into long-term members.
+              Completed as the capstone for Google's Data Analytics Professional
+              Certificate, this project analyzes Chicago bike-share data to
+              understand how casual riders and annual members use Cyclistic
+              differently, and how those differences could inform membership
+              growth strategies. Using R, I cleaned and analyzed millions of
+              trips from 2019 and 2024, examining ride duration, timing,
+              seasonality, bicycle type, and geographic patterns.
             </p>
             <p>
-              Using <b>R</b> for data cleaning and analysis, I processed ride
-              data for 2024 and 2019, identifying key differences in ride
-              duration, trip frequency, and preferred stations. Visualizations
-              highlighted actionable insights such as peak usage hours, seasonal
-              trends, and geographic hotspots for casual riders.
+              In 2024, casual riders averaged roughly 20 minutes per trip,
+              compared with 12 minutes for members; in 2019, the gap was wider.
+              Members showed weekday commuting peaks and clustered around
+              downtown business districts, while casual riders took longer
+              trips, rode more on weekends, and favored lakefront attractions
+              and cultural destinations. Ridership also varied seasonally, and
+              electric bike use increased across both groups.
             </p>
             <p>
-              Key findings, presented in an <b>R Markdown</b> report knitted
-              into HTML, highlight significant variations in trip length,
-              popular routes, and time-of-day preferences between user groups.
-              These insights support targeted marketing efforts, such as
-              promotional campaigns at high-traffic casual rider locations and
-              pricing adjustments for specific time slots.
-            </p>
-            <p>
-              This project demonstrates my ability to perform
-              <b>data wrangling</b>, <b>statistical analysis</b>, and
-              <b>visual storytelling</b>, translating raw data into strategic
-              business recommendations for Cyclistic’s membership growth
-              initiatives.
+              These patterns suggest opportunities for leisure-focused
+              messaging, seasonal promotions, and outreach near popular
+              recreational destinations. R Markdown reports, exploratory
+              visualizations, and interactive maps bring the analysis together,
+              translating observed rider behavior into practical marketing
+              recommendations.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
