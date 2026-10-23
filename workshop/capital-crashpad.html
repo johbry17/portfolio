@@ -162,38 +162,6 @@
               </a>
             </div>
             <!-- <hr class="my-4" /> -->
-            <!-- <div class="post-preview">
-              <a
-                href="https://public.tableau.com/views/DCAirbnb/DCAirbnbMobile?:language=en-US&amp;publish=yes&amp;:sid=&amp;:redirect=auth&amp;:display_count=n&amp;:origin=viz_share_link"
-                rel="noopener"
-                target="_blank"
-              >
-                <p class="post-subtitle">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-chart-line fa-stack-1x fa-inverse"></i>
-                  </span>
-                  Tableau Explanatory Data Analysis
-                </p>
-              </a>
-            </div> -->
-            <!-- <hr class="my-4" /> -->
-            <!-- <div class="post-preview">
-              <a
-                href="https://github.com/johbry17/Capital-Crashpad/blob/main/notebooks/eda_2026.ipynb"
-                rel="noopener"
-                target="_blank"
-              >
-                <p class="post-subtitle">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-python fa-stack-1x fa-inverse"></i>
-                  </span>
-                  Python Exploratory Data Analysis
-                </p>
-              </a>
-            </div> -->
-            <!-- <hr class="my-4" /> -->
             <div class="post-preview">
               <a
                 href="https://github.com/johbry17/Capital-Crashpad"
@@ -220,43 +188,55 @@
                 policy, not local laws. Routine EDA turned into a deeper
                 investigation: the data showed a structural break, with
                 lucrative extended-stay rentals disappearing. I built this tool
-                for anyone in DC to explore these shifts, whether you’re curious
+                for anyone in DC to explore these shifts, whether you're curious
                 about your block or the big picture.
               </p>
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              The guiding question was not how many Airbnbs exist, but how
-              platform policies reshaped the structure of supply.
+              Between Q1 and Q2 2024, Washington, D.C. lost nearly
+              <b>1,800 active Airbnb listings in a single quarter</b>. Listings
+              requiring minimum stays of 31 nights accounted for roughly 1,200
+              of that decline, while licensed listings made up a larger share of
+              the remaining market. Capital Crashpad investigates this abrupt
+              shift alongside Airbnb’s expanded identity verification and
+              quality-removal efforts, examining how platform governance can
+              reshape a local market beyond the reach of municipal law.
             </p>
             <p>
-              Using quarterly listing data stored in
-              <b>PostgreSQL</b> and analyzed in <b>Python</b>, I built a full
-              pipeline to track changes in pricing, licensing status,
-              minimum-night distributions, and projected revenue before and
-              after enforcement. The dashboard integrates <b>Leaflet</b> and
-              <b>JavaScript</b> to visualize neighborhood patterns and
-              regulatory thresholds, while the written case study interprets
-              those shifts in plain language.
+              Using quarterly listing data from Inside Airbnb, I built a data
+              pipeline with
+              <b>PostgreSQL</b> and <b>Python</b> to examine changes in supply,
+              licensing, minimum-night requirements, pricing, projected revenue,
+              and host concentration. An interactive dashboard built with
+              JavaScript and Leaflet lets users explore neighborhood patterns,
+              while a guided case study connects those patterns to the city's
+              regulatory context. The analysis also found that revenue remained
+              highly concentrated among a small share of hosts, even after the
+              market contracted.
             </p>
             <p>
-              The result is both a tool and an argument. The dashboard enables
-              exploration; the case study explains what changed and why it
-              matters. Together, they show how platform governance can alter
-              local housing markets almost overnight.
+              The timing and scale of the decline are consistent with a major
+              structural break, but the available data cannot prove that
+              Airbnb’s policy changes caused it or establish why particular
+              listings disappeared. The project distinguishes observed market
+              changes from plausible explanations, including the limits of
+              projected revenue and reviews as proxies for actual earnings and
+              demand.
             </p>
             <p>
-              Technically, the project demonstrates database design, SQL
-              querying, Python-based analysis, and geospatial visualization.
-              More importantly, it reflects my focus as a
-              <b>data communicator</b>: translating structural market changes
-              into insights that policymakers and residents can actually
-              understand and use.
+              Capital Crashpad combines database querying, exploratory analysis,
+              geospatial visualization, and evidence-based writing to make a
+              complex local market shift accessible to residents and
+              policymakers. It demonstrates how I approach data storytelling:
+              identifying a consequential pattern, investigating its context,
+              and building tools that help people explore the evidence for
+              themselves.
             </p>
             <p><strong>Data Storytelling</strong></p>
             <p>
               Capital Crashpad includes a guided, interactive data story that
-              leads viewers through the market’s contraction, changing licensing
+              leads viewers through the market's contraction, changing licensing
               patterns, persistent host concentration, and differences across DC
               neighborhoods, before handing the dashboard back to the viewer to
               explore.
@@ -274,7 +254,7 @@
             <span class="caption text-muted"
               >Listings Over Time (2023–2025): Active listings fall sharply
               between Q1 and Q2 2024, marking a structural break coinciding with
-              Airbnb’s expanded verification and quality removals.</span
+              Airbnb's expanded verification and quality removals.</span
             >
             <br /><br />
             <img
@@ -283,9 +263,9 @@
               src="/assets/img/capital-crashpad/case_study_license_change.png"
             />
             <span class="caption text-muted"
-              >Licensing Share: Following the Q2 2024 contraction, the share of
-              licensed listings rises as unlicensed supply exits the
-              platform.</span
+              >Licensing Share: The share of licensed listings rises after the
+              Q2 2024 contraction, as unlicensed listings decline at a higher
+              rate.</span
             >
             <br /><br />
             <img
@@ -344,15 +324,15 @@
             >
             <br /><br />
             <img
-              alt="Lorenz curve of Airbnb host revenue concentration before and after verification, showing no change"
+              alt="Lorenz curve of Airbnb projected host revenue concentration before and after verification, showing no change"
               class="img-fluid mx-auto d-block"
               src="/assets/img/capital-crashpad/case_study_lorenz.png"
               style="border-radius: 10px"
             />
             <span class="caption text-muted"
-              >Revenue Concentration: Host revenue remains highly concentrated
-              before and after enforcement, indicating persistent structural
-              inequality within the market.</span
+              >Revenue Concentration: Projected host revenue remains highly
+              concentrated before and after enforcement, indicating persistent
+              structural inequality within the market.</span
             >
             <br /><br />
             <img
