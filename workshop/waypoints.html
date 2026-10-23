@@ -184,44 +184,38 @@
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              The atlas integrates travel records from Google Sheets and CSV
-              files with geographic features retrieved through APIs and custom
-              GeoJSON files. These sources feed an interactive Leaflet map that
-              combines location markers, activity layers, travel routes,
-              photographs, and personal narratives.
-            </p>
-            <p>Supporting services extend the map's capabilities:</p>
-            <ul>
-              <li>
-                <b>Overpass API</b> queries OpenStreetMap data for geographic
-                features such as trails, waterways, and ferry routes.
-              </li>
-              <li>
-                <b>Nominatim</b> supports geocoding and reverse geocoding.
-              </li>
-              <li><b>OpenRouteService API</b> generates vehicle routes.</li>
-              <li><b>GeographicLib</b> supports geodesic calculations.</li>
-              <li>
-                <b>geojson.io and GeoJSON</b> support the creation and storage
-                of custom geographic features and manually reconstructed routes.
-              </li>
-              <li><b>Shepherd.js</b> guides visitors through the interface.</li>
-            </ul>
-            <p>
-              A Python backend integrates data from these sources, while Google
-              Sheets and CSV files provide lightweight, accessible data storage.
-              On the frontend, interactive popups combine photographs and
-              commentary, while map layers let visitors explore locations by
-              activity and travel route. The interface is designed to work
-              across screen sizes.
+              Waypoints brings years of travel records, photographs, routes, and
+              personal recollections together in an interactive atlas. Visitors
+              can explore places I've lived and traveled, follow journeys across
+              the map, and open location-specific stories and photographs.
+              Geographic layers distinguish different activities and
+              experiences, connecting individual memories to the places and
+              routes around them.
             </p>
             <p>
-              The central challenge is integrating diverse geographic and
-              narrative data into a single, intuitive interface. Waypoints
-              demonstrates API integration, geospatial data handling,
-              interactive visualization, and frontend design through an
-              application that connects places, journeys, and personal
-              experiences.
+              Building the atlas meant integrating geographic data from several
+              sources into a coherent interface. Google Sheets and CSV files
+              provide the underlying travel records, while APIs supply
+              geographic features, location searches, and routes. I also created
+              custom GeoJSON features and manually reconstructed routes where
+              existing geographic data couldn't capture the journey I wanted to
+              represent.
+            </p>
+            <p>
+              A Python backend handles data integration and processing, while
+              Leaflet powers the interactive map. Layer controls, clustered
+              markers, photographic popups, and a guided interface help visitors
+              move between a global overview and the details of individual
+              places. The application brings together geospatial data handling,
+              API integration, route rendering, and frontend design in a single,
+              evolving project.
+            </p>
+            <p>
+              Waypoints is both a technical exploration and a personal archive.
+              It demonstrates how disparate data sources can become an
+              accessible geographic experience, while exploring a question that
+              keeps the project growing: how can maps help us revisit not just
+              where we've been, but what those places meant to us?
             </p>
             <!-- Divider-->
             <hr class="my-4" />
@@ -290,8 +284,7 @@
             <h2 class="section-heading">References</h2>
             <ul>
               <li>
-                <b>Leaflet.js</b> - Interactive map rendering library for
-                creating dynamic and visually engaging maps.
+                <b>Leaflet.js</b> — Interactive map rendering.
                 <a
                   href="https://leafletjs.com/"
                   rel="noopener"
@@ -301,8 +294,8 @@
                 >.
               </li>
               <li>
-                <b>Overpass API</b> - Used for querying OpenStreetMap data to
-                retrieve geographic information.
+                <b>Overpass API</b> — Queries OpenStreetMap for geographic
+                features, including trails, waterways, and ferry routes.
                 <a
                   href="https://overpass-api.de/"
                   rel="noopener"
@@ -312,8 +305,7 @@
                 >.
               </li>
               <li>
-                <b>Nominatim</b> - Used for geocoding and reverse geocoding to
-                convert locations into geographic coordinates.
+                <b>Nominatim</b> — Geocoding and reverse geocoding.
                 <a
                   href="https://nominatim.org/"
                   rel="noopener"
@@ -323,8 +315,7 @@
                 >.
               </li>
               <li>
-                <b>OpenRouteService API</b> - Provides routing and geospatial
-                analysis services for various transportation modes.
+                <b>OpenRouteService API</b> — Generates vehicle routes.
                 <a
                   href="https://openrouteservice.org/documentation/"
                   rel="noopener"
@@ -334,9 +325,8 @@
                 >.
               </li>
               <li>
-                <b>GeographicLib</b> - A library for performing geographic
-                calculations, such as geodesics and projections (e.g., great
-                circle routes).
+                <b>GeographicLib</b> — Geodesic calculations and geographic
+                measurements (e.g., great circle routes).
                 <a
                   href="https://geographiclib.sourceforge.io/"
                   rel="noopener"
@@ -346,9 +336,8 @@
                 >.
               </li>
               <li>
-                <b>geojson.io</b> - A web-based tool for drawing and editing
-                custom geographic data, such as boat and ferry routes, and
-                exporting them in GeoJSON format.
+                <b>geojson.io</b> — Drawing and exporting custom geographic
+                features and reconstructed routes.
                 <a
                   href="https://geojson.io/"
                   rel="noopener"
@@ -358,8 +347,8 @@
                 >.
               </li>
               <li>
-                <b>GeoJSON Specification</b> - A format for encoding geographic
-                data structures.
+                <b>GeoJSON</b> — Format for storing and exchanging geographic
+                features and routes.
                 <a
                   href="https://geojson.org/"
                   rel="noopener"
@@ -369,9 +358,8 @@
                 >.
               </li>
               <li>
-                <b>Google Sheets API</b> - Used for integrating and managing
-                tabular data, serving as a lightweight backend for storing and
-                updating waypoints and travel logs.
+                <b>Google Sheets API</b> — Integrates waypoint and travel data
+                from Google Sheets.
                 <a
                   href="https://developers.google.com/sheets/api"
                   rel="noopener"
@@ -381,8 +369,8 @@
                 >.
               </li>
               <li>
-                <b>Python</b> - Backend scripting language for data integration,
-                processing, and API interaction.
+                <b>Python</b> — Data integration, processing, and API
+                interaction.
                 <a
                   href="https://www.python.org/"
                   rel="noopener"
@@ -392,8 +380,7 @@
                 >.
               </li>
               <li>
-                <b>Shepherd.js</b> - A library for building guided user tours
-                with tooltips and onboarding flows.
+                <b>Shepherd.js</b> — Guided interface tours.
                 <a
                   href="https://shepherdjs.dev/"
                   rel="noopener"
@@ -403,11 +390,10 @@
                 >.
               </li>
               <li>
-                <b>Personal Photos</b> - All images used in this project are
-                from my personal collection and are protected under copyright
-                law. They may not be copied, modified, or distributed without
-                explicit written permission. If you appear in any of the photos
-                and would like them removed, please contact me at
+                <b>Personal Photos</b> — All photographs are from my personal
+                collection and may not be copied, modified, or distributed
+                without written permission. If you appear in a photograph and
+                would like it removed, please contact
                 <a
                   href="mailto:bryan.johns@informedwanderer.com"
                   style="text-decoration: underline"
@@ -415,8 +401,8 @@
                 >.
               </li>
               <li>
-                <b>Personal Memory</b> - The narratives and waypoints are based
-                on my personal experiences and recollections.
+                <b>Personal Memory</b> — Narratives and waypoints are based on
+                my experiences and recollections.
               </li>
             </ul>
             <!-- <br><br> -->
