@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -91,7 +91,7 @@
     <header
       class="masthead"
       style="
-        background-image: url('/assets/img/usgs-earthquakes/eclipse_clipped_4.png');
+        background-image: url(&quot;/assets/img/usgs-earthquakes/eclipse_clipped_4.png&quot;);
       "
     >
       <div class="container position-relative px-4 px-lg-5">
@@ -175,24 +175,28 @@
             </blockquote>
             <h2 class="section-heading">Project Overview</h2>
             <p>
-              This project visualizes global earthquake activity from the past
-              30 days using real-time data from the
-              <b>USGS GeoJSON API</b>. Built with <b>JavaScript</b>,
-              <b>Leaflet</b>, and <b>D3</b>, the map integrates multiple data
-              layers: earthquake points, tectonic boundaries, and a heatmap to
-              show seismic hotspots.
+              Global earthquakes are not distributed randomly: their locations
+              often trace the boundaries of Earth's tectonic plates. This
+              interactive map uses the
+              <b>USGS GeoJSON API</b> to visualize earthquake activity over the
+              past 30 days, making these spatial patterns easier to explore.
             </p>
             <p>
-              Users can explore detailed quake info by clicking on markers and
-              toggling layers. The tool is designed to make seismic trends easy
-              to grasp, helping inform both the public and policy conversations.
+              Built with <b>JavaScript</b>, <b>Leaflet</b>, and <b>D3</b>, the
+              map combines earthquake markers sized by magnitude and colored by
+              depth with tectonic plate boundaries and a heatmap. These
+              complementary layers let users compare individual events with
+              broader concentrations of seismic activity, while clickable
+              markers provide additional details about each earthquake.
             </p>
             <p>
-              It demonstrates my ability to combine live data, mapping
-              libraries, and layered interactivity to deliver accessible,
-              science-driven visual storytelling. While primarily educational,
-              it shows how live data and layered maps can surface system-level
-              patterns that static charts often miss.
+              Building this project taught me how map design influences the
+              interpretation of spatial data. I also tackled a practical
+              geographic challenge: making the visualization wrap cleanly across
+              the antimeridian, so earthquake activity remains continuous at the
+              edges of the map. The result is an accessible, interactive
+              introduction to global seismic patterns—and an early project that
+              shaped how I approach spatial data storytelling.
             </p>
             <!-- Divider-->
             <hr class="my-4" />
