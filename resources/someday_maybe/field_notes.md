@@ -1,3 +1,29 @@
+### F4 — Two Lifelines: Remittances vs. ODA
+
+This is intellectually interesting and could be a good development-research piece. It examines two different ways external resources reach small island economies.
+
+Concern: The proposed indicators use different denominators: remittances as a percentage of GDP and aid as a percentage of GNI. That's not an apples-to-apples comparison. It needs a consistent normalization and a careful distinction between describing two flows and claiming that one substitutes for the other.
+
+Verdict: Strong backup if you want a more explicitly development-oriented project.
+
+### F2 — Aid to the Islands
+
+This could be valuable for international development roles, especially if you want to demonstrate familiarity with donor data and development finance.
+
+Concern: OECD Creditor Reporting System data can become a much larger data-cleaning task than the brief implies. Donor concentration, sectors, recipients, and 20-plus years of records are a lot for a compact EDA.
+
+Verdict: Keep it as a future project or a replacement for F3 if development-finance roles become your immediate priority.
+
+### F6 — European Hotel Seasonality
+
+This probably has the cleanest starting dataset and is a natural fit for R and ggplot2. It could produce an attractive report with monthly patterns and small multiples.
+
+Concern: The question is less personally distinctive, and tourism seasonality is an established research topic. The proposed Gini-based seasonality index also needs a clear rationale and interpretation.
+
+Verdict: Your low-risk fallback if one of the other projects gets stuck on data access.
+
+# Original Assessment, with completed projects removed
+
 I have comprehensive data from four research streams. Let me compile the complete brief now — I have everything needed for a rigorous, fully-cited response.
 
 ---
@@ -63,101 +89,7 @@ I have comprehensive data from four research streams. Let me compile the complet
 
 ### Field Note F1: Tourism Dependence and the COVID Cliff
 
-**Working Title:** *Tourism Dependence and the COVID Cliff: An EDA of Caribbean and Pacific Small Island Economies, 2008–2023*
-
-**Research Question:**
-- **Primary:** Which Caribbean and Pacific small island economies were most tourism-dependent in the years before COVID-19, and does pre-pandemic tourism dependence predict the size of the 2020 economic contraction?
-- **Secondary:** Which tourism-dependent SIDS had recovered to near pre-pandemic economic output by 2022–2023?
-
----
-
-**Significance**
-
-Tourism is the economic backbone of many small island states — for places like Aruba, the British Virgin Islands, and Palau, tourism receipts account for 20–50% of total export earnings or more of measured GDP. The COVID-19 pandemic functioned as a sharp, involuntary stress test: international arrivals fell 74% globally in 2020, but the distributional consequences for heavily tourism-dependent economies were far more severe than for diversified ones. This question is analytically tractable, policy-relevant, and personally grounded: the USVI (where tourism accounts for roughly 20–30% of measured GDP per OWID data confirmed in this session) was among the most exposed small island economies globally, both to the 2020 pandemic shock and to the 2017 hurricane season.
-
-Organizations that would value this research: small island development organizations, Caribbean regional bodies, IMF/World Bank small states desks, climate and development think tanks, international donors working on economic resilience.
-
----
-
-**Geographic and Temporal Scope**
-
-- **Unit of analysis:** Country-year (one row per country per year)
-- **Countries:** ~30–40 SIDS with sufficient data coverage: Caribbean (USVI, BVI, Aruba, Barbados, Bahamas, Jamaica, St. Lucia, Grenada, Dominica, Antigua & Barbuda, Trinidad & Tobago, Cayman Islands, etc.) + Pacific (Fiji, Vanuatu, Samoa, Tonga, Palau, Maldives, Marshall Islands, Micronesia, Kiribati)
-- **Years:** 2008–2023 (OWID tourism-GDP CSV range) with supplemental arrivals data back to 1995 from WDI
-- **Temporal scope is manageable:** 15 years for the primary analysis, with a 2019-to-2020 shock window as the core analytical moment
-
----
-
-**Verified Data Inventory**
-
-| Dataset | Direct URL | Key Variables | Coverage | Access | Notes |
-|---------|-----------|---------------|----------|--------|-------|
-| OWID Tourism GDP % | `https://ourworldindata.org/grapher/tourism-gdp-proportion-of-total-gdp.csv` | Tourism % of GDP (SDG 8.9.1) | ~150 countries, 2008–2023 | Free, direct CSV | **Confirmed in session.** USVI, Fiji, Aruba, BVI visible. Maldives absent (no TSA). Many Pacific SIDS sparse. |
-| OWID Tourist Arrivals | `https://ourworldindata.org/grapher/international-tourist-trips.csv` | Annual arrivals (count) | ~200 countries, 1995–2024 | Free, direct CSV | **Confirmed in session.** Source: UNWTO via OWID. |
-| OWID Tourism Receipts | `https://ourworldindata.org/grapher/spending-by-international-visitors-while-visiting-a-country.csv` | Annual receipts (current USD) | ~200 countries, 1995–2024 | Free, direct CSV | **Confirmed in session.** |
-| WDI Tourism Receipts % Exports | `https://api.worldbank.org/v2/en/indicator/ST.INT.RCPT.XP.ZS?downloadformat=csv` | Tourism receipts as % of total exports | 217 countries, ~1995–2022 | Free, direct ZIP | **Confirmed in session.** Better coverage for Maldives and Pacific micro-states than OWID tourism-GDP CSV. |
-| WDI GDP per capita | Via `wbstats::wb_data("NY.GDP.PCAP.CD")` | GDP per capita, current USD | 217 countries, 1960– | R package or bulk ZIP | **Confirmed (wbstats CRAN page confirmed).** |
-
-**Caveats:** OWID tourism-GDP CSV uses Tourism Satellite Account methodology; many SIDS lack TSA data and are absent. This is not fatal — the WDI `ST.INT.RCPT.XP.ZS` (tourism receipts as % of total exports) covers more SIDS and is a valid dependency proxy. Some 2020 GDP data may be preliminary or revised in later years.
-
----
-
-**Proposed EDA**
-
-**Language: R** (`wbstats`, `dplyr`, `ggplot2`, `tidyr`, `readr`, `countrycode`)
-
-R is appropriate because the `wbstats` package enables direct programmatic access to WDI with no file management, and `ggplot2` is the clearest tool for the multi-panel small-multiple visualizations this project requires. The analysis is cross-sectional and longitudinal with a manageable number of countries.
-
-**Steps:**
-1. **Data acquisition (45 min):** Download OWID tourism-GDP CSV directly. Use `wbstats::wb_data()` to pull `ST.INT.RCPT.XP.ZS`, `NY.GDP.PCAP.CD`, `NY.GDP.MKTP.KD.ZG` (GDP growth), `SL.UEM.TOTL.ZS` (unemployment) for a custom SIDS country vector. Join on country code using `countrycode` package.
-2. **Data quality check (30 min):** Count missing values per country per indicator. Identify which SIDS have sparse pre-2019 coverage. Define the analysis sample clearly — likely 25–35 countries with acceptable coverage.
-3. **Dependency ranking (30 min):** Rank SIDS by 2019 (or 2017–2019 average) tourism receipts % of exports. Bar chart with country labels, highlighted by region (Caribbean vs. Pacific). A supplemental scatter of receipts-per-arrival vs. dependency explores the quality vs. quantity angle.
-4. **COVID shock analysis (60 min):** Calculate the 2020 GDP growth rate for each SIDS. Scatter: 2019 tourism dependency vs. 2020 GDP growth. Fit a simple regression line with uncertainty band. Flag outliers (e.g., Maldives, which despite extreme tourism dependence has limited data). This is a descriptive correlation, not causal.
-5. **Recovery tracking (45 min):** For the 15–20 SIDS with 2021–2023 data, compare GDP per capita or tourism receipts to 2019 baseline. Small-multiple line charts colored by recovery status (above/below pre-pandemic level by 2022).
-6. **Interpretation (60 min):** Write narrative: which places recovered fastest and why (diversification, domestic tourism, geographic isolation), where data gaps prevent conclusions.
-
----
-
-**Originality and Contribution**
-
-Existing analyses found: The World Bank and IMF have published policy briefs on SIDS economic resilience and COVID (e.g., "COVID-19 and Small States," various 2021–2022 IMF Working Papers). The OWID "Tourism and Economic Development" page summarizes the macro picture. Several academic papers examine tourism-led growth in individual SIDS (Aruba: Croes & Vanegas 2003; Maldives: various).
-
-**What this adds:** A focused cross-sectional EDA using freely reproducible code, visualizing the dependency-shock relationship across the SIDS universe simultaneously rather than in country case studies. The recovery angle (2021–2023) extends beyond most published analyses. The USVI inclusion as a non-sovereign U.S. territory adds an unusual comparative data point. The Field Note format — reproducible R Quarto document — is itself different from academic papers or institutional briefs.
-
-**What it does not add:** Causal identification. This is an observational EDA. The correlation between tourism dependence and GDP shock may reflect other factors (domestic economic structure, policy response, fiscal buffers, hurricane exposure). These limitations must be explicit.
-
----
-
-**Feasibility**
-
-| Phase | Estimated Time |
-|-------|---------------|
-| Data download and initial inspection | 45 min |
-| Cleaning and country-level joins | 60 min |
-| Analysis and visualizations | 120 min |
-| Interpretation and writing | 90 min |
-| Quarto rendering and polish | 45 min |
-| **Total** | **~6 hours** |
-
-**Most likely obstacle:** SIDS data coverage gaps. The OWID tourism-GDP CSV has significant missingness for Pacific micro-states; the WDI receipts-as-%-exports series partially compensates. The fallback is to restrict the sample to countries with ≥10 years of data, accept a smaller N (20–25 countries), and be explicit about selection.
-
----
-
-**Hiring Signal**
-
-Demonstrates: R proficiency (`tidyverse`, `ggplot2`, `wbstats`); cross-sectional analysis with appropriate caveats; domain knowledge about small island economies, tourism dependence, and COVID-era development; data quality judgment; ability to communicate international economic data to non-specialist audiences.
-
-Relevant roles: development data analyst (World Bank, IMF, UN agencies, Caribbean regional organizations, NGOs working on SIDS resilience), tourism analytics, economic consulting, policy research.
-
----
-
-**Limitations**
-
-- **Causation:** Cannot establish that tourism dependence *caused* deeper contractions. Confounders include fiscal space, healthcare capacity, and lockdown policies.
-- **SIDS coverage:** Many Pacific micro-states have poor WDI/OWID coverage; sample is biased toward Caribbean islands and larger Pacific economies.
-- **Tourism GDP methodology:** OWID uses Tourism Satellite Account data, which is absent for many SIDS. Substituting tourism receipts % of exports is a reasonable proxy but not identical.
-- **Definitional changes:** WDI arrivals and receipts data sourced from UNWTO, which uses variable national definitions of "tourist" (some include same-day visitors).
-- **USVI is a U.S. territory:** GDP data for USVI flows through BEA, not World Bank, and is only partially captured in WDI. It appears in OWID's tourism-GDP CSV but not all WDI series.
+Completed
 
 ---
 
@@ -269,98 +201,7 @@ Relevant roles: development finance analyst, international development data posi
 
 ### Field Note F3: World Bank Lending in Costa Rica
 
-**Working Title:** *Infrastructure, Reform, and Resilience: What the World Bank Has Financed in Costa Rica, 1990–2024*
-
-**Research Question:**
-- **Primary:** How has the sectoral and thematic distribution of World Bank lending to Costa Rica shifted across 35 years, and what do project patterns reveal about the country's changing development priorities and World Bank strategy?
-- **Secondary:** How does Costa Rica's lending pattern compare to its macroeconomic trajectory (growth, debt, social indicators)?
-
----
-
-**Significance**
-
-Costa Rica is a genuine development success story — a country with strong biodiversity conservation, universal health coverage, and high human development relative to income — yet it has also relied significantly on external borrowing, including from the World Bank, particularly around fiscal reform periods. The World Bank's project-level data is publicly accessible and rich, covering project descriptions, sectors, amounts, and dates. Tracing 35 years of lending reveals which institutions and sectors the Bank (and by extension, Costa Rican governments) prioritized at each historical moment: SAPs in the 1990s, infrastructure in the 2000s, climate and education lending in the 2010s, COVID fiscal support in the 2020s.
-
-Organizations that would value this: development institutions, Costa Rica policy researchers, civil society organizations, international development students and practitioners, researchers interested in the World Bank's country strategy evolution.
-
----
-
-**Geographic and Temporal Scope**
-
-- **Unit:** Project level (72 confirmed Costa Rica projects in the WB Projects API)
-- **Geography:** Costa Rica
-- **Years:** 1990–2024 (full confirmed WB portfolio)
-- **Supplemental context:** WDI economic/social indicators for Costa Rica (confirmed via wbstats)
-
----
-
-**Verified Data Inventory**
-
-| Dataset | Direct URL | Key Variables | Coverage | Access | Notes |
-|---------|-----------|---------------|----------|--------|-------|
-| WB Projects API | `https://search.worldbank.org/api/v2/projects?format=json&countrycode=CR&rows=100` | Project name, ID, total amount, sector1–sector5, theme, board approval date, closing date, status, project description | 72 projects, 1944–2024 | Free, no auth | **Confirmed in session.** 72 projects returned. Rich text descriptions available. |
-| WDI via wbstats | `wbstats::wb_data(c("NY.GDP.PCAP.CD","SI.POV.GINI","SP.DYN.LE00.IN","SE.ADT.LITR.ZS"), country="CR")` | GDP per capita, Gini, life expectancy, literacy | Costa Rica, 1960– | R package, CRAN confirmed | **Confirmed.** Supplemental context for the lending story. |
-
-**Caveats:** The 72 projects include all Bank lending instruments (investment loans, development policy loans, CAT DDOs, technical assistance). Not all "projects" are equivalent in analytical weight — a $500M DPL is very different from a $5M technical assistance grant. The project description text is rich but in English (descriptions of projects from the 1990s may be sparse). Board approval dates are available; actual disbursement schedules are not in the Projects API.
-
----
-
-**Proposed EDA**
-
-**Language: R** (`httr`, `jsonlite`, `dplyr`, `ggplot2`, `lubridate`, `wbstats`, `stringr`, `scales`)
-
-R is appropriate because the analysis starts with a JSON API call, requires date handling (`lubridate`), text-based sector classification (`stringr`), and visualization with ggplot2.
-
-**Steps:**
-1. **API pull (30 min):** Use `httr::GET()` or `jsonlite::fromJSON()` to fetch all 72 Costa Rica projects. Parse JSON to data frame. Clean sector columns (sector1–5 have `Name` and `Percent` subfields). Extract board approval year using `lubridate`.
-2. **Data inspection (20 min):** Check sector completeness, identify null sectors, note large vs. small projects. Log-transform loan amounts for visualization.
-3. **Timeline visualization (40 min):** Gantt-style chart or scatter plot of project amounts over time, colored by sector. Annotate key historical events (1994 financial crisis, 2008 global crisis, 2017–2020 fiscal consolidation, COVID 2020).
-4. **Sector analysis (40 min):** Aggregate total lending by sector across three eras (pre-2010, 2010–2019, 2020–2024). Stacked bar. Has the Bank shifted from infrastructure to DPLs, or from social to climate?
-5. **Instrument mix (30 min):** DPLs vs. investment loans vs. technical assistance. How has the balance shifted? DPLs (budget support) often imply macro-fiscal conditionality — their frequency tells a story.
-6. **Supplemental macro context (30 min):** Pull 3–4 WDI indicators for Costa Rica. Two-panel plot: World Bank commitment volumes by year (left axis) vs. GDP growth rate or debt-to-GDP (right axis). Does lending peak during economic stress?
-7. **Interpretation (60 min):** Narrative connecting lending patterns to Costa Rica's development story. Note the 5 most recent large projects (confirmed from API session): Education Results, Social Risk Management DPL, Climate Resilient Recovery, Fiscal DPL, CAT DDO — these tell a 2023–2024 policy moment story.
-
----
-
-**Originality and Contribution**
-
-Existing analyses: World Bank publishes a Costa Rica country page with portfolio summary. Academic papers analyze World Bank conditionality globally. Individual project evaluations exist. What is uncommon is a researcher doing their own data pull from the Projects API and constructing a visual narrative of a single country's 35-year lending trajectory.
-
-**What this adds:** A reproducible, researcher-constructed EDA from the Projects API — demonstrating that the researcher can work with institutional data sources, not just pre-formatted teaching datasets. The Costa Rica connection is authentic (researcher has academic and research experience in country). The analysis differs entirely from the existing Floodlines or Capital Crashpad projects.
-
----
-
-**Feasibility**
-
-| Phase | Estimated Time |
-|-------|---------------|
-| API pull, parsing, initial inspection | 45 min |
-| Data cleaning and sector classification | 60 min |
-| Visualizations (4–5 charts) | 90 min |
-| WDI supplemental pull and integration | 30 min |
-| Interpretation and writing | 75 min |
-| Quarto rendering and polish | 45 min |
-| **Total** | **~6 hours** |
-
-**Most likely obstacle:** Sector field parsing. The API returns sector data as JSON subobjects with Name and Percent fields; some projects have 5 sectors. Cleaning this into a flat format takes more time than expected if the JSON structure is irregular. Fallback: use only `sector1` (the primary sector) if sector5 data is sparse.
-
----
-
-**Hiring Signal**
-
-Demonstrates: API data acquisition (JSON), `lubridate` date handling, sector classification logic, multi-indicator context building, domain knowledge about World Bank instruments (DPLs, CAT DDOs, investment lending), Costa Rica-specific knowledge. 
-
-Relevant roles: international development analyst, World Bank or IFC positions, development finance research, Central America-focused organizations, multilateral development bank support roles.
-
----
-
-**Limitations**
-
-- **72 projects is a small dataset.** Most visualizations will have N < 100. Statistical inference is not meaningful. This is descriptive storytelling, not regression analysis.
-- **Project amounts vs. disbursements:** Board approval amounts differ from actual disbursements. DPLs (budget support) are typically drawn down quickly; investment loans may take years.
-- **No project outcomes data.** The Projects API does not include project completion ratings or outcome assessments (those are in a separate ICR database, not easily accessible).
-- **Sector classification is coarse.** The Bank's own sector taxonomy changed over time; comparing 1995 and 2024 sectors requires care.
-- **Puerto Rico comparison is unavailable:** USVI and Puerto Rico are U.S. territories with no World Bank projects.
+Completed
 
 ---
 
@@ -463,101 +304,7 @@ Relevant roles: ADB, Pacific community organizations, Australia Department of Fo
 
 ### Field Note F5: After the Storm — USVI Tourism Recovery
 
-**Working Title:** *After the Storm: A Data Portrait of Tourism Recovery in the U.S. Virgin Islands, 2000–2025*
-
-**Research Question:**
-- **Primary:** How did visitor arrivals at Virgin Islands National Park change before, during, and after Hurricanes Irma and Maria in September 2017, and has recovery been complete or incomplete by 2024?
-- **Secondary:** How does the USVI tourism recovery trajectory compare to regional benchmarks from available WDI/OWID island comparison data?
-
----
-
-**Significance**
-
-The 2017 Atlantic hurricane season was catastrophic for the USVI. Hurricanes Irma and Maria struck within two weeks of each other, destroying much of the islands' tourism infrastructure, damaging or closing hotels, and damaging Virgin Islands National Park (which covers about 60% of St. John's land area). The recovery was complicated, slow, and uneven. For someone with three years of professional experience in USVI tourism, this is not an abstract data exercise — it is a personally witnessed economic and ecological disruption. NPS visitation data, which goes back to 1979, provides an unusually long and clean time series for examining the park's pre-storm baseline, the COVID disruption layered on top of the hurricane recovery, and any recent return to pre-2017 norms. USVIBER monthly PDFs (2022–2026) provide a more recent operational picture of hotel occupancy and visitor arrivals.
-
-Organizations that would value this: USVI Department of Tourism, USVI Bureau of Economic Research, National Park Service, Caribbean tourism consultancies, disaster recovery researchers, Chambers of Commerce in USVI.
-
----
-
-**Geographic and Temporal Scope**
-
-- **Unit:** Monthly or annual visitor counts (park level) + hotel-level aggregates
-- **Geography:** U.S. Virgin Islands — Virgin Islands National Park (VIIS, St. John) and Buck Island Reef National Monument (VIBN, St. Croix)
-- **Years:** 2000–2024 (NPS IRMA), supplemented by USVIBER 2022–2026
-- **Why this scope is manageable:** Two NPS park units. Annual park visitation data is one row per park per year. The analysis is fundamentally a time series comparison.
-
----
-
-**Verified Data Inventory**
-
-| Dataset | Direct URL / Access | Key Variables | Coverage | Access | Notes |
-|---------|-----------|---------------|----------|--------|-------|
-| NPS IRMA Visitation Stats | `https://irma.nps.gov/Stats/` → navigate to "Query Builder for Public Use Statistics" or individual park reports | Recreation visitors, overnight stays, by park unit | VIIS + VIBN, 1979–2024 (annual), monthly available | Free, requires portal navigation + CSV export from SSRS report viewer | ⚠️ **Portal confirmed accessible.** No direct API URL. Must select park code (VIIS, VIBN), export to CSV manually. 5-minute browser task. |
-| USVIBER Monthly PDFs | `https://usviber.org/wp-content/uploads/2022/` through `2026/` | Air visitor arrivals (RA files), room nights (RN files), hotel occupancy reports, employment, consumer prices | 2022–2026, monthly | Free, PDF format | **Confirmed in session.** PDF extraction required (pdftools in R or pdfplumber in Python). Annual summary files exist. |
-| OWID Tourist Arrivals | `https://ourworldindata.org/grapher/international-tourist-trips.csv` | Annual arrivals | USVI if present; otherwise regional context | Free, confirmed | USVI may not appear as a separate entity (it is a U.S. territory); use for Caribbean island comparison |
-| WDI (for context) | `wbstats::wb_data("ST.INT.ARVL", country=c("BH","BB","DM","GD","KN","LC","VC"))` | Tourist arrivals, Caribbean peers | Caribbean SIDS, 1995–2022 | R package, CRAN confirmed | For benchmarking USVI against regional peers |
-
-**Caveats:** NPS visitation measures recreation visits to the national park, which is a proxy for USVI tourism health but not equivalent to total island visitor arrivals. Virgin Islands National Park includes beach and snorkeling access — it is a key tourism asset, but visitors who come only for beach-front hotels or cruise ship day trips may not enter the park. USVIBER PDFs go back only to 2022, so for the critical 2017–2021 period, the analysis relies primarily on NPS IRMA data (which goes back to 1979 and is not a PDF). The OWID and WDI tourism data may not have USVI as a separate country given its territorial status.
-
----
-
-**Proposed EDA**
-
-**Language: R** (`readr`, `ggplot2`, `dplyr`, `lubridate`, `pdftools` or manual tabulation for USVIBER PDFs)
-
-R is appropriate for the time series and visualization work. PDF extraction can be handled with `pdftools` if the USVIBER PDFs are text-based (most modern PDFs are); alternatively, the 2022–2026 period is short enough that manual tabulation from 4–5 annual summary PDFs is feasible in under an hour.
-
-**Steps:**
-1. **NPS IRMA data acquisition (20 min):** Navigate to `irma.nps.gov/Stats/`. Select "Query Builder for Public Use Statistics." Choose park codes VIIS and VIBN, all years (1979–2024), annual, recreation visitors. Export to CSV. This produces a clean time series immediately.
-2. **NPS time series visualization (30 min):** Line chart of annual recreation visitors for VIIS (St. John) and VIBN (Buck Island), 2000–2024. Annotate: 2017 (Irma/Maria), 2020 (COVID). Does visitation recover to pre-2017 levels?
-3. **Pre/post comparison (30 min):** Calculate average annual visitors for 2012–2016 (pre-storm), 2018–2019 (partial recovery pre-COVID), 2021–2024 (post-COVID recovery). Bar chart with error bars.
-4. **USVIBER PDF extraction (60–90 min):** For 2022–2026, use `pdftools::pdf_text()` to extract text from hotel occupancy and air arrivals PDFs. Parse into a data table of month-year + occupancy rate + air arrivals. If PDF parsing is too complex (scanned images, not text), manually transcribe the annual summary values from the `A22`, `A23`, `A24`, `A25` files (one number per year × 12 months × 1-2 variables = ~100 data points manually).
-5. **Hotel occupancy trend (30 min):** Plot monthly hotel occupancy rate, 2022–2026. Identify seasonal peaks (winter months). Any trend toward pre-pandemic norms?
-6. **Caribbean benchmark (30 min):** Pull WDI arrivals for 5–6 Caribbean islands (Barbados, St. Lucia, Grenada, Antigua) for 2015–2022. Line chart showing USVI NPS visitation trajectory vs. regional peer recovery.
-7. **Interpretation (60 min):** Narrative on what the data does and does not show. Note structural differences between USVI (heavily dependent on specific park infrastructure) and more diversified Caribbean tourism economies.
-
----
-
-**Originality and Contribution**
-
-Existing work: Academic papers and government reports on USVI hurricane recovery are primarily qualitative or economic (BEA GDP). A quantitative NPS-visitation-based time series analysis is not a common portfolio project. The combination of NPS data (long history) + USVIBER PDFs (recent operational context) + Caribbean benchmark is an unusual combination.
-
-**What this adds:** A personal, place-specific data story connecting three years of firsthand professional experience to a concrete analytical question. The long NPS time series (going back to 1979) allows pre-storm, post-storm, and post-COVID analysis in a single coherent narrative. This project would be genuinely interesting to a USVI Department of Tourism or NPS social scientist reviewer.
-
----
-
-**Feasibility**
-
-| Phase | Estimated Time |
-|-------|---------------|
-| NPS IRMA portal navigation and CSV export | 20 min |
-| NPS time series analysis and visualization | 60 min |
-| USVIBER PDF extraction or manual transcription | 60–90 min |
-| Caribbean benchmark WDI pull and visualization | 45 min |
-| Integration and overall narrative | 60 min |
-| Quarto rendering and polish | 45 min |
-| **Total** | **~5.5–7 hours** |
-
-**Most likely obstacle:** USVIBER PDF data. If the PDFs are text-layer PDFs (likely), `pdftools` in R extracts them in minutes. If they are scanned images, manual transcription of the limited number of annual summaries is the fallback. The annual summary PDFs (`A22`, `A23`, `A24`, `A25`) appear to be the most useful — one per year rather than 12 monthly PDFs.
-
-**Minimum viable deliverable:** The NPS time series alone (Steps 1–3) can produce a complete, publishable Field Note in 3–4 hours. Steps 4–7 add depth and contemporary operational data but are not required for the core story.
-
----
-
-**Hiring Signal**
-
-Demonstrates: Data acquisition from an institutional portal (NPS IRMA); time series analysis; PDF data extraction; place-specific knowledge and personal domain expertise (USVI); ability to connect personal professional experience to analytical questions; sensitivity to natural disaster recovery dynamics.
-
-Relevant roles: tourism analytics, USVI government or NGO positions, NPS social science, Caribbean regional organizations, disaster resilience research, place-based policy analytics broadly.
-
----
-
-**Limitations**
-
-- **NPS ≠ total USVI tourism.** Park visitation is a proxy, not a comprehensive measure. Cruise ship visitors, beach-front hotel guests, and visitors to St. Croix who don't visit Buck Island are not captured.
-- **USVIBER PDFs cover only 2022–2026.** The critical 2017–2021 period — hurricane recovery, first few years of reconstruction, COVID — is not covered by USVIBER's digital archive.
-- **Causal attribution is impossible.** The 2020 COVID shock overlaps with the ongoing hurricane recovery, making it impossible to cleanly separate the two effects.
-- **NPS monthly data may have quality issues.** Some months may have estimated counts, particularly in the October 2017–December 2017 period when the park was closed for storm damage assessment.
+Completed
 
 ---
 
@@ -743,53 +490,7 @@ Each criterion is scored 1–5. **Scores below 2 on any single criterion trigger
 
 ### F1: Tourism Dependence and the COVID Cliff
 
-**1. First action:**
-- Open `https://ourworldindata.org/grapher/tourism-gdp-proportion-of-total-gdp.csv` in a browser and download the CSV directly.
-- Also download: `https://ourworldindata.org/grapher/international-tourist-trips.csv`
-- Documentation: `https://ourworldindata.org/tourism` — review methodology notes, particularly the Tourism Satellite Account note explaining which countries are missing.
-
-**2. First inspection:**
-- Open the tourism-GDP CSV. Check: which SIDS are present? Look for USVI, Fiji, Aruba, BVI, Maldives, Palau, Tonga, Samoa.
-- Count rows per country. Identify which SIDS have data for 2019 AND 2020 (the critical shock years). Any country missing either year is likely excluded from the main analysis.
-- For countries absent from OWID tourism-GDP CSV, check if `ST.INT.RCPT.XP.ZS` from WDI covers them: `wbstats::wb_data("ST.INT.RCPT.XP.ZS", country="all", start_date=2019, end_date=2020)`.
-
-**3. Initial EDA checks:**
-1. `summary(df)` — distributions, range of tourism % values, number of NAs per year
-2. Bar chart: top 20 countries by 2019 tourism % of GDP — does it look like the expected SIDS-dominated ranking?
-3. Quick scatter: 2019 tourism % GDP vs. 2020 GDP growth rate (from WDI) for the available sample
-4. Count: how many SIDS have ≥5 years of non-NA data in the 2015–2022 window?
-5. Line chart: USVI, Fiji, Aruba, BVI trajectories over 2008–2023 — any interesting pre-COVID trends?
-
-**4. Technical setup:**
-```r
-install.packages(c("wbstats", "tidyverse", "countrycode", "ggrepel"))
-library(wbstats); library(tidyverse); library(countrycode); library(readr)
-
-# Download OWID CSV
-tourism_gdp <- read_csv("https://ourworldindata.org/grapher/tourism-gdp-proportion-of-total-gdp.csv")
-
-# Define SIDS country codes (ISO2)
-sids <- c("AW","BB","BS","DM","GD","HT","JM","KN","LC","TT","VC","VG","VI",
-          "FJ","FM","KI","MH","MV","NR","PF","PG","PW","SB","TO","TV","VU","WS")
-
-# Pull WDI supplement
-wdi <- wb_data(c("ST.INT.RCPT.XP.ZS","NY.GDP.MKTP.KD.ZG","NY.GDP.PCAP.CD"),
-               country=sids, start_date=2000, end_date=2023)
-```
-
-**5. Feasibility test (go/no-go):**
-- **GO** if: ≥20 SIDS have both 2019 and 2020 data for at least one of (tourism % GDP, tourism receipts % exports, arrivals) AND at least one of (GDP growth, GDP per capita).
-- **NO-GO** (narrow scope) if: Fewer than 15 usable country-year pairs. In that case, expand to all high-income small island economies (not just SIDS designation) or broaden to LMICs with >10% tourism-receipts-to-exports.
-
-**6. Time budget:**
-- Initial feasibility test: 30–45 minutes
-- Complete Field Note: 5–7 hours
-
-**7. Minimum viable deliverable:**
-A Quarto HTML document containing: (a) a data table showing 2019 tourism dependency ranking for ≥20 SIDS; (b) a scatter plot of 2019 tourism dependency vs. 2020 GDP growth with labeled country points and a trend line; (c) a multi-line recovery chart for the 8–10 best-covered destinations, 2019–2023; (d) a 300–400 word interpretation section; (e) explicit data limitations and download links.
-
-**8. Principal failure mode:**
-Too few SIDS have both pre-pandemic tourism data AND reliable 2020 GDP data to make the scatter plot analytically meaningful. The simplest fallback: change the primary visualization to a "profiles gallery" (bar chart of 2019 dependency + change bar for 2020) rather than a scatter regression, which requires fewer matched observations.
+-
 
 ---
 
@@ -846,49 +547,7 @@ SIDS recipient code identification. The CRS uses DAC numeric codes (not ISO2), a
 
 ### F3: World Bank Lending in Costa Rica
 
-**1. First action:**
-- Open `https://search.worldbank.org/api/v2/projects?format=json&countrycode=CR&rows=100&fl=id,project_name,totalamt,sector1,sector2,sector3,boardapprovaldate,closingdate,status,project_abstract`
-- This URL is confirmed working and returns 72 projects. Copy the JSON response into a text editor to inspect the structure before writing the R code.
-- Secondary documentation: `https://projects.worldbank.org/en/projects-operations/projects-home?lang=en`
-
-**2. First inspection:**
-- Parse JSON: count total projects (confirmed 72). Check range of board approval dates (earliest and latest project).
-- Inspect sector1 field — what values appear most frequently? Is sector data complete for all 72 projects?
-- Check the distribution of `totalamt` — are there large outliers (e.g., $500M DPLs)?
-- Note the 5 most recent projects from the confirmed API response: Education Results (2024), Social Risk Management DPL (2024), Climate Resilient Recovery (2024), Fiscal DPL (2023), CAT DDO (2023) — these are a ready-made set to profile.
-
-**3. Initial EDA checks:**
-1. Histogram of `totalamt` (log scale) — what's the typical project size?
-2. Timeline scatter: projects over time colored by sector — any visible shift?
-3. Count projects by decade (1990s, 2000s, 2010s, 2020s)
-4. Total lending by decade — did the Bank lend more or less over time?
-5. Pull WDI GDP growth for Costa Rica: `wb_data("NY.GDP.MKTP.KD.ZG", country="CR", start_date=1990, end_date=2024)` — annotate on lending timeline
-
-**4. Technical setup:**
-```r
-library(jsonlite); library(dplyr); library(ggplot2); library(lubridate)
-library(wbstats); library(scales); library(stringr)
-
-url <- "https://search.worldbank.org/api/v2/projects?format=json&countrycode=CR&rows=100"
-raw <- fromJSON(url)
-projects <- raw$projects %>% bind_rows()  # flatten list of lists to tibble
-projects$board_year <- year(as.Date(projects$boardapprovaldate))
-projects$totalamt <- as.numeric(projects$totalamt)
-```
-
-**5. Feasibility test:**
-- **GO** if: JSON parse works, sector1 column is populated for ≥50 of 72 projects, board approval dates span at least 1990–2023, and totalamt is non-null for the large projects.
-- **NO-GO** (reframe question) if: Sector data is so sparse that sector analysis is impossible. Fallback: reframe as a lending timeline analysis only, supplemented by WDI context, without sector decomposition.
-
-**6. Time budget:**
-- Initial feasibility test: 20–30 minutes
-- Complete Field Note: 5–7 hours
-
-**7. Minimum viable deliverable:**
-A Quarto HTML with: (a) timeline plot of WB project amounts by year, annotated with key Costa Rica events; (b) sector breakdown for the three most recent decades; (c) loan volume trend; (d) supplemental WDI macro context (GDP growth, debt); (e) 400-word interpretation connecting lending to development story. 72 projects is enough for a compelling narrative EDA even without deep statistical analysis.
-
-**8. Principal failure mode:**
-Sector field inconsistency. The WB sector taxonomy changed multiple times between 1990 and 2024. Projects approved in 1990 may use different sector codes than 2024 projects. The fallback is to group sectors into 5–6 broad categories manually, accepting some imprecision in the early years.
+-
 
 ---
 
@@ -936,53 +595,7 @@ Pacific micro-states have very sparse WDI data. Tuvalu, Nauru, Cook Islands, and
 
 ### F5: After the Storm (USVI Tourism Recovery)
 
-**1. First action:**
-- Navigate to `https://irma.nps.gov/Stats/` in a browser. Click "Query Builder for Public Use Statistics (1979 – Last Calendar Year)."
-- Select: Unit Type = Park; park = VIIS (Virgin Islands National Park); Statistic = Recreation Visitors; Data Type = Annual; Year Range = All. Click View Report. Export to CSV or Excel using the report toolbar.
-- Repeat for VIBN (Buck Island Reef National Monument).
-
-**2. First inspection:**
-- Open the downloaded CSV. Check: what are the years covered? What are the recreation visitor counts for 2016 (pre-storm baseline), 2017 (storm year), 2018–2019 (recovery), 2020 (COVID), 2021–2024 (recovery)?
-- Specifically note: Did VIIS visitation decline below the pre-2017 baseline in 2018–2019, or did it recover quickly? Does the COVID dip in 2020 exceed the hurricane dip in 2017–2018?
-- Also download monthly data for 2015–2024 from the same query builder (monthly option).
-
-**3. Initial EDA checks:**
-1. Simple line chart: VIIS recreation visitors by year, 2000–2024, with vertical lines at Sept 2017 and March 2020
-2. Bar chart: average visitors in 3 periods — pre-storm (2012–2016), recovery/pre-COVID (2018–2019), post-COVID (2021–2024)
-3. Index chart: 2016 = 100, track VIIS and VIBN trajectories through the shocks
-4. Compare to OWID arrivals for Barbados and St. Lucia (similar-size Caribbean islands) over the same period
-5. Check USVIBER 2024 annual report PDF (`A24`) for hotel occupancy and arrivals data 2022–2024
-
-**4. Technical setup:**
-```r
-library(readr); library(dplyr); library(ggplot2); library(lubridate)
-library(pdftools)  # for USVIBER PDFs
-
-# After downloading NPS IRMA CSV:
-nps <- read_csv("nps_viis_annual.csv") %>%
-  filter(ParkCode == "VIIS") %>%
-  select(Year, RecreationVisitors)
-
-# For USVIBER PDF extraction (text-layer PDFs):
-annual_text <- pdftools::pdf_text("https://usviber.org/wp-content/uploads/2024/01/A23DEC.pdf")
-```
-
-**5. Feasibility test:**
-- **GO (full project)** if: NPS IRMA CSV downloads cleanly with ≥20 years of data AND USVIBER annual summary PDFs (`A22DEC`, `A23DEC`, `A24`) yield extractable visitor arrival numbers via `pdftools` (text layer, not scanned images).
-- **GO (NPS-only)** if: NPS data is clean but USVIBER PDFs are scanned images. The NPS time series alone is sufficient for a publishable Field Note with a narrower scope.
-- **NO-GO** if: NPS data export fails and USVIBER PDFs are unreadable. (Unlikely — both are publicly accessible.)
-
-**6. Time budget:**
-- NPS data acquisition: 20 minutes (browser portal)
-- Initial feasibility test (NPS + one USVIBER PDF): 45 minutes
-- Complete NPS-only Field Note: 3–4 hours
-- Complete Field Note with USVIBER: 7–8 hours
-
-**7. Minimum viable deliverable:**
-A Quarto HTML with: (a) NPS VIIS/VIBN annual visitation time series 2000–2024, annotated for 2017 and 2020 events; (b) pre-/post-storm comparison bar chart; (c) index recovery chart vs. 2 Caribbean peer parks or destinations; (d) 400-word interpretation drawing on personal USVI knowledge. PDF data is an enhancement, not a requirement.
-
-**8. Principal failure mode:**
-USVIBER PDFs are scanned images rather than text-layer PDFs. In that case, `pdftools` will return garbled output. Fallback: manually extract the 5 annual totals (2022–2026) from the annual summary PDFs (`A22DEC` through the most recent) — each PDF likely has one summary table, taking ~15 minutes to transcribe per year. This is tedious but finite.
+-
 
 ---
 
@@ -1099,10 +712,6 @@ Confirmed working, no registration, OData query syntax:
 
 ---
 
-The USVI Tourism Data agent (154+ tool calls completed) is still running — it has been investigating USVIBER, NPS IRMA, and related USVI-specific data sources in depth. When it completes, it may add more specific detail about what is and is not accessible in the USVIBER monthly reports, and whether historical (pre-2022) USVI hotel/arrival data exists at other sources. The core findings for F5 will not change — the NPS IRMA portal and USVIBER 2022-2026 PDFs are confirmed — but the agent may surface whether pre-hurricane arrival data is accessible from, for instance, the Virgin Islands Department of Tourism or archival USVIBER publications.
-
----
-
 ## Summary: Research Status
 
 | Component | Status |
@@ -1112,132 +721,3 @@ The USVI Tourism Data agent (154+ tool calls completed) is still running — it 
 | Part III: Scoring and top-3 recommendation | ✅ Complete |
 | Section 10: First-step plans for all six | ✅ Complete |
 | R package verification | ✅ Complete (all CRAN-confirmed packages verified) |
-| USVI Tourism Data agent | 🔄 Still running (~1,560 seconds) — additional USVI detail pending |
-
-The brief above is complete and actionable. The USVI Tourism agent may add useful detail for F5's feasibility test, particularly around pre-2017 historical data availability from alternative USVI sources. If you'd like to wait for it before finalizing, I can update the F5 section once it completes. Otherwise, the F5 minimum viable deliverable (NPS IRMA time series) is confirmed ready to start now.
-
-# Addendum Two
-
-This final agent contains very significant findings that substantially upgrade F5's feasibility. Let me summarize the material changes and corrections to the brief.
-
----
-
-## Critical F5 Update: USVI Tourism Data Is Substantially Better Than Initially Assessed
-
-The USVI Tourism Data agent ran for 40 minutes (154+ tool calls) and found several directly downloadable, machine-readable datasets that I could not confirm through my own web research. **This changes the feasibility assessment for F5 from Medium to High.**
-
----
-
-### What Changed
-
-#### 1. USVIBER has annual PDF summaries going back to 2002 — not just 2022
-
-The annual `TOUR##` series (`TOUR02.pdf` through `TOUR22.pdf`) is confirmed at `usviber.org/wp-content/uploads/`. These cover:
-- Air visitor arrivals
-- Cruise passenger arrivals
-- Total arrivals
-- Hotel occupancy rate, ADR, RevPAR
-- Visitor expenditures (total and per-visitor)
-- Visitor origin by region
-
-**Years confirmed:** 2002–2022 (annual), 2010–2026 (monthly by type). The critical pre-hurricane baseline (2012–2016) and immediate post-storm period (2017–2019) are in these annual summaries. This was the primary uncertainty in my original F5 assessment.
-
-#### 2. FRED employment data is directly downloadable as CSV — no registration, no portal navigation
-
-These URLs deliver raw CSVs immediately:
-
-| Series | URL | Coverage |
-|--------|-----|----------|
-| USVI Leisure & Hospitality Employment | `https://fred.stlouisfed.org/graph/fredgraph.csv?id=SMU78000007000000001` | Monthly, 1990–Sep 2026 |
-| USVI Total Nonfarm Employment | `https://fred.stlouisfed.org/graph/fredgraph.csv?id=SMU78000000000000001` | Monthly, 1975–Sep 2026 |
-
-The hurricane signal is starkly visible in the data: Leisure & Hospitality employment fell from **7,400 in August 2017 to 4,600 by November 2017** — a 38% collapse in three months. This is the cleanest, most immediate time series available for the USVI economic shock.
-
-#### 3. BEA XLSX is directly downloadable — one URL, no API key
-
-`https://www.bea.gov/sites/default/files/2024-06/vigdp0624.xlsx`
-
-Contains USVI GDP by industry including accommodation & food services, approximately 2002–2022. **Critical limitation:** BEA has **officially paused future USVI GDP releases** because the Department of Interior's Office of Insular Affairs stopped funding this work. The June 2024 release (covering through 2022) is likely the last one indefinitely. This must appear prominently in the F5 limitations section.
-
-#### 4. World Bank has USVI arrivals data from 1995 to 2020 — confirmed with actual values
-
-The World Bank API returns USVI-specific arrival figures:
-- 2016: **2.57 million** arrivals
-- 2017: **1.95 million** (hurricane year — visible decline)
-- 2018: **1.92 million**
-
-The 2020 value of **8.6 million** is almost certainly a data entry error (World Bank likely miskeyed a figure) and must be treated as missing. The pre-2020 series is a clean, confirmed complement to the FRED employment series.
-
-#### 5. Census Economic Census accommodation tables are directly downloadable as CSV ZIPs
-
-| URL | Content | Years |
-|-----|---------|-------|
-| `https://www2.census.gov/programs-surveys/economic-census/data/2022/sector00/IA2200NAPCS02.zip` | USVI guestrooms by industry, 2022 | 2022 |
-| `https://www2.census.gov/programs-surveys/economic-census/data/2017/sector00/IA1700NAPCS02.zip` | Same, 2017 | 2017 |
-| `https://www2.census.gov/programs-surveys/economic-census/data/2022/sector00/IA2200BASIC02.zip` | Comparative stats 2022 vs. 2017 | 2017, 2022 |
-
-Every 5 years back to 2002: number of accommodation establishments, employment, annual payroll, total revenue, number of guestrooms, revenue per guestroom — USVI-specific, free, no registration.
-
----
-
-### Revised F5 Data Inventory
-
-The updated, expanded data table for F5:
-
-| Dataset | Direct URL | Variables | Coverage | Access | Status |
-|---------|-----------|-----------|----------|--------|--------|
-| **FRED L&H Employment** | `fred.stlouisfed.org/graph/fredgraph.csv?id=SMU78000007000000001` | Monthly employment (thousands) | 1990–2026 | Free CSV, no auth | ✅ **CONFIRMED** |
-| **FRED Total Employment** | `fred.stlouisfed.org/graph/fredgraph.csv?id=SMU78000000000000001` | Total nonfarm employment | 1975–2026 | Free CSV, no auth | ✅ **CONFIRMED** |
-| **WB Arrivals API** | `api.worldbank.org/v2/country/VI/indicator/ST.INT.ARVL?format=json` | Annual arrivals | 1995–2020 | Free JSON, no auth | ✅ **CONFIRMED** (flag 2020 anomaly) |
-| **WB Receipts API** | `api.worldbank.org/v2/country/VI/indicator/ST.INT.RCPT.CD?format=json` | Annual receipts (USD) | 2005–2020 | Free JSON, no auth | ✅ **CONFIRMED** |
-| **BEA XLSX** | `bea.gov/sites/default/files/2024-06/vigdp0624.xlsx` | GDP by industry incl. accommodation | ~2002–2022 | Free XLSX, no auth | ✅ **CONFIRMED** (future releases paused) |
-| **Census Econ Census** | `census.gov/...IA2200NAPCS02.zip` and `IA1700NAPCS02.zip` | Establishments, rooms, revenue, employment | 2007, 2012, 2017, 2022 | Free CSV ZIP, no auth | ✅ **CONFIRMED** |
-| **USVIBER Annual PDFs** | `usviber.org/wp-content/uploads/...TOUR02.pdf` through `TOUR22.pdf` | Air arrivals, hotel occupancy, expenditures | 2002–2022 annual | Free PDF | ✅ **CONFIRMED** (PDF extraction required) |
-| **NPS IRMA Visitation** | `irma.nps.gov/Stats/` | Park recreation visitors | 1979–2024 | Portal export | ✅ (portal confirmed; CSV via report export) |
-
----
-
-### Revised Feasibility Assessment for F5
-
-**Old assessment:** Medium feasibility (3/5) — uncertain pre-2022 data, NPS portal only, PDF risk.
-
-**New assessment:** High feasibility (4/5) — multiple machine-readable free datasets confirmed, including a 35-year monthly employment series that alone supports the core analysis. The FRED CSV can be downloaded in one line of R and contains the hurricane signal cleanly.
-
-**Revised time estimate:** 5–7 hours (previously 7–10 hours). A complete, publishable Field Note using FRED + World Bank + BEA XLSX + one Census Economic Census comparison requires no PDF extraction at all.
-
-**Revised minimum viable deliverable (no PDF work required):**
-1. FRED employment time series (1990–2026, monthly, annotated for 2017 and 2020)
-2. World Bank arrivals time series (1995–2019, with 2020 anomaly dropped)
-3. BEA GDP by industry (2002–2022, accommodation sector highlighted)
-4. Census accommodation sector comparison (2007 → 2017 → 2022)
-5. Written interpretation drawing on personal USVI knowledge
-
-USVIBER PDFs and NPS IRMA remain as optional enhancements for additional depth, not requirements.
-
----
-
-### Revised Scoring Table
-
-| Criterion | Weight | F1 | F2 | F3 | F4 | **F5 (revised)** | F6 |
-|-----------|--------|----|----|----|----|------------------|----|
-| Data availability | 30% | 5 | 5 | 5 | 5 | **4→4.5** | 5 |
-| Feasibility | 20% | 5 | 4 | 5 | 5 | **3→4** | 5 |
-| Originality | 15% | 4 | 4 | 4 | 4 | 5 | 3 |
-| Analytical substance | 10% | 5 | 4 | 4 | 4 | 4 | 4 |
-| R signal | 10% | 5 | 5 | 4 | 5 | **3→4** | 5 |
-| Int'l dev signal | 5% | 5 | 5 | 5 | 4 | 1 | 1 |
-| Tourism signal | 5% | 5 | 2 | 2 | 1 | 5 | 5 |
-| Place-based relevance | 5% | 4 | 3 | 5 | 4 | 5 | 2 |
-| **Weighted score** | | **4.70** | **4.35** | **4.55** | **4.50** | **3.45→4.10** | **4.15** |
-
-F5 moves from the weakest finalist to a competitive mid-tier candidate. The recommended top 3 of **F1 + F3 + F5** remains the best portfolio combination, but F5's execution risk is now substantially lower than initially assessed.
-
----
-
-### One Additional Limitation for F5
-
-The **BEA pause** must be stated explicitly in the report: as of June 2024, BEA has ceased producing USVI GDP statistics indefinitely due to OIA funding withdrawal. This means the 2002–2022 BEA XLSX is both a confirmed free resource and a historical artifact — there is no update path. The Field Note should note this as a data policy finding in its own right: the cessation of USVI economic measurement is itself a story about how territories are treated differently from states in federal statistical programs.
-
----
-
-All four research agents have now completed. The brief is fully verified. The recommended portfolio combination of **F1 (Tourism Dependence and the COVID Cliff) + F3 (World Bank Lending in Costa Rica) + F5 (After the Storm: USVI Tourism Recovery)** stands, with F5 now on significantly firmer data footing than the initial assessment suggested.
