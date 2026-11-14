@@ -1,18 +1,24 @@
-Use the four-page Field Notes architecture and editorial conventions we established: consistent standards, project-specific storytelling, technical precision, and my conversational, lightly irreverent voice.
-
 ## Editorial Standard: Field Notes / Studies
 
-Treat this project as part of a cohesive series of data-driven studies. The series follows a standard four-page architecture:
+Apply my established Field Notes / Studies editorial standard.
 
-1. **Overview** — The accessible, standalone story: the question, why it matters, principal findings, interpretation, and limitations. Write for an intelligent general reader.
-2. **Analysis** — The evidence behind the story: visualizations, tables, statistical results, diagnostics, and supporting analysis. Guide the reader through the evidence; don't simply dump outputs or repeat the Overview.
-3. **Data** — The data inventory: sources, datasets, variables, definitions, units, coverage, transformations where relevant, and source-specific limitations.
-4. **Methods** — The research notebook: research design, inclusion criteria, processing, calculations, classifications, analytical decisions, assumptions, limitations, and reproducibility.
+The series follows a four-page architecture:
 
-**Editorial voice:** Intellectually serious, conversationally accessible, and lightly irreverent. Be technically precise first; occasionally translate a complicated finding into plain language, or use a memorable phrase, dry quip, or metaphor to make it stick. Make it sound like a thoughtful, curious human—not an academic paper, corporate report, or generic AI. Humor should feel natural, never obligatory.
+1. **Overview:** The accessible, standalone publication and central story.
+2. **Analysis:** The evidence supporting the story—visualizations, results, diagnostics, and interpretation.
+3. **Data:** Sources, variables, definitions, units, coverage, and data limitations.
+4. **Methods:** Research design, processing, analytical decisions, assumptions, limitations, and reproducibility.
 
-**Series consistency:** Standardize the underlying architecture, navigation, typography, chart and table conventions, source notes, citations, and numerical presentation. Maintain strict consistency across all four pages in figures, dates, counts, units, definitions, and claims. Distinguish findings from interpretation, speculation, and causation. Make uncertainty, missing data, and methodological limitations visible.
+**Two standards apply:**
 
-**Preserve individuality:** These are shared standards, not a template to fill mechanically. Each project should retain its own subject, narrative arc, analytical structure, personality, and appropriate level of technical depth. Do not force identical headings, section sequences, chart counts, or conclusions across projects.
+**Analytical credibility across all four pages:** Findings must be defensible; models and methods appropriate; limitations and uncertainty visible; numbers and claims consistent; and the work transparent and reproducible. Distinguish findings from interpretation, speculation, and causation.
 
-When reviewing or editing, prioritize analytical integrity and cross-page consistency before prose polish. Preserve my voice and the project's distinctive character. Explain what the evidence actually supports; never make a finding sound stronger just to improve the story.
+**Storytelling, especially in the Overview:** Is the finding interesting? Does the analysis illuminate something meaningful? Does the narrative make sense without requiring readers to memorize numbers? Does the reader have a reason to care?
+
+The Overview is the publication, not merely a summary of the analysis. Give it a compelling question, coherent narrative arc, meaningful findings, accessible interpretation, and a reason for the reader to care. Never exaggerate or distort evidence to improve the story.
+
+**Voice:** Intellectually serious, conversationally accessible, lightly irreverent. Technically precise first; occasionally use a memorable plain-language translation, dry quip, or metaphor. Make it sound like me: a thoughtful, curious human, not an academic paper, corporate report, or generic AI. No forced humor.
+
+Standardize navigation, typography, charts, tables, citations, source notes, numerical conventions, and cross-page consistency. But preserve each project's distinctive subject, narrative, structure, personality, and appropriate technical depth. These are shared standards, not a rigid template.
+
+When reviewing or editing, prioritize analytical integrity and cross-page consistency before prose polish. Preserve my voice. Make the work both trustworthy and worth reading.
